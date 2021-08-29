@@ -1,19 +1,10 @@
 
 # 202120_S2_E1 - Proyecto JOGA
 
-_Hola!, este es un proyecto que busca facilitar la manera en que los gamers buscan compañeros de partida para un juego en especifico_
+_Hola!, este es un proyecto que busca facilitar la manera en que los gamers buscan compañeros de partida para un juego en específico_
 
 
 ## Tabla de contenido
-  - [Tabla de contenido](#tabla-de-contenido)
-  - [Comenzando 🚀](#comenzando-)
-    - [Pre-requisitos 📋](#pre-requisitos-)
-    - [Instalación 🔧](#instalación-)
-  - [Ejecutando las pruebas ⚙️](#ejecutando-las-pruebas-️)
-  - [Despliegue 📦](#despliegue-)
-  - [Construido con 🛠️](#construido-con-️)
-  - [Wiki 📖](#wiki-)
-  - [Autores ✒️](#autores-️)
 
 ## Comenzando 🚀
 
@@ -31,30 +22,46 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
   # determinar version de node
   npm --v
   ```
-
-
-### Instalación 🔧
+### Instalación 🔧 
 
 1. Clonar el repositorio
 
    ```bash
-   git clone https://github.com/natobo/isis3710-uniandes-EjercicioNodeJS
+   git clone https://github.com/isis3710-uniandes/202120_S2_E1
    ```
 
-2. Dentro de la terminal, navegar a `isis3710-uniandes-EjercicioNodeJS/`
+2. Dentro de la terminal, navegar a `202120_S2_E1/`
    ```bash
-   cd isis3710-uniandes-EjercicioNodeJS
+   cd 202120_S2_E1
    ```
 3. Instalar módulos con npm
    ```bash
     npm install
+   ``` 
+
+### Ejecutar servidor de backend 🤖
+1. Dentro de la terminal, navegar a `202120_S2_E1/`
+   ```bash
+   cd 202120_S2_E1
    ```
-4. Encender el servidor
+2. Para ejecutar el servidor para ámbitos de producción
    ```bash
    npm start
    ```
+3. Para ejecutar el servidor para ámbitos de desarrollo
+   ```bash
+   npm run dev
+   ```
 
-_En ese momento el servidor en estado de produccion debe de estar escuchando en el puerto determinado por las variables de entorno en el .env o por default en el puerto 3001_
+### Ejecutar aplicación el frontend 👽
+1. Dentro de la terminal, navegar a `202120_S2_E1/front-react`
+   ```bash
+   cd 202120_S2_E1/front-react
+   ```
+2. Para ejecutar la aplicación web de react
+   ```bash
+   npm start
+   ```
 
 ## Ejecutando las pruebas ⚙️
 
