@@ -5,12 +5,17 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
 
 
 ## Tabla de contenido
+  - [Tabla de contenido](#tabla-de-contenido)
+  - [Comenzando 🚀](#comenzando-)
+    - [Pre-requisitos 📋](#pre-requisitos-)
+    - [Instalación 🔧](#instalación-)
+  - [Ejecutando las pruebas ⚙️](#ejecutando-las-pruebas-️)
+  - [Despliegue 📦](#despliegue-)
+  - [Construido con 🛠️](#construido-con-️)
+  - [Wiki 📖](#wiki-)
+  - [Autores ✒️](#autores-️)
 
 ## Comenzando 🚀
-
-_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
-
-Mira **Despliegue** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
@@ -29,9 +34,6 @@ Mira **Despliegue** para conocer como desplegar el proyecto.
 
 
 ### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
 
 1. Clonar el repositorio
 
@@ -64,8 +66,6 @@ _Aún no utilizamos un servicio cloud, a futuro esta sección tendrá una explic
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
-
 - [Node](http://www.dropwizard.io/1.0.2/docs/) - El framework usado para el servidor backend
 - [npm](https://maven.apache.org/) - Manejador de paquetes de nodeJS
 - [React](https://es.reactjs.org/) - El framework usado para el frontend
@@ -76,12 +76,10 @@ Puedes encontrar la wiki del proyecto aquí: [Wiki](https://github.com/isis3710-
 
 ## Autores ✒️
 
-_Todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-- **Nicolás Tobo** - _Desarrollador y documentación_ - [natobo](https://github.com/natobo)
-- **Santiago Tangarife** - _Desarrollador_ - [Batman-exe](https://github.com/Batman-exe)
-- **Nicolás Calero** - _Desarrollador_ - [Batman-exe](https://github.com/Batman-exe)
-- **Gabriela Caballero** - _Desarrollador_ - [Batman-exe](https://github.com/gcaballeroduran)
-- **Sebastián Rosado** - _Desarrollador_ - [Batman-exe](https://github.com/srosadoa)
+- **Nicolás Tobo** - _Desarrollo y documentación_ - [natobo](https://github.com/natobo)
+- **Santiago Tangarife** - _Desarrollo_ - [Batman-exe](https://github.com/Batman-exe)
+- **Nicolás Calero** - _Desarrollo_ - [cale](https://github.com/necalero)
+- **Gabriela Caballero** - _Desarrollo_ - [Gabriela Caballero](https://github.com/gcaballeroduran)
+- **Sebastián Rosado** - _Desarrollo_ - [srosadoa](https://github.com/srosadoa)
   
 ---
