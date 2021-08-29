@@ -3,13 +3,17 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "SET DEBUG=app:* & nodemon ./bin/www",
-    "start": "SET NODE_ENV=production & node ./bin/www",
+    "dev": "run-script-os",
+    "dev:windows": "SET DEBUG=app:* & nodemon ./bin/www",
+    "dev:default": "DEBUG=app:* nodemon ./bin/www",
+    "start": "run-script-os",
+    "start:windows": "SET NODE_ENV=production & node ./bin/www",
+    "start:default": "NODE_ENV=production node ./bin/www",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install"
   },
-  "workspaces":[
+  "workspaces": [
     "front-react"
   ],
   "dependencies": {
@@ -34,7 +38,8 @@
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "run-script-os": "^1.1.6"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
