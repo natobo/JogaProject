@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const usersRouter = require('./routes/user-router');
 
 const app = express();
 
@@ -17,8 +17,8 @@ app.use(express.urlencoded({ extended: false })); // For data type application/x
 
 // This is a built-in middleware function in Express. It serves static files and is based on serve-static.
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Here we put our routers
+usersRouter(app);
 
 module.exports = app;

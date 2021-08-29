@@ -3,6 +3,8 @@
 
 _Hola!, este es un proyecto que busca facilitar la manera en que los gamers buscan compañeros de partida para un juego en específico_
 
+**Aviso para quien este calificando las entregas 😁:** Tratamos de llevar una especie de git flow, por lo que si no se ven los cambios en master por favor🙏 revisar la rama `dev`
+
 
 ## Tabla de contenido
 
@@ -53,7 +55,7 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
    npm run dev
    ```
 
-### Ejecutar aplicación el frontend 👽
+### Ejecutar aplicación de frontend 👽
 1. Dentro de la terminal, navegar a `202120_S2_E1/front-react`
    ```bash
    cd 202120_S2_E1/front-react
