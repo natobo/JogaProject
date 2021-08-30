@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "9fc9e5d6-8cc5-4bb8-86e6-021d2e54079e",
+		"name": "reviewJoga.postman_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET REVIEWS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/review",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET REVIEW",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/review/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE REVIEW",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/review",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT REVIEW",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/review/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE REVIEW",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/review/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"review",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
