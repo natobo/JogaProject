@@ -4,14 +4,15 @@ _En este READMEDEVS Vamos a poner las tareas semana a semana jaja, si un poco te
 ## Tabla de contenido, pa que no hagan tanto scroll 🙈
   - [Tabla de contenido, pa que no hagan tanto scroll 🙈](#tabla-de-contenido-pa-que-no-hagan-tanto-scroll-)
   - [Uso del git](#uso-del-git)
-  - [REGLAS DE DESARROLLO 📣📣📣📣](#reglas-de-desarrollo-)
+  - [REGLAS DE DESARROLLO/EQUIPO 📣📣📣📣](#reglas-de-desarrolloequipo-)
   - [Tarea 1 crear cada uno su endpoint](#tarea-1-crear-cada-uno-su-endpoint)
-    - [Paso 1 👀](#paso-1-)
-    - [Paso 2 👾](#paso-2-)
-    - [Paso 3 ✨](#paso-3-)
+    - [Paso 1 Instalar y hacer rama 👀](#paso-1-instalar-y-hacer-rama-)
+    - [Paso 2 Hacer Mock 👾](#paso-2-hacer-mock-)
+    - [Paso 3 Codear el router ✨](#paso-3-codear-el-router-)
     - [Paso 4 ¿Como rayos pruebo lo del paso 3? 😱](#paso-4-como-rayos-pruebo-lo-del-paso-3-)
     - [Paso 5 Poner la colección de Postman de sus clases dentro de la carpeta Coleccions😱](#paso-5-poner-la-colección-de-postman-de-sus-clases-dentro-de-la-carpeta-coleccions)
-    - [Paso 6 Disfutar que terminaron su tarea](#paso-6-disfutar-que-terminaron-su-tarea)
+    - [Paso 6 Hacer Pull request en git A DEV](#paso-6-hacer-pull-request-en-git-a-dev)
+    - [Paso 7 Disfutar que terminaron su tarea](#paso-7-disfutar-que-terminaron-su-tarea)
 
 ## Uso del git  
 Por el momento deberíamos trabajar así con git: 
