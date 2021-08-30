@@ -1,103 +1,23 @@
-const mockDashboard = [
-  {
-    id: 1,
-    theme: 'Teal',
-    filters: [{}],
-  },
-  {
-    id: 2,
-    theme: 'Aquamarine',
-    filters: [{}, {}],
-  },
-  {
-    id: 3,
-    theme: 'Orange',
-    filters: [{}, {}, {}],
-  },
-  {
-    id: 4,
-    theme: 'Green',
-    filters: [],
-  },
-  {
-    id: 5,
-    theme: 'Aquamarine',
-    filters: [{}, {}, {}],
-  },
-  {
-    id: 6,
-    theme: 'Yellow',
-    filters: [{}, {}, {}, {}, {}],
-  },
-  {
-    id: 7,
-    theme: 'Khaki',
-    filters: [{}, {}, {}, {}],
-  },
-  {
-    id: 8,
-    theme: 'Orange',
-    filters: [{}, {}, {}],
-  },
-  {
-    id: 9,
-    theme: 'Maroon',
-    filters: [{}, {}, {}, {}],
-  },
-  {
-    id: 10,
-    theme: 'Fuscia',
-    filters: [],
-  },
-  {
-    id: 11,
-    theme: 'Aquamarine',
-    filters: [],
-  },
-  {
-    id: 12,
-    theme: 'Khaki',
-    filters: [{}, {}],
-  },
-  {
-    id: 13,
-    theme: 'Yellow',
-    filters: [{}, {}, {}, {}],
-  },
-  {
-    id: 14,
-    theme: 'Red',
-    filters: [{}, {}, {}, {}],
-  },
-  {
-    id: 15,
-    theme: 'Blue',
-    filters: [{}, {}, {}, {}],
-  },
-  {
-    id: 16,
-    theme: 'Pink',
-    filters: [{}, {}, {}, {}, {}],
-  },
-  {
-    id: 17,
-    theme: 'Blue',
-    filters: [{}, {}, {}],
-  },
-  {
-    id: 18,
-    theme: 'Indigo',
-    filters: [{}, {}, {}],
-  },
-  {
-    id: 19,
-    theme: 'Turquoise',
-    filters: [{}, {}],
-  },
-  {
-    id: 20,
-    theme: 'Khaki',
-    filters: [{}],
-  },
+const dashboardsMock = [
+  { id: 1, theme: 'Yellow', filters: [{}], User: 1 },
+  { id: 2, theme: 'Violet', filters: [{}, {}, {}, {}], User: 2 },
+  { id: 3, theme: 'Red', filters: [], User: 3 },
+  { id: 4, theme: 'Pink', filters: [{}, {}], User: 4 },
+  { id: 5, theme: 'Violet', filters: [{}, {}], User: 5 },
+  { id: 6, theme: 'Maroon', filters: [{}, {}], User: 6 },
+  { id: 7, theme: 'Khaki', filters: [{}, {}, {}, {}], User: 7 },
+  { id: 8, theme: 'Goldenrod', filters: [], User: 8 },
+  { id: 9, theme: 'Goldenrod', filters: [{}, {}, {}, {}], User: 9 },
+  { id: 10, theme: 'Aquamarine', filters: [{}], User: 10 },
+  { id: 11, theme: 'Fuscia', filters: [{}, {}, {}, {}, {}], User: 11 },
+  { id: 12, theme: 'Green', filters: [], User: 12 },
+  { id: 13, theme: 'Teal', filters: [{}, {}, {}, {}, {}], User: 13 },
+  { id: 14, theme: 'Teal', filters: [{}, {}, {}, {}], User: 14 },
+  { id: 15, theme: 'Maroon', filters: [{}], User: 15 },
+  { id: 16, theme: 'Violet', filters: [{}, {}, {}], User: 16 },
+  { id: 17, theme: 'Yellow', filters: [{}, {}, {}, {}], User: 17 },
+  { id: 18, theme: 'Yellow', filters: [{}, {}, {}], User: 18 },
+  { id: 19, theme: 'Maroon', filters: [{}, {}, {}, {}], User: 19 },
+  { id: 20, theme: 'Yellow', filters: [{}, {}, {}, {}, {}], User: 20 },
 ];
-module.exports = { mockDashboard };
+module.exports = { dashboardsMock };
