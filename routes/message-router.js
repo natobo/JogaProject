@@ -1,5 +1,5 @@
 const express = require('express');
-const { messagesMock } = require('../utils/mocks/mock-message');
+const { messageMock } = require('../utils/mocks/mock-message');
 /**
  * Router for the Message class
  * @param {*} app principal App from express framework
@@ -12,7 +12,7 @@ function messageRouter(app) {
   // CRUD for the message object
   router.get('/', async function (req, res, next) {
     try {
-      const messages = await Promise.resolve(messagesMock);
+      const messages = await Promise.resolve(messageMock);
       // Defines the response of the server
       res.status(200).json({
         data: messages,
@@ -28,7 +28,7 @@ function messageRouter(app) {
     try {
       // Search the message in the mock if dont exists retrieve data empty
       const message = await Promise.resolve(
-        messagesMock.find(
+        messageMock.find(
           (mMessage) => mMessage.id === Number(req.params.messageId)
         )
       );
@@ -44,7 +44,7 @@ function messageRouter(app) {
   router.post('/', async function (req, res, next) {
     try {
       // Returns the id of the first One of the mock, later it will be the id of the created Object
-      const createdMessageId = await Promise.resolve(messagesMock[0].id);
+      const createdMessageId = await Promise.resolve(messageMock[0].id);
       // Defines the response of the server
       res.status(201).json({
         data: createdMessageId,
@@ -59,7 +59,7 @@ function messageRouter(app) {
   router.put('/:messageId', async function (req, res, next) {
     try {
       // Returns the id of the first One of the mock, later it will be the id of the updated Object
-      const updatedMessageId = await Promise.resolve(messagesMock[0].id);
+      const updatedMessageId = await Promise.resolve(messageMock[0].id);
       // Defines the response of the server
       res.status(200).json({
         data: updatedMessageId,
@@ -74,7 +74,7 @@ function messageRouter(app) {
   router.delete('/:messageId', async function (req, res, next) {
     try {
       // Returns the id of the first One of the mock, later it will be the id of the deleted Object
-      const deletedMessageId = await Promise.resolve(messagesMock[0].id);
+      const deletedMessageId = await Promise.resolve(messageMock[0].id);
       // Defines the response of the server
       res.status(200).json({
         data: deletedMessageId,
