@@ -36,5 +36,7 @@ gameRouter(app);
 partyRouter(app);
 lfgsRouter(app);
 rankingsRouter(app);
+chatRouter(app);
+messageRouter(app);
 
 module.exports = app;
