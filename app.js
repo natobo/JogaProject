@@ -8,6 +8,8 @@ const usersRouter = require('./routes/user-router');
 const dashboardRouter = require('./routes/dashboard-router');
 const reviewsRouter = require('./routes/review-router');
 const invitesRouter = require('./routes/invite-router');
+const lfgsRouter = require('./routes/lfg-router');
+const rankingsRouter = require('./routes/ranking-router');
 
 const app = express();
 
@@ -26,5 +28,7 @@ usersRouter(app);
 dashboardRouter(app);
 reviewsRouter(app);
 invitesRouter(app);
+lfgsRouter(app);
+rankingsRouter(app);
 
 module.exports = app;
