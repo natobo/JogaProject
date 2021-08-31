@@ -65,6 +65,7 @@ function userRouter(app) {
       });
     } catch (error) {
       // next is catching the error from a callback function
+      console.log('HI LUIS');
       next(error);
     }
   });
