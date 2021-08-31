@@ -62,7 +62,7 @@ Listo todo eso suena perf, pero que pasa si no sabemos git 😅, pues tranqui aq
     ```
 >_Ahora todo perf Nicolás ¿pero como rayos combinas una rama a otra?_
 
-A pues fácil usas una cosa llamada Pull Request y Merge Request, del merge request me encargo **yo**, lo estoy aprendiendo en el trabajo. Pero el tutorial rápido esta aquí: https://www.youtube.com/watch?v=WSWnch-SyPM. (min 7 si no quieren verlo todo), lo importante es que: **Hagan el pull request y alguno que este actuando como lider vea el código y haga merge request a la rama dev**
+A pues fácil usas una cosa llamada Pull Request, de aceptar el request en github me encargo **yo**, lo estoy aprendiendo en el trabajo. Pero el tutorial rápido esta aquí: https://www.youtube.com/watch?v=WSWnch-SyPM. (min 7 si no quieren verlo todo), lo importante es que: **Hagan el pull request y alguno que este actuando como lider vea el código en github y junte todo a la rama dev**
 
 > ¿Y la rama Master?
 
