@@ -12,6 +12,8 @@ const gameRouter = require('./routes/game-router');
 const partyRouter = require('./routes/party-router');
 const lfgsRouter = require('./routes/lfg-router');
 const rankingsRouter = require('./routes/ranking-router');
+const chatRouter = require('./routes/chat-router');
+const messageRouter = require('./routes/message-router');
 
 const app = express();
 
@@ -34,5 +36,7 @@ gameRouter(app);
 partyRouter(app);
 lfgsRouter(app);
 rankingsRouter(app);
+chatRouter(app);
+messageRouter(app);
 
 module.exports = app;
