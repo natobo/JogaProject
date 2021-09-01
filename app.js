@@ -6,6 +6,14 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/user-router');
 const dashboardRouter = require('./routes/dashboard-router');
+const reviewsRouter = require('./routes/review-router');
+const invitesRouter = require('./routes/invite-router');
+const gameRouter = require('./routes/game-router');
+const partyRouter = require('./routes/party-router');
+const lfgsRouter = require('./routes/lfg-router');
+const rankingsRouter = require('./routes/ranking-router');
+const chatRouter = require('./routes/chat-router');
+const messageRouter = require('./routes/message-router');
 
 const app = express();
 
@@ -22,5 +30,13 @@ app.use('/', indexRouter);
 // Here we put our routers
 usersRouter(app);
 dashboardRouter(app);
+reviewsRouter(app);
+invitesRouter(app);
+gameRouter(app);
+partyRouter(app);
+lfgsRouter(app);
+rankingsRouter(app);
+chatRouter(app);
+messageRouter(app);
 
 module.exports = app;
