@@ -55,19 +55,19 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
    ``` 
 
 ### Ejecutar servidor de backend 🤖
-1. Dentro de la terminal, navegar a `202120_S2_E1/`
+1. Descargar la colección de Postman 
+2. Dentro de la terminal, navegar a `202120_S2_E1/`
    ```bash
    cd 202120_S2_E1
    ```
-2. Para ejecutar el servidor para ámbitos de producción
+3. Para ejecutar el servidor para ámbitos de producción
    ```bash
    npm start
    ```
-3. Para ejecutar el servidor para ámbitos de desarrollo
+4. Para ejecutar el servidor para ámbitos de desarrollo
    ```bash
    npm run dev
    ```
-
 ### Ejecutar aplicación de frontend 👽
 1. Dentro de la terminal, navegar a `202120_S2_E1/front-react`
    ```bash
