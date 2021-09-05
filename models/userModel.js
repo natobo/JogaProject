@@ -64,7 +64,6 @@ const usersSchema = new mongoose.Schema({
   passwordResetToken: String,
   passwordResetExpires: Date,
   // Relationships
-  // normalization to many to many
   friends: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   games: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Game' }],
   lfgs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'LFG' }],
