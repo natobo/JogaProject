@@ -73,11 +73,12 @@ Si les quedan dudas me preguntan por chat peroooo, me esforcé resto pa explicar
 ## REGLAS DE DESARROLLO/EQUIPO 📣📣📣📣
 _lo pongo en mayus porque siento que es importante para no comenzar a tener problemas con el repo, merges (osea modificar las mismas lineas de código y que empiece a totearse todo xd xd) y entre nosotros_
 
-1. **NO hacer push a master**, siempre a su feature y luego se hace merge request a dev.
-2. **Hacer pull de dev constantemente**, ya que todos podemos estar haciendo cambios seguido ahí ya que unimos nuestras features con los merge request.
-3. Avisar con tiempo si esta toteado y ve que no puede sacar sus clases, podemos llegar a un acuerdo y rebalancear todo.
-4. Si están muy perdidos escribir por wha en el grupo, no prometo responder immediatamente pero alguno sabrá que hacer en el equipo.
-5. Ser respetuoso y lo básico para llevarnos bien (_parezco profe de ética, pero pues si es necesario jaja_).
+1. **NO hacer push a master**
+2. **NO hacer push a dev**, siempre a su feature y luego se hace pull request a dev.
+3. **Hacer git pull origin dev constantemente**, ya que todos podemos estar haciendo cambios seguido ahí ya que unimos nuestras features con los merge request.
+4. Avisar con tiempo si esta toteado y ve que no puede sacar sus clases, podemos llegar a un acuerdo y rebalancear todo.
+5. Si están muy perdidos escribir por wha en el grupo, no prometo responder immediatamente pero alguno sabrá que hacer en el equipo.
+6. Ser respetuoso y lo básico para llevarnos bien (_parezco profe de ética, pero pues si es necesario jaja_).
 
 ## Tarea 1 crear cada uno su endpoint
  Ok.. vamo a empezar esto, el montaje ya esta cuadrado por mí, entonces lo que vamos a empezar es a darle al código >:D
@@ -142,3 +143,5 @@ Repito hacerlo a Dev Pliz, y avisar por el grupo de wha para que yo haga el MR j
 
 ### Paso 7 Disfutar que terminaron su tarea
 ![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+## Tarea 2 crear cada uno su controller y su model
