@@ -41,14 +41,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/review/1",
+					"raw": "{{URL}}/api/review/613501cc5d2cde74513cdc78",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"review",
-						"1"
+						"613501cc5d2cde74513cdc78"
 					]
 				}
 			},
@@ -61,7 +61,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\n    \"punctuation\":4.6,\n    \"comment\":\"groupware\",\n    \"pros\":[],\n    \"cons\":[],\n    \"author\":\"6134538081f8d8c8c6e6acf6\",\n    \"user\": \"613456b981f8d8c8c6e6acf8\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,15 +86,24 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"punctuation\": 4.8,\n    \"comment\": \" \"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{URL}}/api/review/1",
+					"raw": "{{URL}}/api/review/613501cc5d2cde74513cdc78",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"review",
-						"1"
+						"613501cc5d2cde74513cdc78"
 					]
 				}
 			},
@@ -106,14 +115,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/review/1",
+					"raw": "{{URL}}/api/review/613501cc5d2cde74513cdc78",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"review",
-						"1"
+						"613501cc5d2cde74513cdc78"
 					]
 				}
 			},
