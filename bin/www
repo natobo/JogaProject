@@ -5,45 +5,25 @@
  */
 
 const http = require('http');
+const mongoose = require('mongoose');
 const app = require('../app');
 const { config } = require('../config/config');
-
-/**
- * Get port from environment and store in Express.
- */
-
-const port = normalizePort(config.port || '3001');
-app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-const server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
 
 /**
  * Normalize a port into a number, string, or false.
  */
 
 function normalizePort(val) {
-  const port = parseInt(val, 10);
+  const nPort = parseInt(val, 10);
 
-  if (isNaN(port)) {
+  if (Number.isNaN(nPort)) {
     // named pipe
     return val;
   }
 
-  if (port >= 0) {
+  if (nPort >= 0) {
     // port number
-    return port;
+    return nPort;
   }
 
   return false;
@@ -82,3 +62,43 @@ function onListening() {
   if (config.dev) console.log(`Listening http://localhost:${config.port}`);
   else console.log(`Listening on ${bind}`);
 }
+
+/**
+ * Consts to make db connection, encodeURIComponent Encodes a text string as a valid component of a Uniform Resource Identifier
+ * this way we ensure no problems with special characters
+ */
+const USER = encodeURIComponent(config.dbUser);
+const PASSWORD = encodeURIComponent(config.dbPassword);
+const DB_NAME = config.dbName;
+// Our MongoDB URI
+const MONGO_URI = `mongodb+srv://${USER}:${PASSWORD}@${config.dbHost}/${DB_NAME}?retryWrites=true&w=majority`;
+// Do the DB Connection
+mongoose
+  .connect(MONGO_URI)
+  .then(() => {
+    console.log('DB connection succesful');
+  })
+  .catch((err) => {
+    console.log(`ERROR connecting to the DB💥: ${err}`);
+  });
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+const port = normalizePort(config.port || '3001');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+const server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);

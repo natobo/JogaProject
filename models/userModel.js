@@ -8,12 +8,19 @@ const usersSchema = new mongoose.Schema({
     type: String,
     required: [true, 'An user must have a name'],
   },
+  username: {
+    type: String,
+    required: [true, 'An user must have a username'],
+  },
   email: {
     type: String,
-    unique: true,
     lowercase: true,
     required: [true, 'An user must have a email'],
     validate: [validator.isEmail, 'Must provide a valid email'],
+  },
+  avatar: {
+    data: Buffer,
+    contentType: String,
   },
   role: {
     type: String,
@@ -38,6 +45,16 @@ const usersSchema = new mongoose.Schema({
     },
     select: false,
   },
+  bio: {
+    type: String,
+  },
+  bannerImgLink: {
+    data: Buffer,
+    contentType: String,
+  },
+  avgPunctuation: {
+    type: Number,
+  },
   active: {
     type: Boolean,
     default: true,
@@ -46,6 +63,12 @@ const usersSchema = new mongoose.Schema({
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,
+  // Relationships
+  // normalization to many to many
+  friends: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
+  games: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Game' }],
+  lfgs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'LFG' }],
+  dashboards: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Dashboard' }],
 });
 
 usersSchema.pre('save', async function (next) {
