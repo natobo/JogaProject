@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "a7062728-1a32-4600-b0e1-ec6f6b7846aa",
+    "name": "Joga Party Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET PARTIES",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}/api/party",
+          "host": ["{{URL}}"],
+          "path": ["api", "party"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET PARTY",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/api/party/6134dec90ee91009723acf50",
+          "host": ["{{URL}}"],
+          "path": ["api", "party", "6134dec90ee91009723acf50"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CREATE PARTY",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 201\", function () {\r",
+              "    pm.response.to.have.status(201);\r",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"idJitsiMeet\": \"https://bing.com/ligula.jsp?odio=in&porttitor=leo\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/api/party",
+          "host": ["{{URL}}"],
+          "path": ["api", "party"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT PARTY",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"idJitsiMeet\": \"https://comcast.net/vestibulum/quam/sapien/varius/ut/blandit.jsp\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/api/party/6134dec90ee91009723acf50",
+          "host": ["{{URL}}"],
+          "path": ["api", "party", "6134dec90ee91009723acf50"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE PARTY",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}/api/party/6134dedd0ee91009723acf53",
+          "host": ["{{URL}}"],
+          "path": ["api", "party", "6134dedd0ee91009723acf53"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "URL",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

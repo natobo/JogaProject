@@ -67,6 +67,9 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
    ```bash
    npm run dev
    ```
+4. Importar en postman la colección `Joga users-auth.postman_collection.json`.
+5. Logearse como admin haciendo la petición `LOGIN ADMIN` (Jwt guarda una cookie, para poder realizar las demás peticiones y en el caso de admin poder listar usuarios).
+6. ¡Empezar a probar los endpoints con las otras colecciones!
 
 ### Ejecutar aplicación de frontend 👽
 1. Dentro de la terminal, navegar a `202120_S2_E1/front-react`

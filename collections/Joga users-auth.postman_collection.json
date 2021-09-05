@@ -135,7 +135,7 @@
 					"response": []
 				},
 				{
-					"name": "ADD USER",
+					"name": "ADD USER / SING UP",
 					"request": {
 						"method": "POST",
 						"header": [],

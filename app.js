@@ -5,8 +5,8 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 // Middlewares for security
-const rateLimit = require('express-rate-limit'); // Enable CORS (Cross-origin resource sharing) in routes or in our app.
-const cors = require('cors');
+const rateLimit = require('express-rate-limit');
+const cors = require('cors'); // Enable CORS (Cross-origin resource sharing) in routes or in our app.
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
