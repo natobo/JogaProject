@@ -1,88 +1,39 @@
 const express = require('express');
-const { usersMock } = require('../utils/mocks/mock-user');
+const authController = require('../controllers/authController');
+const userController = require('../controllers/userController');
 /**
  * Router for the User class
  * @param {*} app principal App from express framework
  */
-function userRouter(app) {
-  const router = express.Router();
-  // Defines the router and the direction of the path to be called
-  app.use('/api/user', router);
+const router = express.Router();
 
-  // CRUD for the user object
-  router.get('/', async function (req, res, next) {
-    try {
-      const users = await Promise.resolve(usersMock);
-      // Defines the response of the server
-      res.status(200).json({
-        data: users,
-        message: 'Users listed',
-      });
-    } catch (error) {
-      // next is catching the error from a callback function
-      next(error);
-    }
-  });
+// Auth routes
+router.post('/signup', authController.signup);
+router.post('/login', authController.login);
+router.get('/logout', authController.logout);
 
-  router.get('/:userId', async function (req, res, next) {
-    try {
-      // Search the user in the mock if dont exists retrieve data empty
-      const user = await Promise.resolve(
-        usersMock.find((mUser) => mUser.id === Number(req.params.userId))
-      );
-      res.status(200).json({
-        data: user,
-        message: 'User retrieved',
-      });
-    } catch (error) {
-      next(error);
-    }
-  });
+router.post('/forgotPassword', authController.forgotPassword);
+router.patch('/resetPassword/:token', authController.resetPassword);
 
-  router.post('/', async function (req, res, next) {
-    try {
-      // Returns the id of the first One of the mock, later it will be the id of the created Object
-      const createdUserId = await Promise.resolve(usersMock[0].id);
-      // Defines the response of the server
-      res.status(201).json({
-        data: createdUserId,
-        message: 'User created',
-      });
-    } catch (error) {
-      // next is catching the error from a callback function
-      next(error);
-    }
-  });
+// Check that the user is logged
+router.use(authController.protect);
 
-  router.put('/:userId', async function (req, res, next) {
-    try {
-      // Returns the id of the first One of the mock, later it will be the id of the updated Object
-      const updatedUserId = await Promise.resolve(usersMock[0].id);
-      // Defines the response of the server
-      res.status(200).json({
-        data: updatedUserId,
-        message: 'User updated',
-      });
-    } catch (error) {
-      // next is catching the error from a callback function
-      next(error);
-    }
-  });
+router.patch('/updateMyPassword', authController.updatePassword);
+router.get('/getMe', userController.getMe, userController.getUser);
+router.patch('/updateMe', userController.updateMe);
+router.delete('/deleteMe', userController.deleteMe);
 
-  router.delete('/:userId', async function (req, res, next) {
-    try {
-      // Returns the id of the first One of the mock, later it will be the id of the deleted Object
-      const deletedUserId = await Promise.resolve(usersMock[0].id);
-      // Defines the response of the server
-      res.status(200).json({
-        data: deletedUserId,
-        message: 'User deleted',
-      });
-    } catch (error) {
-      // next is catching the error from a callback function
-      next(error);
-    }
-  });
-}
+// Restrict to admin access
+router.use(authController.restrictTo('admin'));
 
-module.exports = userRouter;
+router
+  .route('/')
+  .get(userController.getAllUsers)
+  .post(userController.createUser);
+router
+  .route('/:id')
+  .get(userController.getUser)
+  .patch(userController.updateUser)
+  .delete(userController.deleteUser);
+
+module.exports = router;
