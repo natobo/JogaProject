@@ -5,9 +5,9 @@ const dashboardController = require('../controllers/dashboardController');
  * Router for the Dashboard class
  */
 const router = express.Router();
+
 // Check that the user is logged
 router.use(authController.protect);
-
 // CRUD for the user object
 router.get('/', dashboardController.getAllDashboards);
 router.get('/:id', dashboardController.getDashboard);
