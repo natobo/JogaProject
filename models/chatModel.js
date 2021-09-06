@@ -10,7 +10,7 @@ const chatSchema = mongoose.Schema({
     type: String,
     required: [true, 'lastMessageID is required to create the chat'],
   },
-  icon: {
+  Icon: {
     type: String,
     required: [true, 'icon is required to create the chat'],
     validator: [validator.isURL, 'Must provide a valid URL'],
