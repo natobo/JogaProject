@@ -4,7 +4,7 @@ const validator = require('validator');
 const partySchema = mongoose.Schema({
   idJitsiMeet: {
     type: String,
-    require: [true, 'idJitsiMeet is required to create the party'],
+    required: [true, 'idJitsiMeet is required to create the party'],
     validator: [validator.isURL, 'Must provide a valid URL'],
   },
 });
