@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "c62d9f79-503f-46d4-afe1-59a826ef26bc",
+		"_postman_id": "d03a0547-463a-4a04-94f3-138c56501a49",
 		"name": "ranking",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -30,7 +30,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/api/ranking/1",
+					"raw": "localhost:3000/api/ranking/613649142e93814016c6b384",
 					"host": [
 						"localhost"
 					],
@@ -38,7 +38,7 @@
 					"path": [
 						"api",
 						"ranking",
-						"1"
+						"613649142e93814016c6b384"
 					]
 				}
 			},
@@ -49,6 +49,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Asoka\",\r\n    \"description\": \"a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor\",\r\n    \"lfg\": \"613649022e93814016c6b37f\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "localhost:3000/api/ranking/",
 					"host": [
@@ -69,8 +78,17 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Cale Inc.\",\r\n    \"description\": \"El ranking de cale\",\r\n    \"lfg\": \"613649022e93814016c6b37f\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "localhost:3000/api/ranking/1",
+					"raw": "localhost:3000/api/ranking/613649142e93814016c6b384",
 					"host": [
 						"localhost"
 					],
@@ -78,7 +96,7 @@
 					"path": [
 						"api",
 						"ranking",
-						"1"
+						"613649142e93814016c6b384"
 					]
 				}
 			},
@@ -90,7 +108,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/api/ranking/1",
+					"raw": "localhost:3000/api/ranking/613649142e93814016c6b384",
 					"host": [
 						"localhost"
 					],
@@ -98,7 +116,7 @@
 					"path": [
 						"api",
 						"ranking",
-						"1"
+						"613649142e93814016c6b384"
 					]
 				}
 			},

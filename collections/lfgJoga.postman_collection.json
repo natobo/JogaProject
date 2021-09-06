@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fed96a61-0e5b-4182-846a-3f98d0835147",
+		"_postman_id": "5329f8b5-4766-4150-a091-6d31ad733e1a",
 		"name": "lfg",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -30,7 +30,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/api/lfg/1",
+					"raw": "localhost:3000/api/lfg/6136460e2e93814016c6b372",
 					"host": [
 						"localhost"
 					],
@@ -38,7 +38,7 @@
 					"path": [
 						"api",
 						"lfg",
-						"1"
+						"6136460e2e93814016c6b372"
 					]
 				}
 			},
@@ -49,6 +49,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"region\": \"asia\",\r\n    \"comment\": \"sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis\",\r\n    \"authorUsername\": \"vniblock0\",\r\n    \"createdAt\": \"2021-08-27 01:55:46\",\r\n    \"expiresAt\": \"2021-08-29 12:28:54\",\r\n    \"user\": \"6134538081f8d8c8c6e6acf6\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "localhost:3000/api/lfg",
 					"host": [
@@ -68,8 +77,17 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"region\": \"asia\",\r\n    \"comment\": \"jaja si\",\r\n    \"authorUsername\": \"vniblock0\",\r\n    \"createdAt\": \"2021-08-27 01:55:46\",\r\n    \"expiresAt\": \"2021-08-30 12:28:54\",\r\n    \"user\": \"6134538081f8d8c8c6e6acf6\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "localhost:3000/api/lfg/1",
+					"raw": "localhost:3000/api/lfg/6136460e2e93814016c6b372",
 					"host": [
 						"localhost"
 					],
@@ -77,7 +95,7 @@
 					"path": [
 						"api",
 						"lfg",
-						"1"
+						"6136460e2e93814016c6b372"
 					]
 				}
 			},
@@ -89,7 +107,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/api/lfg/1",
+					"raw": "localhost:3000/api/lfg/6136460e2e93814016c6b372",
 					"host": [
 						"localhost"
 					],
@@ -97,7 +115,7 @@
 					"path": [
 						"api",
 						"lfg",
-						"1"
+						"6136460e2e93814016c6b372"
 					]
 				}
 			},
