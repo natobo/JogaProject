@@ -13,6 +13,7 @@ const chatSchema = mongoose.Schema({
   icon: {
     type: String,
     required: [true, 'icon is required to create the chat'],
+    validator: [validator.isURL, 'Must provide a valid URL'],
   },
 });
 
