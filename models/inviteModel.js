@@ -4,8 +4,8 @@ const inviteSchema = mongoose.Schema({
   description: String,
   status: {
     type: String,
-    enum: ['accepted', 'rejected', 'pending'],
-    default: 'pending',
+    enum: ['ACCEPTED', 'REJECTED', 'PENDING'],
+    default: 'PENDING',
   },
   createdAt: Date,
   completeddAt: Date,
@@ -21,4 +21,4 @@ const inviteSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('invite', inviteSchema);
+module.exports = mongoose.model('Invite', inviteSchema);

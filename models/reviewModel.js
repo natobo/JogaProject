@@ -19,8 +19,8 @@ const reviewSchema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: [true, 'user is required to create the review'],
+    required: [true, 'User is required to create the review'],
   },
 });
 
-module.exports = mongoose.model('review', reviewSchema);
+module.exports = mongoose.model('Review', reviewSchema);

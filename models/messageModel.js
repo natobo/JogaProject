@@ -11,6 +11,16 @@ const messageSchema = mongoose.Schema({
     type: String,
     required: [true, 'content is required to create the message'],
   },
+  chat: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Chat',
+    required: [true, 'chat is required to create the message'],
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: [true, 'user is required to create the message'],
+  },
 });
 
 module.exports = mongoose.model('Message', messageSchema);

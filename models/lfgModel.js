@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const lfgSchema = mongoose.Schema({
   region: {
     type: String,
-    enum: ['latam', 'europe', 'northamerica', 'asia', 'oceania', 'africa'],
-    default: 'latam',
+    enum: ['LATAM', 'EUROPE', 'NORTHAMERICA', 'ASIA', 'OCEANIA', 'AFRICA'],
+    default: 'LATAM',
   },
   comment: {
     type: String,

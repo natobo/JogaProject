@@ -1,20 +1,24 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
 
 const chatSchema = mongoose.Schema({
-  nombre: {
+  name: {
     type: String,
-    required: [true, 'nombre is required to create the chat'],
+    required: [true, 'name is required to create the chat'],
   },
   lastMessageID: {
     type: String,
     required: [true, 'lastMessageID is required to create the chat'],
   },
   Icon: {
-    type: String,
-    required: [true, 'icon is required to create the chat'],
-    validator: [validator.isURL, 'Must provide a valid URL'],
+    data: Buffer,
+    contentType: String,
   },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: [true, 'user is required to create the chat'],
+  },
+  messages: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Message' }],
 });
 
 module.exports = mongoose.model('Chat', chatSchema);

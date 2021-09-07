@@ -18,7 +18,7 @@ const gamesSchema = new mongoose.Schema({
       validator(el) {
         return el.length > 0 && el.length < 5;
       },
-      message: 'A game must have at leat 1 platform!',
+      message: 'A game must have at least 1 platform!',
     },
   },
   linkImg: [
