@@ -68,9 +68,10 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
    ```bash
    npm run dev
    ```
-5. Importar en postman la colección `Joga users-auth.postman_collection.json`, [link al workspace público de postman](https://www.postman.com/EwadtLPMDhZx2Va/workspace/joga-web-isis3710-uniandes-202120-s2-e1)
-6. Logearse como admin haciendo la petición `LOGIN ADMIN` (Jwt guarda una cookie, para poder realizar las demás peticiones y en el caso de admin poder listar usuarios).
-7. ¡Empezar a probar los endpoints con las otras colecciones!
+5. Importar el enviroment de postman `Joga Enviroment.postman_environment.json`, [link al workspace público de postman](https://www.postman.com/EwadtLPMDhZx2Va/workspace/joga-web-isis3710-uniandes-202120-s2-e1)
+6. Importar en postman la colección `Joga users-auth.postman_collection.json`
+7. Logearse como admin haciendo la petición `LOGIN ADMIN` (Jwt guarda una cookie, para poder realizar las demás peticiones y en el caso de admin poder listar usuarios).
+8. ¡Empezar a probar los endpoints con las otras colecciones!
 
 ### Ejecutar aplicación de frontend 👽
 1. Dentro de la terminal, navegar a `202120_S2_E1/front-react`
