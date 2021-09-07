@@ -6,8 +6,7 @@ const chatSchema = mongoose.Schema({
     required: [true, 'name is required to create the chat'],
   },
   lastMessageID: {
-    type: String,
-    required: [true, 'lastMessageID is required to create the chat'],
+    type: mongoose.Schema.Types.ObjectId,
   },
   Icon: {
     data: Buffer,

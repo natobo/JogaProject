@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "ef2d7e91-12c9-4cd7-991a-69da5df35eaa",
-		"name": "Joga Party Collection",
+		"_postman_id": "64c92fa2-b0ca-4b9c-a770-6c52f7b843dd",
+		"name": "Joga Chat Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CREATE PARTY",
+			"name": "CREATE CHAT",
 			"event": [
 				{
 					"listen": "test",
@@ -25,7 +25,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://bing.com/ligula.jsp?odio=in&porttitor=leo\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Joy Vallery\",\r\n    \"user\": \"613456b981f8d8c8c6e6acf8\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -33,51 +33,20 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "{{URL}}/api/chat",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party"
+						"chat"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTIES",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});"
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{URL}}/api/party",
-					"host": [
-						"{{URL}}"
-					],
-					"path": [
-						"api",
-						"party"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET PARTY",
+			"name": "GET CHAT",
 			"event": [
 				{
 					"listen": "test",
@@ -99,29 +68,55 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": ""
 				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/chat/6136ddd300b9e7d68a2dfd4d",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"chat",
+						"6136ddd300b9e7d68a2dfd4d"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT PARTY",
+			"name": "GET ALL CHAT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/chat",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"chat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT CHAT",
 			"event": [
 				{
 					"listen": "test",
@@ -140,7 +135,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://comcast.net/vestibulum/quam/sapien/varius/ut/blandit.jsp\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Sebas Vallery\",\r\n    \"user\": \"613456b981f8d8c8c6e6acf8\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,21 +143,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/chat/6136dd7f00b9e7d68a2dfd3f",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"chat",
+						"6136dd7f00b9e7d68a2dfd3f"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE PARTY",
+			"name": "DELETE CHAT",
 			"event": [
 				{
 					"listen": "test",
@@ -180,44 +175,18 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/chat/6136dd6e00b9e7d68a2dfd3c",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"chat",
+						"6136dd6e00b9e7d68a2dfd3c"
 					]
 				}
 			},
 			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "URL",
-			"value": "http://localhost:3000"
 		}
 	]
 }

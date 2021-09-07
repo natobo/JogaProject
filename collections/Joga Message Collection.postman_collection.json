@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "ef2d7e91-12c9-4cd7-991a-69da5df35eaa",
-		"name": "Joga Party Collection",
+		"_postman_id": "584ba82f-504f-4425-91c6-84f53a4630bc",
+		"name": "Joga Message Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CREATE PARTY",
+			"name": "CREATE MESSAGE",
 			"event": [
 				{
 					"listen": "test",
@@ -25,7 +25,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://bing.com/ligula.jsp?odio=in&porttitor=leo\"\r\n}",
+					"raw": "{\r\n    \"content\": \"Hello World\",\r\n    \"timestamp\": \"2021-08-27 01:55:46\",\r\n    \"user\": \"613456b981f8d8c8c6e6acf8\",\r\n    \"chat\": \"6136ddd300b9e7d68a2dfd4d\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -33,20 +33,20 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "{{URL}}/api/message",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party"
+						"message"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTIES",
+			"name": "GET MESSAGE",
 			"event": [
 				{
 					"listen": "test",
@@ -64,20 +64,21 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "{{URL}}/api/message/61367428fcfdc431e6274990",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party"
+						"message",
+						"61367428fcfdc431e6274990"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTY",
+			"name": "GET ALL MESSAGE",
 			"event": [
 				{
 					"listen": "test",
@@ -91,37 +92,24 @@
 					}
 				}
 			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/message",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"message"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT PARTY",
+			"name": "PUT MESSAGE",
 			"event": [
 				{
 					"listen": "test",
@@ -140,7 +128,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://comcast.net/vestibulum/quam/sapien/varius/ut/blandit.jsp\"\r\n}",
+					"raw": "{\r\n    \"content\": \"Bye World\",\r\n    \"timestamp\": \"2021-08-27 01:55:46\",\r\n    \"user\": \"613456b981f8d8c8c6e6acf8\",\r\n    \"chat\": \"6136ddd300b9e7d68a2dfd4d\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,21 +136,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/message/6136dfcc00b9e7d68a2dfd54",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"message",
+						"6136dfcc00b9e7d68a2dfd54"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE PARTY",
+			"name": "DELETE MESSAGE",
 			"event": [
 				{
 					"listen": "test",
@@ -180,44 +168,18 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/message/6136dfcc00b9e7d68a2dfd54",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"message",
+						"6136dfcc00b9e7d68a2dfd54"
 					]
 				}
 			},
 			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "URL",
-			"value": "http://localhost:3000"
 		}
 	]
 }
