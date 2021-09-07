@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const buffer = require('buffer');
-const validator = require('validator');
 
 const gamesSchema = new mongoose.Schema({
   name: {
