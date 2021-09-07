@@ -41,14 +41,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/game/5",
+					"raw": "{{URL}}/api/game/6136c55dca94070de96d0214",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"game",
-						"5"
+						"6136c55dca94070de96d0214"
 					]
 				}
 			},
@@ -61,7 +61,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": " {\r\n    \"name\": \"Matsoft 2\",\r\n    \"platform\": [\"PC\"],\r\n    \"linkImg\": [ ],\r\n    \"type\": \"ACCION\"\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -86,15 +86,24 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"name\": \"Matsoft 2\",\r\n    \"platform\": [\"PC\", \"XBOX\"],\r\n    \"linkImg\": [ ],\r\n    \"type\": \"ACCION\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{URL}}/api/game/1",
+					"raw": "{{URL}}/api/game/6136c55dca94070de96d0214",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"game",
-						"1"
+						"6136c55dca94070de96d0214"
 					]
 				}
 			},
@@ -106,14 +115,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/game/1",
+					"raw": "{{URL}}/api/game/6136c55dca94070de96d0214",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"game",
-						"1"
+						"6136c55dca94070de96d0214"
 					]
 				}
 			},

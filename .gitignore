@@ -61,6 +61,8 @@ typings/
 .next
 
 # front
-
 front-react/node_modules
+
+#WebStorm configuration
+.idea
 
