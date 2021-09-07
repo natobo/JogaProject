@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "ef2d7e91-12c9-4cd7-991a-69da5df35eaa",
-		"name": "Joga Party Collection",
+		"_postman_id": "0d4225a6-08a5-44aa-91cf-7b9b4b0fbe47",
+		"name": "Joga Game Collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CREATE PARTY",
+			"name": "CREATE GAME",
 			"event": [
 				{
 					"listen": "test",
@@ -25,7 +25,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://bing.com/ligula.jsp?odio=in&porttitor=leo\"\r\n}",
+					"raw": " {\r\n    \"name\": \"Matsoft 2\",\r\n    \"platform\": [\"PC\"],\r\n    \"linkImg\": [ ],\r\n    \"type\": \"ACCION\"\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -33,20 +33,20 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "{{URL}}/api/game",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party"
+						"game"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTIES",
+			"name": "GET GAMES",
 			"event": [
 				{
 					"listen": "test",
@@ -64,20 +64,20 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "{{URL}}/api/game",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party"
+						"game"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTY",
+			"name": "GET GAME",
 			"event": [
 				{
 					"listen": "test",
@@ -107,21 +107,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/game/6136b46b5cab918f3113be4c",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"game",
+						"6136b46b5cab918f3113be4c"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT PARTY",
+			"name": "PUT GAME",
 			"event": [
 				{
 					"listen": "test",
@@ -140,7 +140,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://comcast.net/vestibulum/quam/sapien/varius/ut/blandit.jsp\"\r\n}",
+					"raw": " {\r\n    \"name\": \"Matsoft 2\",\r\n    \"platform\": [\"PC\", \"XBOX\"],\r\n    \"linkImg\": [ ],\r\n    \"type\": \"ACCION\"\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,21 +148,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/game/6136b46b5cab918f3113be4c",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"game",
+						"6136b46b5cab918f3113be4c"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE PARTY",
+			"name": "DELETE GAME",
 			"event": [
 				{
 					"listen": "test",
@@ -180,14 +180,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "{{URL}}/api/game/6136c55dca94070de96d0214",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"game",
+						"6136c55dca94070de96d0214"
 					]
 				}
 			},

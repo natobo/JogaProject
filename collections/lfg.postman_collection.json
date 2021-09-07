@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "ef2d7e91-12c9-4cd7-991a-69da5df35eaa",
-		"name": "Joga Party Collection",
+		"_postman_id": "c2443213-bd25-4070-bb59-7bd807d763a9",
+		"name": "lfg",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CREATE PARTY",
+			"name": "CREATE LFG",
 			"event": [
 				{
 					"listen": "test",
@@ -25,7 +25,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://bing.com/ligula.jsp?odio=in&porttitor=leo\"\r\n}",
+					"raw": "{\r\n    \"region\": \"ASIA\",\r\n    \"comment\": \"sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis\",\r\n    \"authorUsername\": \"vniblock0\",\r\n    \"createdAt\": \"2021-08-27 01:55:46\",\r\n    \"expiresAt\": \"2021-08-29 12:28:54\",\r\n    \"user\": \"6134538081f8d8c8c6e6acf6\"\r\n    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -33,20 +33,21 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "localhost:3000/api/lfg",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party"
+						"lfg"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTIES",
+			"name": "GET LFGS",
 			"event": [
 				{
 					"listen": "test",
@@ -64,20 +65,21 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "localhost:3000/api/lfg",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party"
+						"lfg"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTY",
+			"name": "GET LFG",
 			"event": [
 				{
 					"listen": "test",
@@ -91,37 +93,26 @@
 					}
 				}
 			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "localhost:3000/api/lfg/6136da593d10da2b26c12e7e",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"lfg",
+						"6136da593d10da2b26c12e7e"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT PARTY",
+			"name": "PUT LFG",
 			"event": [
 				{
 					"listen": "test",
@@ -140,7 +131,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://comcast.net/vestibulum/quam/sapien/varius/ut/blandit.jsp\"\r\n}",
+					"raw": "{\r\n    \"region\": \"ASIA\",\r\n    \"comment\": \"jaja si\",\r\n    \"authorUsername\": \"vniblock0\",\r\n    \"createdAt\": \"2021-08-27 01:55:46\",\r\n    \"expiresAt\": \"2021-08-30 12:28:54\",\r\n    \"user\": \"6134538081f8d8c8c6e6acf6\"\r\n    \r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,21 +139,22 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "localhost:3000/api/lfg/6136da593d10da2b26c12e7e",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"lfg",
+						"6136da593d10da2b26c12e7e"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE PARTY",
+			"name": "DELETE LFG",
 			"event": [
 				{
 					"listen": "test",
@@ -180,44 +172,19 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "localhost:3000/api/lfg/6136db233d10da2b26c12e95",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"lfg",
+						"6136db233d10da2b26c12e95"
 					]
 				}
 			},
 			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "URL",
-			"value": "http://localhost:3000"
 		}
 	]
 }

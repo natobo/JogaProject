@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "ef2d7e91-12c9-4cd7-991a-69da5df35eaa",
-		"name": "Joga Party Collection",
+		"_postman_id": "4b08a393-1e8c-4797-a87e-522d22fa284d",
+		"name": "ranking",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "CREATE PARTY",
+			"name": "CREATE RANKING",
 			"event": [
 				{
 					"listen": "test",
@@ -25,7 +25,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://bing.com/ligula.jsp?odio=in&porttitor=leo\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Asoka\",\r\n    \"description\": \"a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor\",\r\n    \"lfg\": \"613649022e93814016c6b37f\"\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -33,20 +33,22 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "localhost:3000/api/ranking/",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party"
+						"ranking",
+						""
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTIES",
+			"name": "GET RANKINGS",
 			"event": [
 				{
 					"listen": "test",
@@ -64,20 +66,21 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party",
+					"raw": "localhost:3000/api/ranking",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party"
+						"ranking"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET PARTY",
+			"name": "GET RANKING",
 			"event": [
 				{
 					"listen": "test",
@@ -91,37 +94,26 @@
 					}
 				}
 			],
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "localhost:3000/api/ranking/6136db233d10da2b26c12e95",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"ranking",
+						"6136db233d10da2b26c12e95"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "PUT PARTY",
+			"name": "PUT RANKING",
 			"event": [
 				{
 					"listen": "test",
@@ -140,7 +132,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"idJitsiMeet\": \"https://comcast.net/vestibulum/quam/sapien/varius/ut/blandit.jsp\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Cale Inc.\",\r\n    \"description\": \"El ranking de cale\",\r\n    \"lfg\": \"613649022e93814016c6b37f\"\r\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -148,21 +140,22 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "localhost:3000/api/ranking/613649142e93814016c6b384",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"ranking",
+						"613649142e93814016c6b384"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE PARTY",
+			"name": "DELETE RANKING",
 			"event": [
 				{
 					"listen": "test",
@@ -180,44 +173,19 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/party/6134f4303c5ca5c3adcb8835",
+					"raw": "localhost:3000/api/ranking/613649142e93814016c6b384",
 					"host": [
-						"{{URL}}"
+						"localhost"
 					],
+					"port": "3000",
 					"path": [
 						"api",
-						"party",
-						"6134f4303c5ca5c3adcb8835"
+						"ranking",
+						"613649142e93814016c6b384"
 					]
 				}
 			},
 			"response": []
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "URL",
-			"value": "http://localhost:3000"
 		}
 	]
 }

@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const dashboardSchema = mongoose.Schema({
   theme: {
     type: String,
-    enum: ['dark', 'light', 'blue', 'red'],
-    default: 'dark',
+    enum: ['DARK', 'LIGHT', 'BLUE', 'RED'],
+    default: 'DARK',
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

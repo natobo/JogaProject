@@ -68,6 +68,9 @@ const usersSchema = new mongoose.Schema({
   games: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Game' }],
   lfgs: [{ type: mongoose.Schema.Types.ObjectId, ref: 'LFG' }],
   dashboards: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Dashboard' }],
+  myReviews: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Review' }],
+  chats: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Chat' }],
+  invites: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Invite' }],
 });
 
 usersSchema.pre('save', async function (next) {

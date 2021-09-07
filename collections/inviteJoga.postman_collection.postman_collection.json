@@ -1,10 +1,50 @@
 {
 	"info": {
-		"_postman_id": "725d42bc-2e08-4c9b-9356-16b404d80017",
+		"_postman_id": "f1bccb34-0a4f-43a9-b797-537f2e2c3a60",
 		"name": "inviteJoga.postman_collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "CREATE INVITE",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\":\"Sharable\",\n    \"status\":\"PENDING\",\n    \"cratedAt\":\"8/30/2021\",\n    \"completedAt\":\"8/31/2021\",\n    \"sender\":\"6134538081f8d8c8c6e6acf6\",\n    \"reciver\":\"613456b981f8d8c8c6e6acf8\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/invite",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"invite"
+					]
+				}
+			},
+			"response": []
+		},
 		{
 			"name": "GET INVITES",
 			"request": {
@@ -41,41 +81,14 @@
 					}
 				},
 				"url": {
-					"raw": "{{URL}}/api/invite/1",
+					"raw": "{{URL}}/api/invite/6134fb944b566296bc4bd23a",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"invite",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "CREATE INVITE",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{URL}}/api/invite",
-					"host": [
-						"{{URL}}"
-					],
-					"path": [
-						"api",
-						"invite"
+						"6134fb944b566296bc4bd23a"
 					]
 				}
 			},
@@ -86,15 +99,24 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\":\"Hello\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "{{URL}}/api/invite/1",
+					"raw": "{{URL}}/api/invite/6134fb944b566296bc4bd23a",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"invite",
-						"1"
+						"6134fb944b566296bc4bd23a"
 					]
 				}
 			},
@@ -106,14 +128,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{URL}}/api/invite/1",
+					"raw": "{{URL}}/api/invite/6134fb944b566296bc4bd23a",
 					"host": [
 						"{{URL}}"
 					],
 					"path": [
 						"api",
 						"invite",
-						"1"
+						"6134fb944b566296bc4bd23a"
 					]
 				}
 			},
