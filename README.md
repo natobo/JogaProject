@@ -1,5 +1,9 @@
 
 # 202120_S2_E1 - Proyecto JOGA
+
+## Links
+[GitInspector](https://isis3710-uniandes.github.io/202120_S2_E1/reports)
+
 >**Aviso para quien este calificando las entregas 😁:** Tratamos de llevar una especie de git flow, por lo que si no se ven los cambios en master por favor🙏 revisar la rama `dev`
 ## Tabla de contenido
   - [Tabla de contenido](#tabla-de-contenido)
