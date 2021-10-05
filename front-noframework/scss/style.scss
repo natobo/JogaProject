@@ -1,0 +1,16 @@
+@use 'custom';
+
+// Import the components
+@use 'components/animations';
+@use 'components/mixins';
+@use 'components/buttons';
+@use 'components/typography';
+
+// Import the sections of the landing page
+@use 'sections-landing/carrousel-games';
+@use 'sections-landing/footer';
+@use 'sections-landing/intro-section';
+@use 'sections-landing/joga-section';
+@use 'sections-landing/lfgs-section';
+@use 'sections-landing/navbar';
+@use 'sections-landing/tab-services';

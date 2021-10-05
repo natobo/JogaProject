@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "run-script-os",
+    "compile:sass": "sass --watch front-noframework/scss:front-noframework/assets/css",
     "dev:windows": "SET DEBUG=app:* & nodemon ./bin/www",
     "dev:default": "DEBUG=app:* nodemon ./bin/www",
     "start": "run-script-os",
@@ -17,7 +18,10 @@
     "front-react"
   ],
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "autoprefixer": "^9.8.7",
     "bcrypt": "^5.0.1",
+    "bootstrap": "^5.1.1",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -30,6 +34,7 @@
     "mongoose": "^6.0.4",
     "morgan": "^1.10.0",
     "nodemailer": "^6.6.3",
+    "postcss-cli": "^9.0.1",
     "validator": "^13.6.0",
     "xss-clean": "^0.1.1"
   },
@@ -50,7 +55,8 @@
     "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
-    "run-script-os": "^1.1.6"
+    "run-script-os": "^1.1.6",
+    "sass": "^1.42.1"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"

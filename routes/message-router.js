@@ -2,7 +2,7 @@ const express = require('express');
 const authController = require('../controllers/authController');
 const messageController = require('../controllers/messageController');
 /**
- * Router for the Message class
+ * create Router for the Message class
  */
 const router = express.Router();
 // Check that the user is logged
