@@ -1,0 +1,34 @@
+@use '../custom' as *;
+
+.display-2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+
+  &--intro {
+    display: inline-block;
+    font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    color: $white;
+  }
+
+  &--description {
+    font-size: 1rem;
+    display: block;
+    margin-top: 1.2rem;
+    text-transform: none;
+    color: $white;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+      display: inline-block;
+    }
+  }
+}
+
+.section-title-black {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  color: $black;
+}

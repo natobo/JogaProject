@@ -1,0 +1,24 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.tab-services {
+  img {
+    width: 25rem;
+    height: 25rem;
+  }
+  h3 {
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  nav {
+    @include gradient;
+  }
+}
+
+.center-pills {
+  display: flex;
+  justify-content: center;
+}
