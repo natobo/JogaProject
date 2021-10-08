@@ -11247,3 +11247,28 @@ textarea.form-control-lg {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.circulo {
+  width: 375px;
+  height: 384px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background:var(--bs-indigo);
+}
+.rectangulo{
+  width: auto; 
+  height: 300px; 
+  background: var(--bs-indigo);
+}
+
+
+.amigos{
+width: 306px;
+height: 83px;
+left: 198px;
+top: 1189px;
+
+background: #4D1FEA;
+border-radius: 88.5px;
+}
