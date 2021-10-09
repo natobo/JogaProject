@@ -29,7 +29,7 @@ const messageRouter = require('./routes/message-router');
 const app = express();
 
 // MIDDLEWARES
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(helmet());
 app.use(logger('dev'));
 app.use(cookieParser());

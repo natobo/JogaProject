@@ -1,4 +1,5 @@
-// import {getCardTemplate} from "./templates";
+import { getCardTemplate } from './templates.js';
+
 // console.log(getCardTemplate);
 const urlBackLogin = 'http://localhost:3000/api/user/login';
 const urlBackGames = 'http://localhost:3000/api/game';
@@ -150,26 +151,40 @@ carruselesJuegos.forEach((p) => {
 });
 
 async function apiCall() {
-  await fetch(urlBackLogin, {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      email: 'noreply.joga@gmail.com',
-      password: 'admin123',
-    }),
-  })
-    .then((p) => console.log(p.json()))
-    .catch((e) => console.log(e));
+  try {
+    const resp = await fetch(urlBackLogin, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: 'noreply.joga@gmail.com',
+        password: 'admin123',
+      }),
+    });
+    console.log(resp);
+    const respJson = await resp.json();
+    localStorage.setItem('jwt', respJson.token);
+  } catch (error) {
+    console.log(error);
+  }
 
-  await fetch(urlBackGames)
-    .then((resp) => console.log(resp))
-    .then((data) => {
-      console.log('data', data);
-    })
-    .catch((e) => console.log(e));
+  try {
+    const dataGames = await fetch(urlBackGames, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
+    console.log(dataGames);
+    const dataGamesJson = await dataGames.json();
+    console.log(dataGamesJson);
+  } catch (error) {
+    console.log(error);
+  }
 }
 console.log(carruselesJuegos);
 apiCall();
