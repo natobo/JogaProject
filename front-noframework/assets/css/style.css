@@ -11246,4 +11246,234 @@ textarea.form-control-lg {
   justify-content: center;
 }
 
+body {
+  background: #260A87;
+}
+
+.juegos-carruseles {
+  position: absolute;
+  height: 86%;
+  width: 86%;
+  left: 14%;
+  top: 14%;
+}
+
+.contenedor-titulo-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+  background: #bb6ef5;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+  background: #9926f0;
+}
+
+.juegos-recientes, .juegos-populares, .juegos-competitivos, .juegos-casuales {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.contenedor-principal .flecha-izquierda,
+.contenedor-principal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.01);
+  font-size: 40px;
+  height: 50%;
+  top: 25%;
+  line-height: 40px;
+  width: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.contenedor-principal .flecha-izquierda:hover,
+.contenedor-principal .flecha-derecha:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.contenedor-principal .flecha-izquierda {
+  left: 0;
+}
+
+.contenedor-principal .flecha-derecha {
+  right: 0;
+}
+
+.contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.contenedor-carousel .carousel .game {
+  min-width: 16.66%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-carousel .carousel .game.hover {
+  transform: scale(1, 2);
+  transform-origin: center;
+}
+
+.contenedor-carousel .carousel .game img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.contenedor-carousel .carousel .game-description {
+  position: absolute;
+  font-size: 10px;
+  height: 100%;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  z-index: 400;
+  transition: 0.2s ease all;
+}
+
+.card-title {
+  font-size: 16px;
+}
+
+.card-text {
+  max-height: 50px;
+}
+
+.btn-primary {
+  margin-bottom: 10px;
+  bottom: 0;
+  font-size: 10px;
+}
+
+.contenedor-carousel .carousel .btn-primary {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.contenedor-carousel .carousel .game-description:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.contenedor-carousel .carousel .btn-primary:hover {
+  background: #260A87;
+  color: white;
+}
+
+.sidebargames {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 14%;
+  background: #3310AC;
+  padding: 6px 0px;
+}
+
+.logocontainer {
+  padding-top: 5%;
+}
+
+.logo {
+  color: #fff;
+  display: flex;
+  height: 4vh;
+  width: 100%;
+  align-items: center;
+}
+
+.sidebargames ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.sidebargames ul li {
+  position: relative;
+  height: 8vh;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 6vh;
+  border-radius: 12px;
+}
+
+.sidebargames ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  height: 100%;
+  width: 100%;
+  padding-left: 5%;
+}
+
+.sidebargames ul li a:hover {
+  background: #260A87;
+}
+
+.sidebargames ul li a i {
+  height: 6vh;
+  min-width: 30%;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.juegos-titulo {
+  position: absolute;
+  height: 14%;
+  width: 86%;
+  left: 14%;
+  background: #6A00EB;
+}
+
+.juegos-titulo .text {
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 8vh;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 5%;
+}
+
 /*# sourceMappingURL=style.css.map */
