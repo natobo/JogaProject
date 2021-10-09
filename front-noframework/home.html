@@ -13,34 +13,40 @@
     </head>
 <body>
     <header>
-    <!-- Nav bar-->
-    <nav class="navbar navbar-expand-lg navbar-light menu shadow fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-              <img src="assets/images/JOGA_LOGO.svg" alt="Logo Joga">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Juegos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">LFGs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Chats</a>
-              </li>
-              <button type="button" class="rounded-pill btn-rounded"><i class="fas fa-globe"></i></button>
-            </ul>
-          </div>
-        </div>
-      </nav>
+   <!-- START THE NAVBAR SECTION -->
+   <div class="sidebargames">
+    <div class="logocontainer">
+        <a class="navbar-brand" href="#">
+            <img  class="logo" src="assets/images/JOGA_LOGO.svg" alt="Logo Joga">
+        </a> 
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a href="#">
+                <i class='bx bx-home-alt'></i>
+                <span class="links-name">Home</span>
+            </a>
+        </li>
+        <li>
+           <a href="#">
+                <i class='bx bx-game' ></i>
+               <span class="links-name">Juegos</span>
+           </a>
+       </li>
+       <li>
+           <a href="#">
+                <i class='bx bx-group' ></i>
+               <span class="links-name">LFGs</span>
+           </a>
+       </li>
+       <li>
+           <a href="#">
+                <i class='bx bx-chat' ></i>
+               <span class="links-name">Chats</span>
+           </a>
+       </li>
+    </ul>
+ </div>
   </header>
   <!--USER SECTION-->
   <section id="img" class="intro-section">
@@ -58,7 +64,7 @@
            <!--Image section-->
           <div class="col-md-6 intros text-end">
             <div class="circulo">
-              <img src="assets/images/ps5_controller.svg" alt="control illustration" class="img-fluid" id="img-control">
+              <img class="circulo" src="https://image.flaticon.com/icons/png/512/435/435010.png" alt="control illustration" class="img-fluid" id="img-control">
               
             </div>
           </div>
@@ -92,31 +98,34 @@
                   <span class="display-2--intro">juegos Recientes</span>
                 </h1>  
               </div>
+              
             </div>
     </div>
 </section>
- <!--GAMES SECTION-->
- <section id="games" class="intro-section">
+ <!--DIV SECTION-->
+ <section id="div" class="intro-section">
     <div class="container-fluid container-intro">
         <div class="row align-items-center text-white">
 
           <table>
             <tr>
+              <!--AMIGOS SECTION-->
                 <td>
                   <h1 class="display-2 align-self-md-auto">
                     <span class="display-2--intro">Amigos</span>
                   </h1>
                   <h2 class="display-2 align-self-md-auto">
                     <dl>
-                        <dt class="row align-items-center amigos container-fluid"> <span class="display-2--description">Amigo 1</span></dt>
-                        <dt> <span class="display-2--description ">Amigo 2</span></dt>
-                        <dt> <span class="display-2--description">Amigo 3</span></dt>
-                        <dt> <span class="display-2--description">Amigo 4</span></dt>
-                        <dt> <span class="display-2--description">Amigo 5</span></dt>
+                        <dt class="row align-items-center container-fluid"> <span class="display-2--description amigos">Amigo 1</span></dt>
+                        <dt class="row align-items-center container-fluid"> <span class="display-2--description amigos">Amigo 2</span></dt>
+                        <dt class="row align-items-center container-fluid"> <span class="display-2--description amigos">Amigo 3</span></dt>
+                        <dt class="row align-items-center container-fluid"> <span class="display-2--description amigos">Amigo 4</span></dt>
+                        <dt class="row align-items-center container-fluid"> <span class="display-2--description amigos">Amigo 5</span></dt>
                       </dl>
                   </h2>
                 </td>
                 <td>
+                  <!--LFGs SECTION-->
                     <h1 class="display-2 align-self-md-auto">
                       <span class="display-2--intro">LFGs Activos</span>
                     </h1>
@@ -128,5 +137,5 @@
 </section>
     
 </body>
-<script src="./js/user.js"></script>
+<script type="module" src="./js/user.js" ></script>
 </html>

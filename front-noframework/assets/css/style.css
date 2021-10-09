@@ -11264,10 +11264,10 @@ textarea.form-control-lg {
 
 
 .amigos{
-width: 306px;
-height: 83px;
-left: 198px;
-top: 1189px;
+width: auto;
+height: auto;
+left: auto;
+top: auto;
 
 background: #4D1FEA;
 border-radius: 88.5px;
