@@ -1,0 +1,70 @@
+@use '../custom' as *;
+
+.circulo {
+    
+    width: 375px;
+    height: 384px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background:var(--bs-indigo);
+    z-index: -1;
+  }
+  .rectangulo{
+    width: auto; 
+    height: 300px; 
+    background: var(--bs-indigo);
+  } 
+
+.contenedor-home{
+    position: absolute;
+    height: 86%;
+    width: 86%;
+    left: 14%;
+}
+
+.contenedor-bio{
+    position: absolute;
+    height: auto;
+    width: 86%;
+    top: 41.3%;
+    left: 14%;
+}
+.contenedor-juegos{
+    position: absolute;
+    height: auto;
+    width: 86%;
+    top: 91.3%;
+    left: 14%;
+}
+.contenedor-recientes{
+    position: absolute;
+    height: auto;
+    width: 86%;
+    top: 60%;
+    left: 7%;
+}
+.contenedor-lfgs{
+    position: absolute;
+    height: auto;
+    width: 86%;
+    left: 40%;
+}
+
+.contenedor-div{
+    position: absolute;
+    height: auto;
+    width: 86%;
+    top: 155.2%;
+    left: 14%;
+}
+
+.amigos{
+    width: auto;
+    height: auto;
+    left: auto;
+    top: auto;
+    
+    background: #4D1FEA;
+    border-radius: 88.5px;
+    }
