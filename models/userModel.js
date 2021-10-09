@@ -22,6 +22,7 @@ const usersSchema = new mongoose.Schema({
     data: Buffer,
     contentType: String,
   },
+  avatarUrl: String,
   role: {
     type: String,
     enum: ['user', 'admin'],
