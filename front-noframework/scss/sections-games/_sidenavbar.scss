@@ -1,0 +1,77 @@
+@use '../custom' as *;
+
+ .sidebargames{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 14%;
+    background: $blue-dark;
+    padding: 6px 0px;
+  }
+
+  .logocontainer{
+    padding-top: 5%;
+
+  }
+
+  .logo{
+    color: #fff;
+    display: flex;
+    height: 4vh;
+    width: 100%;
+    align-items: center;
+    
+  }
+
+  .sidebargames ul{
+    margin-top: 0;
+    padding-left: 0 ;
+  }
+
+  .sidebargames ul li{
+    position: relative;
+    height: 8vh;
+    width: 100%;
+    margin: 0 5px;
+    list-style: none;
+    line-height: 6vh;
+    border-radius: 12px;
+  }
+
+  .sidebargames ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+  }
+
+  .sidebargames ul li a:hover{
+    
+    background: $blue-darker;
+  
+
+
+  }
+
+  .sidebargames ul li a i{
+    height: 6vh;
+    min-width: 30%;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+  
+  }
+
+  
+
+
+
+
+
+  
+  
