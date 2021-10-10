@@ -1,4 +1,85 @@
-@use '../custom' as *;
-body{
+@use "../custom" as *;
+body {
     background: $blue-darker;
+}
+.Archivados {
+    position: absolute;
+    width: 515px;
+    height: 50px;
+    left: 253px;
+    top: 153px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 130%;
+    /* or 47px */
+
+    font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+
+    color: #ffffff;
+}
+.chat1 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 232px;
+}
+.chat2 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 401.86px;
+}
+.chat3 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 571.44px;
+}
+.chat4 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 741.01px;
+}
+.chat5 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 910.59px;
+}
+.chat6 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 1080.16px;
+}
+.chat7 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 1249.73px;
+}
+.chat8 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 1419.31px;
+}
+.chat9 {
+    position: absolute;
+    width: 1092px;
+    height: 169.14px;
+    left: 179px;
+    top: 1588px;
 }

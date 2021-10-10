@@ -1,0 +1,45 @@
+@use "../custom" as *;
+.chats-titulo {
+  position: absolute;
+  height: 14%;
+  width: 86%;
+  left: 14%;
+  background: $purple-blue;
+}
+
+.chats-titulo .text {
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 8vh;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 5%;
+}
+.barra-contactos {
+  position: absolute;
+  height: 40px;
+  left: 80%;
+  right: 0%;
+  top: calc(50% - 40px / 2);
+  border-radius: 10px;
+}
+.barra-contactos.text {
+  position: absolute;
+height: 24px;
+left: 20px;
+right: 20px;
+top: calc(50% - 24px/2);
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 222.3%;
+/* or 44px */
+
+text-align: center;
+
+/* black */
+
+color: #000000;
+}
