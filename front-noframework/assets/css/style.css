@@ -11678,6 +11678,11 @@ body {
   border-radius: 10px;
 }
 
+.bx {
+  color: #fff;
+  size: 20%;
+}
+
 body {
   background: #260A87;
 }
