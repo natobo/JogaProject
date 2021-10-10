@@ -9,12 +9,7 @@ body {
     left: 179px;
     top: 153px;
 }
-.chats {
-    width: 1092px;
-    height: 1604.14px;
-    left: 179px;
-    top: 10px;
-}
+
 .Archivados {
     position: absolute;
     width: 515px;
@@ -52,348 +47,380 @@ body {
 
     color: #ffffff;
 }
-.chat1 {
+.chats {
     position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 232px;
-    background: #4d1fea;
-    /* darkblue */
-    .perfil {
+    height: 100px;
+    top: 1px;
+    .chat1 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 200px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 232px;
+        background: #4d1fea;
+        /* darkblue */
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
 
-.chat2 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 401.86px;
-    background: #4d1fea;
-    .perfil {
+    .chat2 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle2 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 401.86px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle2 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
 
-.chat3 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 571.44px;
-    background: #4d1fea;
-    .perfil {
+    .chat3 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle3 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 571.44px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle3 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
-.chat4 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 741.01px;
-    background: #4d1fea;
-    .perfil {
+    .chat4 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle4 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 741.01px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle4 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
-.chat5 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 910.59px;
-    background: #4d1fea;
-    .perfil {
+    .chat5 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle5 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 910.59px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle5 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
-.chat6 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 1080.16px;
-    background: #4d1fea;
-    .perfil {
+    .chat6 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle6 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 1080.16px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle6 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
-.chat7 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 1249.73px;
-    background: #4d1fea;
-    .perfil {
+    .chat7 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle7 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 1249.73px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle7 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
-.chat8 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 1419.31px;
-    background: #4d1fea;
-    .perfil {
+    .chat8 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle8 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 1419.31px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle8 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
-}
-.chat9 {
-    position: absolute;
-    width: 1634px;
-    height: 169.14px;
-    left: 87px;
-    top: 1588px;
-    background: #4d1fea;
-    .perfil {
+    .chat9 {
         position: absolute;
-        width: 50px;
-        height: 50.53px;
-        left: 30px;
-        top: 100.43px;
-    }
-    .rectangle9 {
-        height: 78.75px;
-        width: 958px;
-        background-color: #3310ac;
-        border-radius: 88.5px;
-        transform: matrix(1, 0, 0, -1, 0, 0);
-        left: 289px;
-        top: 382.43px;
-        .Mensaje {
-            font-family: Roboto;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 24px;
-            line-height: 175%;
-            /* or 42px */
+        width: 1634px;
+        height: 169.14px;
+        left: 87px;
+        top: 1588px;
+        background: #4d1fea;
+        .perfil {
+            position: absolute;
+            width: 50px;
+            height: 50.53px;
+            left: 10px;
+            top: 70.43px;
+        }
+        .rectangle9 {
+            position: absolute;
+            height: 50.75px;
+            width: 96%;
+            background-color: #3310ac;
+            border-radius: 88.5px;
+            left: 4%;
+            top: 40%;
+            .Mensaje {
+                position: absolute;
+                left: 5%;
+                top: 20%;
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 17px;
+                line-height: 175%;
+                /* or 42px */
 
-            display: flex;
-            align-items: center;
-            font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+                display: flex;
+                align-items: center;
+                font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
 
-            color: #ffffff;
+                color: #ffffff;
+            }
         }
     }
 }

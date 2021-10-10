@@ -11258,13 +11258,6 @@ body {
   top: 153px;
 }
 
-.chats {
-  width: 1092px;
-  height: 1604.14px;
-  left: 179px;
-  top: 10px;
-}
-
 .Archivados {
   position: absolute;
   width: 515px;
@@ -11302,7 +11295,12 @@ body {
   color: #ffffff;
 }
 
-.chat1 {
+.chats {
+  position: absolute;
+  height: 100px;
+  top: 1px;
+}
+.chats .chat1 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11311,27 +11309,30 @@ body {
   background: #4d1fea;
   /* darkblue */
 }
-.chat1 .perfil {
+.chats .chat1 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat1 .rectangle {
-  height: 78.75px;
-  width: 958px;
+.chats .chat1 .rectangle {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 200px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat1 .rectangle .Mensaje {
+.chats .chat1 .rectangle .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11339,8 +11340,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat2 {
+.chats .chat2 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11348,27 +11348,30 @@ body {
   top: 401.86px;
   background: #4d1fea;
 }
-.chat2 .perfil {
+.chats .chat2 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat2 .rectangle2 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat2 .rectangle2 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat2 .rectangle2 .Mensaje {
+.chats .chat2 .rectangle2 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11376,8 +11379,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat3 {
+.chats .chat3 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11385,27 +11387,30 @@ body {
   top: 571.44px;
   background: #4d1fea;
 }
-.chat3 .perfil {
+.chats .chat3 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat3 .rectangle3 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat3 .rectangle3 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat3 .rectangle3 .Mensaje {
+.chats .chat3 .rectangle3 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11413,8 +11418,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat4 {
+.chats .chat4 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11422,27 +11426,30 @@ body {
   top: 741.01px;
   background: #4d1fea;
 }
-.chat4 .perfil {
+.chats .chat4 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat4 .rectangle4 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat4 .rectangle4 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat4 .rectangle4 .Mensaje {
+.chats .chat4 .rectangle4 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11450,8 +11457,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat5 {
+.chats .chat5 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11459,27 +11465,30 @@ body {
   top: 910.59px;
   background: #4d1fea;
 }
-.chat5 .perfil {
+.chats .chat5 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat5 .rectangle5 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat5 .rectangle5 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat5 .rectangle5 .Mensaje {
+.chats .chat5 .rectangle5 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11487,8 +11496,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat6 {
+.chats .chat6 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11496,27 +11504,30 @@ body {
   top: 1080.16px;
   background: #4d1fea;
 }
-.chat6 .perfil {
+.chats .chat6 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat6 .rectangle6 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat6 .rectangle6 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat6 .rectangle6 .Mensaje {
+.chats .chat6 .rectangle6 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11524,8 +11535,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat7 {
+.chats .chat7 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11533,27 +11543,30 @@ body {
   top: 1249.73px;
   background: #4d1fea;
 }
-.chat7 .perfil {
+.chats .chat7 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat7 .rectangle7 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat7 .rectangle7 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat7 .rectangle7 .Mensaje {
+.chats .chat7 .rectangle7 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11561,8 +11574,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat8 {
+.chats .chat8 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11570,27 +11582,30 @@ body {
   top: 1419.31px;
   background: #4d1fea;
 }
-.chat8 .perfil {
+.chats .chat8 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat8 .rectangle8 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat8 .rectangle8 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat8 .rectangle8 .Mensaje {
+.chats .chat8 .rectangle8 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
@@ -11598,8 +11613,7 @@ body {
   font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
   color: #ffffff;
 }
-
-.chat9 {
+.chats .chat9 {
   position: absolute;
   width: 1634px;
   height: 169.14px;
@@ -11607,27 +11621,30 @@ body {
   top: 1588px;
   background: #4d1fea;
 }
-.chat9 .perfil {
+.chats .chat9 .perfil {
   position: absolute;
   width: 50px;
   height: 50.53px;
-  left: 30px;
-  top: 100.43px;
+  left: 10px;
+  top: 70.43px;
 }
-.chat9 .rectangle9 {
-  height: 78.75px;
-  width: 958px;
+.chats .chat9 .rectangle9 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
   background-color: #3310ac;
   border-radius: 88.5px;
-  transform: matrix(1, 0, 0, -1, 0, 0);
-  left: 289px;
-  top: 382.43px;
+  left: 4%;
+  top: 40%;
 }
-.chat9 .rectangle9 .Mensaje {
+.chats .chat9 .rectangle9 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 17px;
   line-height: 175%;
   /* or 42px */
   display: flex;
