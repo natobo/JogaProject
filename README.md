@@ -6,6 +6,7 @@
 
 >**Aviso para quien este calificando las entregas 😁:** Tratamos de llevar una especie de git flow, por lo que si no se ven los cambios en master por favor🙏 revisar la rama `dev`
 ## Tabla de contenido
+  - [Links](#links)
   - [Tabla de contenido](#tabla-de-contenido)
   - [Descripción del proyecto](#descripción-del-proyecto)
   - [Videos y documentación 📺 📜](#videos-y-documentación--)
@@ -13,7 +14,8 @@
     - [Pre-requisitos 📋](#pre-requisitos-)
     - [Instalación 🔧](#instalación-)
     - [Ejecutar servidor de backend 🤖](#ejecutar-servidor-de-backend-)
-    - [Ejecutar aplicación de frontend 👽](#ejecutar-aplicación-de-frontend-)
+    - [Ejecutar aplicación de frontend no framework👽](#ejecutar-aplicación-de-frontend-no-framework)
+    - [Explicación breve de frontend no framework 👾](#explicación-breve-de-frontend-no-framework-)
   - [Ejecutando las pruebas ⚙️](#ejecutando-las-pruebas-️)
   - [Despliegue 📦](#despliegue-)
   - [Construido con 🛠️](#construido-con-️)
@@ -25,7 +27,7 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
 - [Video propuesta JOGA](https://github.com/isis3710-uniandes/202120_S2_E1/wiki/VideoPropuesta)
 - [Modelo Conceptual](https://github.com/isis3710-uniandes/202120_S2_E1/wiki/ModeloConceptual)
 - [Video funcionalidad backend](https://www.loom.com/share/ea7f42d3eb024c939db98cb3f7c44047)
-
+- [Video funcionalidad frontend no framework]()
 ## Comenzando 🚀 - Instrucciones de uso
 ### Pre-requisitos 📋
 
@@ -77,16 +79,22 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
 7. Logearse como admin haciendo la petición `LOGIN ADMIN` (Jwt guarda una cookie, para poder realizar las demás peticiones y en el caso de admin poder listar usuarios).
 8. ¡Empezar a probar los endpoints con las otras colecciones!
 
-### Ejecutar aplicación de frontend 👽
-1. Dentro de la terminal, navegar a `202120_S2_E1/front-react`
+### Ejecutar aplicación de frontend no framework👽
+1. Dentro de la terminal, navegar a `202120_S2_E1`
    ```bash
    cd 202120_S2_E1/front-react
    ```
-2. Para ejecutar la aplicación web de react
+2. Para ejecutar la aplicación en modo de producción ejecutar
    ```bash
    npm start
    ```
-
+3. Para ejecutar la aplicación en modo de desarrollo ejecutar
+   ```bash
+   npm run dev
+   ```
+4. Ir al siguiente link (http://localhost:3000) 
+### Explicación breve de frontend no framework 👾 
+- El proyecto front está compuesto por una landing page, la página de usuarios, la página de chats y la pagina de juegos. En la landing page se encuentran los enlaces a las páginas mencionadas anteriormente, una descripción de conceptos utilizados como LFG, el perfil gamer, entre otros. Finalmente, hay una explicación de lo que es el proyecto JOGA. En la sección de perfil se encuentran los datos del usuario, como el nombre, el username y el bio del usuario, los cuales son traídos de la base de datos. En la sección de juegos se encuentran los juegos registrados en la pagina hasta el momento, en donde estos están desplegados dependiendo de distintas categorías. Estos juegos se traen de la base de datos. En la pagina de chats se desplegan los chats que el usuario activo tiene con los demás usuarios. Estos se traen de la base de datos.
 ## Ejecutando las pruebas ⚙️
 
 _Por el momento no tenemos las pruebas, estamos aprendiendo como hacerlas_ 🤖
