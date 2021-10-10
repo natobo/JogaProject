@@ -11419,6 +11419,442 @@ textarea.form-control-lg {
   justify-content: center;
 }
 
+body {
+  background: #260a87;
+}
+
+.maindata {
+  position: absolute;
+  width: 1092px;
+  height: 1604.14px;
+  left: 179px;
+  top: 153px;
+}
+
+.Archivados {
+  position: absolute;
+  width: 515px;
+  height: 50px;
+  left: 12%;
+  top: 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 130%;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.Archivados .carpeta {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  left: 15%;
+  top: 0.5px;
+}
+
+.nickname {
+  width: 515px;
+  height: 53.66px;
+  left: 303px;
+  top: 252.19px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 130%;
+  /* or 47px */
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+
+.chats {
+  position: absolute;
+  height: 100px;
+  top: -9%;
+}
+.chats .chat1 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 232px;
+  background: #4d1fea;
+}
+.chats .chat1 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat1 .rectangle {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat1 .rectangle .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat2 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 401.86px;
+  background: #4d1fea;
+}
+.chats .chat2 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat2 .rectangle2 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat2 .rectangle2 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat3 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 571.44px;
+  background: #4d1fea;
+}
+.chats .chat3 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat3 .rectangle3 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat3 .rectangle3 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat4 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 741.01px;
+  background: #4d1fea;
+}
+.chats .chat4 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat4 .rectangle4 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat4 .rectangle4 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat5 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 910.59px;
+  background: #4d1fea;
+}
+.chats .chat5 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat5 .rectangle5 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat5 .rectangle5 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat6 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 1080.16px;
+  background: #4d1fea;
+}
+.chats .chat6 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat6 .rectangle6 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat6 .rectangle6 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat7 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 1249.73px;
+  background: #4d1fea;
+}
+.chats .chat7 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat7 .rectangle7 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat7 .rectangle7 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat8 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 1419.31px;
+  background: #4d1fea;
+}
+.chats .chat8 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat8 .rectangle8 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat8 .rectangle8 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.chats .chat9 {
+  position: absolute;
+  width: 1634px;
+  height: 169.14px;
+  left: 87px;
+  top: 1588px;
+  background: #4d1fea;
+}
+.chats .chat9 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 10px;
+  top: 70.43px;
+}
+.chats .chat9 .rectangle9 {
+  position: absolute;
+  height: 50.75px;
+  width: 96%;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  left: 4%;
+  top: 40%;
+}
+.chats .chat9 .rectangle9 .Mensaje {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+
+.chats-titulo {
+  position: absolute;
+  height: 14%;
+  width: 86%;
+  left: 14%;
+  background: #6a00eb;
+}
+
+.chats-titulo .text {
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 8vh;
+  font-weight: 700;
+  color: #fff;
+  padding-left: 5%;
+}
+
+.barra-contactos {
+  position: absolute;
+  height: 40px;
+  left: 80%;
+  right: 0%;
+  top: calc(50% - 20px);
+  border-radius: 10px;
+}
+
+.bx {
+  color: #fff;
+}
+
 .juegos-carruseles {
   position: absolute;
   height: 86%;
@@ -11570,6 +12006,10 @@ textarea.form-control-lg {
 .contenedor-carousel .carousel .btn-primary:hover {
   background: #260a87;
   color: white;
+}
+
+.contenedor-titulo-controles h3 {
+  color: #260a87;
 }
 
 .sidebargames {

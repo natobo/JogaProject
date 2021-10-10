@@ -15,6 +15,10 @@
 @use 'sections-landing/navbar';
 @use 'sections-landing/tab-services';
 
+// Import the sections of the chat
+@use 'sections-chats/chats';
+@use 'sections-chats/footerchat';
+@use 'sections-chats/titlesearchChats';
 // Import the sections of the games page
 @use 'sections-games/games';
 @use 'sections-games/sidenavbar';
