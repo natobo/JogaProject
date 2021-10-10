@@ -20,3 +20,9 @@
 @use 'sections-games/sidenavbar';
 @use 'sections-games/titlesearch';
 @use 'sections-games/footer_games';
+
+//Import the sections of the home page
+
+@use 'sections-home/items';
+@use 'sections-home/carousel';
+
