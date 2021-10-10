@@ -11259,7 +11259,7 @@ textarea.form-control-lg {
 
 .lfgs-section {
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-  padding: 5rem 0 0 0;
+  padding: 0 0 0 0;
   width: 100%;
   height: 100%;
 }
@@ -11284,8 +11284,11 @@ textarea.form-control-lg {
 }
 
 .tab-services img {
-  width: 25rem;
-  height: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 5px;
 }
 .tab-services h3 {
   padding: 2rem;
