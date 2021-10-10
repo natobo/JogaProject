@@ -38,6 +38,13 @@ const gamesSchema = new mongoose.Schema({
     ],
     default: 'AVENTURA Y CASUAL',
   },
+  description: {
+    type: String,
+    required: [true, 'A game must have a description'],
+  },
+  linkPortada: {
+    type: String,
+  },
 });
 
 module.exports = mongoose.model('Game', gamesSchema);

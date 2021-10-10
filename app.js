@@ -29,7 +29,7 @@ const messageRouter = require('./routes/message-router');
 const app = express();
 
 // MIDDLEWARES
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(helmet());
 app.use(logger('dev'));
 app.use(cookieParser());
@@ -47,7 +47,7 @@ app.use('/api', limiter);
 
 // ROUTES
 // This is a built-in middleware function in Express. It serves static files and is based on serve-static.
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'front-noframework')));
 app.use('/', indexRouter);
 app.use('/api/user', usersRouter);
 app.use('/api/dashboard', dashboardRouter);
