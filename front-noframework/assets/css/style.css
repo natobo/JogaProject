@@ -11160,6 +11160,13 @@ textarea.form-control-lg {
   }
 }
 
+.lfg-group-title {
+  display: inline-block;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  color: #000;
+}
+
 .section-title-black {
   padding: 1rem;
   display: inline-block;
@@ -11178,12 +11185,113 @@ textarea.form-control-lg {
   color: #fff;
 }
 
-.joga-section {
-  padding: 5rem 0 0 0;
-  width: 100%;
-  height: 100%;
-  max-width: 1320px;
-  margin: auto;
+.footer {
+  padding-top: 1rem;
+  background-color: #151414;
+}
+
+.contact-box {
+  position: relative;
+}
+.contact-box__icon {
+  width: 2rem;
+  stroke: #9926f0;
+  padding-top: 0.5rem;
+}
+@media (min-width: 576px) {
+  .contact-box__icon {
+    width: 4rem;
+  }
+}
+.contact-box__info {
+  padding: 0.4rem;
+  font-weight: 600;
+}
+.contact-box__info--title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .contact-box__info--title {
+    font-size: 1.4rem;
+  }
+}
+.contact-box__info--subtitle {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+@media (min-width: 576px) {
+  .contact-box__info--subtitle {
+    font-size: 1rem;
+  }
+}
+
+.footer-sm a {
+  color: #fff;
+}
+.footer-sm a i {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+@media (min-width: 576px) {
+  .footer-sm a i {
+    font-size: 1.6rem;
+  }
+}
+.footer-sm a:hover {
+  color: #9926f0;
+}
+
+.campany-list {
+  display: block;
+  list-style-type: none;
+  position: relative;
+}
+.campany-list li {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+.campany-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+.campany-list li a:hover {
+  color: #9926f0;
+}
+
+.footer-bottom {
+  background-color: #000;
+}
+.footer-bottom__copyright {
+  color: #6c757d;
+  font-weight: 400;
+}
+.footer-bottom__copyright a {
+  color: #dee2e6;
+  text-decoration: none;
+}
+.footer-bottom__copyright a:hover {
+  color: #9926f0;
+  text-decoration: underline;
+}
+
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+}
+.back-to-top i {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .intro-section {
@@ -11259,7 +11367,7 @@ textarea.form-control-lg {
 
 .lfgs-section {
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
-  padding: 5rem 0 0 0;
+  padding: 0 0 0 0;
   width: 100%;
   height: 100%;
 }
@@ -11267,6 +11375,11 @@ textarea.form-control-lg {
 .container-lfgs {
   max-width: 1320px;
   margin: auto;
+}
+
+.portfolio-box {
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .menu {
@@ -11284,8 +11397,11 @@ textarea.form-control-lg {
 }
 
 .tab-services img {
-  width: 25rem;
-  height: 25rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 5px;
 }
 .tab-services h3 {
   padding: 2rem;
@@ -11301,10 +11417,6 @@ textarea.form-control-lg {
 .center-pills {
   display: flex;
   justify-content: center;
-}
-
-body {
-  background: #260A87;
 }
 
 .juegos-carruseles {
@@ -11340,7 +11452,10 @@ body {
   background: #9926f0;
 }
 
-.juegos-recientes, .juegos-populares, .juegos-competitivos, .juegos-casuales {
+.juegos-recientes,
+.juegos-populares,
+.juegos-competitivos,
+.juegos-casuales {
   width: 90%;
   margin: auto;
   margin-top: 30px;
@@ -11452,7 +11567,7 @@ body {
 }
 
 .contenedor-carousel .carousel .btn-primary:hover {
-  background: #260A87;
+  background: #260a87;
   color: white;
 }
 
@@ -11462,7 +11577,7 @@ body {
   left: 0;
   height: 100%;
   width: 14%;
-  background: #3310AC;
+  background: #3310ac;
   padding: 6px 0px;
 }
 
@@ -11505,7 +11620,7 @@ body {
 }
 
 .sidebargames ul li a:hover {
-  background: #260A87;
+  background: #260a87;
 }
 
 .sidebargames ul li a i {
@@ -11521,7 +11636,7 @@ body {
   height: 14%;
   width: 86%;
   left: 14%;
-  background: #6A00EB;
+  background: #6a00eb;
 }
 
 .juegos-titulo .text {
