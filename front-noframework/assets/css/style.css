@@ -11250,12 +11250,48 @@ body {
   background: #260A87;
 }
 
+.maindata {
+  position: absolute;
+  width: 1092px;
+  height: 1604.14px;
+  left: 179px;
+  top: 153px;
+}
+
+.chats {
+  width: 1092px;
+  height: 1604.14px;
+  left: 179px;
+  top: 10px;
+}
+
 .Archivados {
   position: absolute;
   width: 515px;
   height: 50px;
-  left: 253px;
-  top: 153px;
+  left: 110px;
+  top: 15px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 130%;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
+}
+.Archivados .carpeta {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  left: 110px;
+  top: 0.5px;
+}
+
+.nickname {
+  width: 515px;
+  height: 53.66px;
+  left: 303px;
+  top: 252.19px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -11268,74 +11304,336 @@ body {
 
 .chat1 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 232px;
+  background: #4d1fea;
+  /* darkblue */
+}
+.chat1 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat1 .rectangle {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 200px;
+  top: 382.43px;
+}
+.chat1 .rectangle .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat2 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 401.86px;
+  background: #4d1fea;
+}
+.chat2 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat2 .rectangle2 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat2 .rectangle2 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat3 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 571.44px;
+  background: #4d1fea;
+}
+.chat3 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat3 .rectangle3 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat3 .rectangle3 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat4 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 741.01px;
+  background: #4d1fea;
+}
+.chat4 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat4 .rectangle4 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat4 .rectangle4 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat5 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 910.59px;
+  background: #4d1fea;
+}
+.chat5 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat5 .rectangle5 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat5 .rectangle5 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat6 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 1080.16px;
+  background: #4d1fea;
+}
+.chat6 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat6 .rectangle6 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat6 .rectangle6 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat7 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 1249.73px;
+  background: #4d1fea;
+}
+.chat7 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat7 .rectangle7 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat7 .rectangle7 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat8 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 1419.31px;
+  background: #4d1fea;
+}
+.chat8 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat8 .rectangle8 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat8 .rectangle8 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chat9 {
   position: absolute;
-  width: 1092px;
+  width: 1634px;
   height: 169.14px;
-  left: 179px;
+  left: 87px;
   top: 1588px;
+  background: #4d1fea;
+}
+.chat9 .perfil {
+  position: absolute;
+  width: 50px;
+  height: 50.53px;
+  left: 30px;
+  top: 100.43px;
+}
+.chat9 .rectangle9 {
+  height: 78.75px;
+  width: 958px;
+  background-color: #3310ac;
+  border-radius: 88.5px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+  left: 289px;
+  top: 382.43px;
+}
+.chat9 .rectangle9 .Mensaje {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 175%;
+  /* or 42px */
+  display: flex;
+  align-items: center;
+  font-feature-settings: "pnum" on, "lnum" on, "ss04" on, "ss03" on, "liga" off;
+  color: #ffffff;
 }
 
 .chats-titulo {
@@ -11362,23 +11660,6 @@ body {
   right: 0%;
   top: calc(50% - 20px);
   border-radius: 10px;
-}
-
-.barra-contactos.text {
-  position: absolute;
-  height: 24px;
-  left: 20px;
-  right: 20px;
-  top: calc(50% - 12px);
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 222.3%;
-  /* or 44px */
-  text-align: center;
-  /* black */
-  color: #000000;
 }
 
 body {
