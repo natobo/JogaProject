@@ -18,5 +18,8 @@
 // Import the sections of the chat
 @use 'sections-chats/chats';
 @use 'sections-chats/footerchat';
-@use 'sections-chats/sidenavbar';
-@use 'sections-chats/titlesearch';
+// Import the sections of the games page
+@use 'sections-games/games';
+@use 'sections-games/sidenavbar';
+@use 'sections-games/titlesearch';
+@use 'sections-games/footer_games';
