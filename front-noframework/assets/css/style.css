@@ -11262,7 +11262,7 @@ body {
   position: absolute;
   width: 515px;
   height: 50px;
-  left: 110px;
+  left: 12%;
   top: 15px;
   font-family: Roboto;
   font-style: normal;
@@ -11276,7 +11276,7 @@ body {
   position: absolute;
   width: 100px;
   height: 25px;
-  left: 110px;
+  left: 15%;
   top: 0.5px;
 }
 
@@ -11298,7 +11298,7 @@ body {
 .chats {
   position: absolute;
   height: 100px;
-  top: 1px;
+  top: -9%;
 }
 .chats .chat1 {
   position: absolute;
@@ -11307,7 +11307,6 @@ body {
   left: 87px;
   top: 232px;
   background: #4d1fea;
-  /* darkblue */
 }
 .chats .chat1 .perfil {
   position: absolute;
