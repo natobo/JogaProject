@@ -1,5 +1,13 @@
 @use '../custom' as *;
 
+.fondo{
+    position: absolute;
+    height: 2700px;
+    width: 86%;
+    left: 14%;
+    background-color: $blue-darker;
+}
+
 .circulo {
     
     width: 375px;
@@ -21,6 +29,7 @@
     height: 86%;
     width: 86%;
     left: 14%;
+   
 }
 .user{
     position: absolute;
@@ -82,6 +91,7 @@
     width: 86%;
     top: 155.2%;
     left: 14%;
+    
 }
 
 .amigos{

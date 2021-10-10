@@ -11649,6 +11649,14 @@ textarea.form-control-lg {
   padding-left: 5%;
 }
 
+.fondo {
+  position: absolute;
+  height: 2700px;
+  width: 86%;
+  left: 14%;
+  background-color: #260a87;
+}
+
 .circulo {
   width: 375px;
   height: 384px;
