@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>        
+    </head>
+<body >
+  <div class="fondo"></div>
+    <header>
+   <!-- START THE NAVBAR SECTION -->
+   
+   <div class="sidebargames">
+    <div class="logocontainer">
+        <a class="navbar-brand" href="#">
+            <img  class="logo" src="assets/images/JOGA_LOGO.svg" alt="Logo Joga">
+        </a> 
+    </div>
+    <ul class="nav_list">
+        <li>
+            <a href="">
+                <i class='bx bx-home-alt'></i>
+                <span class="links-name">Home</span>
+            </a>
+        </li>
+        <li>
+           <a href="games.html" >
+                <i class='bx bx-game' ></i>
+               <span class="links-name">Juegos</span>
+           </a>
+       </li>
+       <li>
+           <a href="#">
+                <i class='bx bx-group' ></i>
+               <span class="links-name">LFGs</span>
+           </a>
+       </li>
+       <li>
+           <a href="chats.html">
+                <i class='bx bx-chat' ></i>
+               <span class="links-name">Chats</span>
+           </a>
+       </li>
+    </ul>
+ </div>
+  </header>
+  <!--USER SECTION-->
+  
+  <section id="img" class="contenedor-home">
+    <div class=" rectangulo ">
+        <div class="row align-items-start text-white">
+          <!--Title section-->  
+          <div class="col-md-6 intros text-start">
+            <h1 class="display-2 align-self-md-auto">
+              <span class="display-2--intro user" id = "USERNAME"  >USERNAME</span>
+            </h1>
+            <h3 class="display-2" >
+                <span class="display-2--description name" id = "NAME" >Nombre</span>
+            </h3>
+          </div>
+           <!--Image section-->
+          <div class="col-md-6 intros text-end">
+            <div class="circulo" >
+              <img class="circulo" src="https://image.flaticon.com/icons/png/512/435/435010.png" alt="control illustration" class="img-fluid" id="IMG">
+              
+            </div>
+          </div>
+          <div class="col-md-6 intros"></div>
+        </div>
+      </div>
+   </section>
+   <!--BIO SECTION-->
+   <section id="bio" class="contenedor-bio ">
+    <div class="container-fluid container-intro">
+        <div class="row align-items-center text-white">
+          <!--Title section-->  
+          <div class="col-md-6 intros text-start">
+            <h1 class="display-2 align-self-md-auto">
+              <span class="display-2--intro">Bio</span>
+            </h1>
+            <h3 class="display-2" >
+                <span class="display-2--description" id="BIO" >Sed urna massa adipiscing egestas accumsan aliquet mauris egestas turpis. Vitae pulvinar lobortis vel ut at. Sed facilisis vestibulum, sed bibendum. Vitae, tristique suspendisse condimentum pulvinar rutrum dui sed tincid...</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+   </section>
+    <!--GAMES SECTION-->
+    <section id="games" class="contenedor-juegos">
+        <div class="container-fluid container-intro">
+            <div class="row align-items-center text-white">
+              <!--Title section-->  
+              <div class="col-md-6 intros text-start">
+                <h1 class="display-2 align-self-md-auto">
+                  <span class="display-2--intro">juegos Recientes</span>
+                </h1>  
+              </div>
+              <div class="juegos-carruseles contenedor-recientes">
+                <div class="juegos-home">
+                    <div class="contenedor-titulo-controles">
+                
+                       <div class="indicadores">
+                           <button></button>
+                           <button></button>
+                       </div>
+                    </div>
+                    <div class="contenedor-principal">
+                        <button role="button" id="flecha-izquierda-recientes" class="flecha-izquierda">
+                           <i class='bx bx-chevron-left' ></i>
+                        </button>
+       
+                        <div id="contenedor-carousel-rec" class="contenedor-carousel">
+                            <div class="carousel">
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/bf2042.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Battlefield 2042</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+                               
+                                
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/league.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">League of Legends</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/maincra.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Minecraft</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/nw.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">New World</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/oc2.jpeg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Overcooked 2</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/overwacho.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Overwatch</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/rl.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Rocket League</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/stardew valley.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Stardew Valley</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/ultimate chicken horse.jpg" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Ultimate Chicken Horse</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                               <div class="card game" style="width: 18rem;">
+                                   <img src="assets/images/test-images/valheim.png" class="card-img-top" alt="...">
+                                   <div class="card-body game-description">
+                                     <h5 class="card-title">Valheim</h5>
+                                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor ipsum lectus. Proin at lobortis ex.</p>
+                                     <a href="#" class="btn btn-primary ">Encontrar grupo</a>
+                                   </div>
+                               </div>
+       
+                           </div>
+                        </div>
+       
+                        <button role="button" id="flecha-derecha-recientes" class="flecha-derecha">
+                           <i class='bx bx-chevron-right' ></i>
+                        </button>
+                    </div>
+                </div>
+              
+            </div>
+    </div>
+</section>
+<!--LFGs SECTION-->
+<section id="lfgs" class="contenedor-lfgs">
+  <div class="container-fluid container-intro">
+      <div class="row align-items-center text-white">
+        <!--Title section-->  
+        <div class="col-md-6 intros text-start">
+          <h1 class="display-2 align-self-md-auto">
+            <span class="display-2--intro">LFGs Activos</span>
+          </h1>  
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;float:left;left: 5%;">
+       <img src="https://cdn0.iconfinder.com/data/icons/video-games-8/24/video_game_play_toad_mushroom_mario-512.png" x="50%" y="50%" fill="#dee2e6" dy=".3em"  class="img-fluid" img>
+      
+        <div class="card-body">
+          <h5 class="card-title">Fans de Mario</h5>
+          <p class="card-text">Jugamos los martes Mario Party</p>
+         
+        </div>
+        
+      </div>
+      <div class="card" style="width: 18rem;float:left; left: 10%;">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/playstation-3628985-3030210.png" width="100%" height="50%" fill="#dee2e6" dy=".3em"  class="img-fluid" img>
+       
+         <div class="card-body">
+           <h5 class="card-title">Playstation Club</h5>
+           <p class="card-text">Play fans en un solo lugar</p>
+          
+         </div>
+         
+       </div>
+       <div class="card" style="width: 18rem;float:left;left: 15%;">
+        <img src="https://icon-library.com/images/cards-icon/cards-icon-13.jpg" x="50%" y="50%" fill="#dee2e6" dy=".3em"  class="img-fluid" img>
+       
+         <div class="card-body">
+           <h5 class="card-title">Poker Game Club</h5>
+           <p class="card-text">¡Todo tipo de juegos de azar!</p>
+          
+         </div>
+         
+       </div>
+      
+  </div>
+</section>
+ <!--DIV SECTION-->
+ <section id="div" class="contenedor-div">
+    <div class="container-fluid container-intro">
+        <div class="row align-items-center text-white">
+            <h1 class="display-2 align-self-md-auto">
+              <span class="display-2--intro">Amigos</span>
+            </h1>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+            <div class="container mt-3 mb-4 amigos " >
+            <div class="col-lg-9 mt-4 mt-lg-0">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
+                      <table class="table manage-candidates-top mb-0">
+                        <thead>
+                          <tr>
+                            <th>Usuario</th>
+                            <th class="text-center">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/219/219969.png" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0"><a href="#">Brooke Kelly</a></h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                    <ul class="list-unstyled">
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                             <span class="candidate-list-time order-1">Jugando</span>
+                            </td>
+                            <td>
+                             
+                            </td>
+                          </tr>
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/219/219988.png" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0"><a href="#">Ronald Bradley</a></h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                   
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                              <span class="candidate-list-time order-1">Inactivo</span>
+                            </td>
+                            <td>
+                             
+                            </td>
+                          </tr>
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="https://cdn-icons-png.flaticon.com/512/219/219986.png" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0"><a href="#">Rafael Briggs</a></h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                              <span class="candidate-list-time order-1">Jugando</span>
+                            </td>
+                            <td>
+                             
+                            </td>
+                          </tr>
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="http://cemokalab.com/wp-content/uploads/2015/07/avatar-369-456321.png" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0"><a href="#">Vickie Meyer</a></h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                               <span class="candidate-list-time order-1">Jugando</span>
+                            </td>
+                            <td>
+                              
+                            </td>
+                          </tr>
+                          <tr class="candidates-list">
+                            <td class="title">
+                              <div class="thumb">
+                                <img class="img-fluid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s5z4ojtNwl2jXifp1jiboZ2T0plskgirZXxHaE_UW2jdj9PI-8Ig05DPcMBUUAvWNCQ&usqp=CAU" alt="">
+                              </div>
+                              <div class="candidate-list-details">
+                                <div class="candidate-list-info">
+                                  <div class="candidate-list-title">
+                                    <h5 class="mb-0"><a href="#">Nichole Haynes</a></h5>
+                                  </div>
+                                  <div class="candidate-list-option">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td class="candidate-list-favourite-time text-center">
+                              <span class="candidate-list-time order-1">Jugando</span>
+                            </td>
+                            <td>
+                              
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>    
+        </div>
+</div>
+</section>
+</body>
+<script src="./js/home.js" ></script>
+</html>

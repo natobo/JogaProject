@@ -10,6 +10,7 @@
     font-family: "Oswald", sans-serif;
     color: $white;
   }
+  
 
   &--description {
     font-size: 1rem;
@@ -24,6 +25,13 @@
   }
 }
 
+.lfg-group-title {
+  display: inline-block;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  color: $black;
+}
+
 .section-title-black {
   padding: 1rem;
   display: inline-block;
@@ -31,4 +39,12 @@
   font-weight: 700;
   font-family: "Oswald", sans-serif;
   color: $black;
+}
+.section-title-white {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Oswald", sans-serif;
+  color: $white;
 }

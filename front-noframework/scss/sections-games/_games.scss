@@ -1,175 +1,163 @@
 @use '../custom' as *;
-body{
-    background: $blue-darker;
+
+.juegos-carruseles {
+  position: absolute;
+  height: 86%;
+  width: 86%;
+  left: 14%;
+  top: 14%;
 }
 
-.juegos-carruseles{
-    position: absolute;
-    height: 86%;
-    width: 86%;
-    left: 14%;
-    top: 14%;
-  }
-
 //   ------------------Titulo y controles---------------------------
-  .contenedor-titulo-controles{
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
+.contenedor-titulo-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
 
-  }
+.contenedor-titulo-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
 
-  .contenedor-titulo-controles h3{
-      color: #fff;
-      font-size: 30px;
-  }
+.contenedor-titulo-controles .indicadores button {
+  background: $purple-light;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
 
-  .contenedor-titulo-controles .indicadores button {
-      background: $purple-light;
-      height: 3px;
-      width: 10px;
-      cursor: pointer;
-      border: none;
-      margin-right: 2px;
-
-  }
-
-  .contenedor-titulo-controles .indicadores button:hover, 
-  .contenedor-titulo-controles .indicadores button.activo {
-
-    background: $purple-dark;
-  }
-
-
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+  background: $purple-dark;
+}
 
 //   ------------Contenedor principal y flechas---------------------
-  .juegos-recientes, .juegos-populares, .juegos-competitivos, .juegos-casuales{  
-    width: 90%;
-      margin: auto;
-      margin-top: 30px;
-  }
+.juegos-recientes,
+.juegos-populares,
+.juegos-competitivos,
+.juegos-casuales {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+}
 
-  .contenedor-principal{
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
+.contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 
-  .contenedor-principal .flecha-izquierda,
-  .contenedor-principal .flecha-derecha{
-    position: absolute;
-    border: none;
-    background: rgba(255,255,255, 0.01);
-    font-size: 40px;
-    height: 50%;
-    top: calc(50% - 25%);
-    line-height: 40px;
-    width: 40px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 500;
-    transition: .2s ease all;
-  }
+.contenedor-principal .flecha-izquierda,
+.contenedor-principal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0.01);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
 
-  .contenedor-principal .flecha-izquierda:hover,
-  .contenedor-principal .flecha-derecha:hover{
-    background: rgba(255,255,255, 0.9);
-    color: rgba(0,0,0, 1);
-  }
+.contenedor-principal .flecha-izquierda:hover,
+.contenedor-principal .flecha-derecha:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 1);
+}
 
-  .contenedor-principal .flecha-izquierda{
-      left: 0;
-  }
-  .contenedor-principal .flecha-derecha{
-      right: 0;
-  }
-
+.contenedor-principal .flecha-izquierda {
+  left: 0;
+}
+.contenedor-principal .flecha-derecha {
+  right: 0;
+}
 
 //   ----------Carousel----------------
 
 .contenedor-carousel {
-    width: 100%;
-    padding: 20px 0;
-    overflow: hidden;
-    scroll-behavior: smooth;
-
-     
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
 
-.contenedor-carousel .carousel{
-    display: flex;
-    flex-wrap: nowrap;
-
+.contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
 }
-  
-.contenedor-carousel .carousel .game{
-    min-width: 16.66%;
-    
-    transition: .3s ease all;
-    box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+
+.contenedor-carousel .carousel .game {
+  min-width: 16.66%;
+
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .contenedor-carousel .carousel .game.hover {
-    transform: scale(1,2);
-    transform-origin: center;
+  transform: scale(1, 2);
+  transform-origin: center;
 }
 
-.contenedor-carousel .carousel .game img{
-    
-    width: 100%;
-    vertical-align: top;
+.contenedor-carousel .carousel .game img {
+  width: 100%;
+  vertical-align: top;
 }
 
-.contenedor-carousel .carousel .game-description{
-    position: absolute;
-    font-size: 10px;
-    height: 100%;
-    border: none;
-    background: rgba(255,255,255, 0);
-    color: rgba(255,255,255, 0);
-    cursor: pointer;
-    z-index: 400;
-    transition: .2s ease all;
+.contenedor-carousel .carousel .game-description {
+  position: absolute;
+  font-size: 10px;
+  height: 100%;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  z-index: 400;
+  transition: 0.2s ease all;
 }
 
 .card-title{
+  font-size: 24px;
+}
+
+.card-text {
+  max-height: 50px;
   font-size: 16px;
 }
 
-.card-text{
-  max-height: 50px;
-}
-
-.btn-primary{
+.btn-primary {
   margin-bottom: 10px;
   bottom: 0;
   font-size: 10px;
 }
 
-.contenedor-carousel .carousel .btn-primary{
-    position: absolute;
-    border: none;
-    background: rgba(255,255,255, 0);
-    color: rgba(255,255,255, 0);
-    cursor: pointer;
-    z-index: 500;
-    transition: .2s ease all;
+.contenedor-carousel .carousel .btn-primary {
+  position: absolute;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.contenedor-carousel .carousel .game-description:hover {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+.contenedor-carousel .carousel .btn-primary:hover {
+  background: $blue-darker;
+  color: rgba(255, 255, 255, 1);
 }
 
 
-
-
-
-.contenedor-carousel .carousel .game-description:hover{
-    
-    background: rgba(255,255,255, 0.9);
-    color: black;
-    
+.contenedor-titulo-controles h3{
+  color: $blue-darker;
 }
-
-.contenedor-carousel .carousel .btn-primary:hover{
-    background: $blue-darker;
-    color: rgba(255,255,255, 1);
-}
-
-
