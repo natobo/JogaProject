@@ -1,0 +1,16 @@
+@use '../../../custom.scss' as *;
+@use '../../shared-scss/mixins' as *;
+@use '../../shared-scss/buttons' as *;
+.menu {
+  @include gradient;
+  li {
+    padding: 0 0.7rem;
+    a {
+      color: $white !important;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+  }
+  max-width: 1320px;
+  margin: auto;
+}
