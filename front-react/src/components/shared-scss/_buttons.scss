@@ -1,0 +1,15 @@
+@use '../../custom.scss' as *;
+@use './mixins' as *;
+
+.btn-rounded {
+  position: relative;
+  padding: 0.4rem 1.2rem;
+  font-weight: 500;
+  margin: 0.2rem;
+  background-color: rgba($white, 1);
+  border: 0.1rem solid rgba($white, 0.6);
+  &:hover {
+    @include gradient;
+    color: $white;
+  }
+}
