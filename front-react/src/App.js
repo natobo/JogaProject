@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
 import { Landing } from './components/landing/Landing';
 import { Home } from './components/home/Home';
 import { Chats } from './components/chats/Chats';
