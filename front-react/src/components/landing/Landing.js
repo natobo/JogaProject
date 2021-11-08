@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Landing.scss';
 import 'jquery';
 import 'popper.js';
@@ -18,6 +18,11 @@ import imgForza from './assets/lfgs/forza.svg';
 import imgUncharted from './assets/lfgs/uncharted.svg';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import ps5Controller from './assets/ps5_controller.svg';
+import imgMarciano from './assets/marciano.svg';
+import imgCorazon from './assets/corazon.svg';
+import imgDiag from './assets/diag.svg';
+import imgControl from './assets/control.svg';
+import { Footer } from '../footer/Footer';
 
 export const Landing = () => (
   <>
@@ -516,8 +521,42 @@ export const Landing = () => (
           />
         </svg>
       </section>
+      <section id="services" className="joga-section">
+        <div className="container-fluid">
+          <div className="row">
+            <h2 className="text-center section-title-black">
+              <img className="marcianito" alt="marcianito" src={imgMarciano} />
+              ¿Qué es Joga?
+              <img className="marcianito" alt="marcianito" src={imgMarciano} />
+            </h2>
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6">
+                  <p className="text-center">
+                    <br />
+                    <br />
+                    <p className="text-center joga-text">
+                      ¡Hola!, este es un proyecto que busca facilitar la manera
+                      en que los gamers buscan compañeros de partida para un
+                      juego en específico, por medio de salas comunes llamadas
+                      LFG (looking for group) 👾 buscamos ser los primeros en
+                      implementar este tipo de ideas aquí en LATAM.
+                    </p>
+                  </p>
+                </div>
+                <div className="col-md-6">
+                  <img className="corazon" src={imgCorazon} alt="" />
+                  <img className="diag" src={imgDiag} alt="" />
+                  <img className="diag" src={imgDiag} alt="" />
+                  <img className="control" src={imgControl} alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
     </main>
-
     <div
       className="modal fade"
       id="videoModal"

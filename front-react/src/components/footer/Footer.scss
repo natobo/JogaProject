@@ -1,14 +1,22 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
+@use '../../custom.scss' as *;
+@use '../shared-scss/mixins' as *;
+
+@use '@fortawesome/fontawesome-free/scss/brands.scss';
+@use '@fortawesome/fontawesome-free/scss/regular.scss';
+@use '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@use '@fortawesome/fontawesome-free/scss/solid.scss';
 
 .footer {
   padding-top: 1rem;
   background-color: $footer;
+  align-items: center;
 }
 
 // STYLE THE CONTACT-BOX CONTENT
 .contact-box {
   position: relative;
+  max-width: 1320px;
+  margin: auto;
 
   &__icon {
     width: 2rem;
@@ -48,6 +56,9 @@
 
 // STYLE THE SOCIAL MEDIA CONTENT
 .footer-sm {
+  max-width: 1320px;
+  margin: auto;
+  background-color: #540ba8;
   a {
     color: $white;
 
@@ -67,6 +78,8 @@
 
 // STYLE THE CAMPANY INFO CONTENT
 .campany-list {
+  max-width: 1320px;
+  margin: auto;
   display: block;
   list-style-type: none;
   position: relative;
@@ -88,6 +101,8 @@
 
 // STYLE THE COPYRIGHT  CONTENT
 .footer-bottom {
+  max-width: 1320px;
+  margin: auto;
   background-color: $black;
 
   &__copyright {
@@ -105,7 +120,15 @@
     }
   }
 }
-
+.container-icons {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1320px;
+  margin: auto;
+}
 // STYLE THE BACK TO TOP BUTTON
 .back-to-top {
   position: fixed;
