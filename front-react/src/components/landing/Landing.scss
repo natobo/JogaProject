@@ -10,3 +10,7 @@
 
 // use shared typography
 @use '../shared-scss/typography';
+@use '../shared-scss/animations';
+
+// Import from cdn
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
