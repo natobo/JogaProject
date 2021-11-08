@@ -49,27 +49,22 @@ export const Landing = () => (
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page">
+                <a className="nav-link" href="#home">
                   Inicio
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#services">
                   Servicios
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Juegos
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#lfg">
                   LFGs
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#services">
+                <a className="nav-link" href="#about-us">
                   Sobre nosotros
                 </a>
               </li>
@@ -521,7 +516,7 @@ export const Landing = () => (
           />
         </svg>
       </section>
-      <section id="services" className="joga-section">
+      <section id="about-us" className="joga-section">
         <div className="container-fluid">
           <div className="row">
             <h2 className="text-center section-title-black">
