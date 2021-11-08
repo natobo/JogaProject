@@ -3,10 +3,10 @@
 @use 'sections-landing-scss/intro-section';
 
 // Font awesome scss
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@use '@fortawesome/fontawesome-free/scss/brands.scss';
+@use '@fortawesome/fontawesome-free/scss/regular.scss';
+@use '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@use '@fortawesome/fontawesome-free/scss/solid.scss';
 
 // use shared typography
 @use '../shared-scss/typography';
