@@ -1,45 +1,14 @@
 import React from 'react';
 import './scss/_items.scss';
-import jogaLogo from './assets/JOGA_LOGO.svg';
+import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
 
 export const Home = () => (
   <>
     <div className="fondo" />
-    <div className="sidebargames">
-      <div className="logocontainer">
-        <a className="navbar-brand" href="#">
-          <img src={jogaLogo} alt="Logo Joga" />
-        </a>
-      </div>
-      <ul className="nav_list">
-        <li>
-          <a>
-            <i className="bx bx-home-alt" />
-            <span className="links-name">Home</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="bx bx-game" />
-            <span className="links-name">Juegos</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="bx bx-group" />
-            <span className="links-name">LFGs</span>
-          </a>
-        </li>
-        <li>
-          <a>
-            <i className="bx bx-chat" />
-            <span className="links-name">Chats</span>
-          </a>
-        </li>
-      </ul>
+    <div>
+      <Sidenavbar />
     </div>
-    <div className="sidebargames" />
     <section id="img" className="contenedor-home">
       <div className=" rectangulo ">
         <div className="row align-items-start text-white">
