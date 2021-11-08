@@ -1,6 +1,16 @@
 import React from 'react';
 import './Chats.scss';
 import jogaLogo from './assets_Chats/JOGA_LOGO.svg';
+import perfil1 from './assets_Chats/Perf1.svg';
+import perfil2 from './assets_Chats/Perf2.svg';
+import perfil3 from './assets_Chats/Perf3.svg';
+import perfil4 from './assets_Chats/Perf4.svg';
+import perfil5 from './assets_Chats/Perf5.svg';
+import perfil6 from './assets_Chats/Perf6.svg';
+import perfil7 from './assets_Chats/Perf7.svg';
+import perfil8 from './assets_Chats/Perf8.svg';
+import perfil9 from './assets_Chats/Perf9.svg';
+import archivados from './assets_Chats/Archivados.svg';
 
 export const Chats = () => (
   <>
@@ -54,7 +64,9 @@ export const Chats = () => (
     <div className="maindata">
       <div className="Archivados">
         <h4>Archivados</h4>
-        {/* <img className="carpeta" src="assets/images/Chats/Archivados.svg"> */}
+        <a className="Archivados" href="#">
+          <img src={archivados} alt="archivados" />
+        </a>
       </div>
       <div className="chats">
         <ul className="chat1">
@@ -66,7 +78,9 @@ export const Chats = () => (
               <p>Te ha invitado a jugar ROCKET LEAGUE.</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf1.svg" alt="perfil1"> */}
+          <a className="perfil" href="#">
+            <img src={perfil1} alt="perfil1" />
+          </a>
         </ul>
         <ul className="chat2">
           <div className="nickname">
@@ -77,7 +91,9 @@ export const Chats = () => (
               <p>Hola! Qué tal todo?</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf2.svg" alt="perfil2"> */}
+          <a className="perfil" href="#">
+            <img src={perfil2} alt="pefil2" />
+          </a>
         </ul>
         <ul className="chat3">
           <div className="nickname">
@@ -88,7 +104,9 @@ export const Chats = () => (
               <p>Mira mi última puntuación en Battlefield!</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf3.svg" alt="perfil3"> */}
+          <a className="perfil" href="#">
+            <img src={perfil3} alt="perfil3" />
+          </a>
         </ul>
         <ul className="chat4">
           <div className="nickname">
@@ -99,7 +117,9 @@ export const Chats = () => (
               <p>Ahora no puedo, me tengo que ir a trabajar.</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf4.svg" alt="perfil4"> */}
+          <a className="perfil" href="#">
+            <img src={perfil4} alt="perfil4" />
+          </a>
         </ul>
         <ul className="chat5">
           <div className="nickname">
@@ -110,7 +130,9 @@ export const Chats = () => (
               <p>Te conozco?</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf5.svg" alt="perfil5"> */}
+          <a className="perfil" href="#">
+            <img src={perfil5} alt="perfil5" />
+          </a>
         </ul>
         <ul className="chat6">
           <div className="nickname">
@@ -121,7 +143,9 @@ export const Chats = () => (
               <p>Wow! Me encantó jugar contigo, nos vemos en la próxima.</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf6.svg" alt="perfil6"> */}
+          <a className="perfil" href="#">
+            <img src={perfil6} alt="perfil6" />
+          </a>
         </ul>
         <ul className="chat7">
           <div className="nickname">
@@ -132,7 +156,9 @@ export const Chats = () => (
               <p>Envíame petición de amistad para jugar otra vez!</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf7.svg" alt="perfil7"> */}
+          <a className="perfil" href="#">
+            <img src={perfil7} alt="perfil7" />
+          </a>
         </ul>
         <ul className="chat8">
           <div className="nickname">
@@ -143,7 +169,9 @@ export const Chats = () => (
               <p>Adiós!</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf8.svg" alt="perfil8"> */}
+          <a className="perfil" href="#">
+            <img src={perfil8} alt="perfil8" />
+          </a>
         </ul>
         <ul className="chat9">
           <div className="nickname">
@@ -154,7 +182,9 @@ export const Chats = () => (
               <p>Por favor, no me envíes mas invitaciones.</p>
             </div>
           </div>
-          {/* <img className="perfil" src="assets/images/Chats/Perf9.svg" alt="perfil9"> */}
+          <a className="perfil" href="#">
+            <img src={perfil9} alt="perfil9" />
+          </a>
         </ul>
       </div>
     </div>
