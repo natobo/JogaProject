@@ -1,7 +1,8 @@
 import React from 'react';
+import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 
 export const Juegos = () => (
   <div>
-    <h1>Juegos</h1>
+    <Sidenavbar />
   </div>
 );
