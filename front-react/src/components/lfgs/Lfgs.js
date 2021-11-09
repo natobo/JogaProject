@@ -40,13 +40,13 @@ export const Lfgs = () => {
   const fetchLFGs = async () => {
     // const data = await resp.json();
 
-    const gifSimple = data?.map((resp) => ({
+    const lfgSimple = data?.map((resp) => ({
       id: resp.id,
       image: resp.image,
       name: resp.name,
       description: resp.description,
     }));
-    setLFGs(gifSimple);
+    setLFGs(lfgSimple);
   };
 
   return (
