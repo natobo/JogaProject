@@ -1,7 +1,6 @@
 import React from 'react';
 import './Chats.scss';
 import './TitleChats.scss';
-
 import jogaLogo from './assets_Chats/JOGA_LOGO.svg';
 import perfil1 from './assets_Chats/Perf1.svg';
 import perfil2 from './assets_Chats/Perf2.svg';
@@ -62,8 +61,7 @@ export const Chats = () => (
         </li>
       </ul>
     </div>
-
-    <div className="maindata">
+    <section className="maindata">
       <div className="Archivados">
         <h4>Archivados</h4>
         <a className="carpeta" href="#">
@@ -189,6 +187,6 @@ export const Chats = () => (
           </a>
         </ul>
       </div>
-    </div>
+    </section>
   </>
 );
