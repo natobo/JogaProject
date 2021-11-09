@@ -1,13 +1,11 @@
 @use "../custom" as *;
-body {
-    background: $blue-darker;
-}
 .maindata {
     position: absolute;
     width: 1092px;
     height: 1604.14px;
     left: 179px;
     top: 153px;
+    background: $blue-darker;
 }
 
 .Archivados {
