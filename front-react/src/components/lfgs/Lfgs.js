@@ -1,5 +1,5 @@
 import React from 'react';
-import { Carousel } from '../carousel/Carousel';
+import { CarouselJoga } from '../carousel/CarouselJoga';
 import './Lfgs.scss';
 
 export const Lfgs = () => {
@@ -27,7 +27,7 @@ export const Lfgs = () => {
   return (
     <div className="main">
       <h1>Lfgs titulo</h1>
-      <Carousel items={data} />
+      <CarouselJoga items={data} />
     </div>
   );
 };

@@ -2,16 +2,12 @@
   alignment: center;
   align-content: center;
 }
-
-
-img {
-  width: auto;
-  height: auto;
-}
-
 .carousel-inner {
-  width: 600px;
-  height: 400px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-
+.carousel-joga {
+  width: 24rem;
+}
