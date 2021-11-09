@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Lfgs.scss';
-import { Carousel } from '../carousel/Carousel';
+import { CarouselJoga } from '../carousel/CarouselJoga';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
+import './Lfgs.scss';
 
 export const Lfgs = () => {
   const data = [
@@ -54,7 +54,7 @@ export const Lfgs = () => {
         <div className="recent">
           <h1>Recientes</h1>
           <div className="Car">
-            <Carousel items={data} />
+            <CarouselJoga items={data} />
           </div>
         </div>
       </div>

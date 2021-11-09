@@ -25,6 +25,11 @@
   padding-left: 5%;
 }
 
+.recent {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
 .recent > h1 {
   color: white;
   font-family: Oswald;
@@ -33,17 +38,13 @@
   align-items: center;
   font-size: 7vh;
   font-weight: 700;
-  padding-left: 8%;
+  padding-left: 5%;
   padding-top: 5%;
 }
 
-.recent > .Car{
-  padding-left: 25%;
+.recent > .Car {
   padding-top: 3%;
-}
-
-.recent > .Car > .carousel-inner > carousel-item active > img, .recent > .Car > .carousel-inner > carousel-item > img {
-  width: 600px;
-  height: 400px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
