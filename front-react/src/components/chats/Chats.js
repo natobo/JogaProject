@@ -1,7 +1,6 @@
 import React from 'react';
 import './Chats.scss';
 import './TitleChats.scss';
-import jogaLogo from './assets_Chats/JOGA_LOGO.svg';
 import perfil1 from './assets_Chats/Perf1.svg';
 import perfil2 from './assets_Chats/Perf2.svg';
 import perfil3 from './assets_Chats/Perf3.svg';
@@ -12,6 +11,8 @@ import perfil7 from './assets_Chats/Perf7.svg';
 import perfil8 from './assets_Chats/Perf8.svg';
 import perfil9 from './assets_Chats/Perf9.svg';
 import archivados from './assets_Chats/Archivados.svg';
+import { Footer } from '../footer/Footer';
+import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 
 export const Chats = () => (
   <>
@@ -19,47 +20,17 @@ export const Chats = () => (
       <div className="chats-titulo">
         <div className="text">Chats</div>
         <div className="barra-contactos">
-          {/* <input type="text" name="buscacontacto" placeholder="Buscar Contacto"> */}
-          <a href="#">
-            <i className="bx bx-search-alt" />
-          </a>
+          <input
+            type="text"
+            placeholder="Buscar"
+            className="textField"
+            name="busqueda"
+          />
         </div>
       </div>
     </header>
-    <div className="sidebargames">
-      <div className="logocontainer">
-        <div className="logocontainer">
-          <a className="navbar-brand" href="#">
-            <img src={jogaLogo} alt="Logo Joga" />
-          </a>
-        </div>
-      </div>
-      <ul className="nav_list">
-        <li>
-          <a href="#">
-            <i className="bx bx-home-alt" />
-            <span className="links-name">Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-game" />
-            <span className="links-name">Juegos</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-group" />
-            <span className="links-name">LFGs</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <i className="bx bx-chat" />
-            <span className="links-name">Chats</span>
-          </a>
-        </li>
-      </ul>
+    <div>
+      <Sidenavbar />
     </div>
     <section className="maindata">
       <div className="Archivados">
@@ -187,6 +158,10 @@ export const Chats = () => (
           </a>
         </ul>
       </div>
+    </section>
+    <section className="contenedor-footer">
+      {' '}
+      <Footer />
     </section>
   </>
 );
