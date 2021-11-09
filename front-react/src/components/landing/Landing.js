@@ -69,6 +69,7 @@ export const Landing = () => {
       const respJson = await resp.json();
       console.log(respJson);
       localStorage.setItem('jwt', respJson.token);
+      alert('Login success');
     } catch (error) {
       console.error(error);
       alert(error);
