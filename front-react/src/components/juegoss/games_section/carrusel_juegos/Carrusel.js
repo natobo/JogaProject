@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Carrusel.scss';
 import { Link } from 'react-router-dom';
 
-function Carrusel({ title, url, buttonText, buttonPath, tag }) {
+function Carrusel({ title, url, buttonText, buttonPath }) {
   const [cards, setCards] = useState([]);
   const ref = useRef(null);
   const URL = url;
@@ -46,26 +46,22 @@ function Carrusel({ title, url, buttonText, buttonPath, tag }) {
           ref={ref}
         >
           <div className="carousel">
-            {cards
-              .filter(function (card) {
-                return card.tags.includes(tag);
-              })
-              .map((card) => (
-                <div className="card-container">
-                  <img
-                    src={card.linkPortada}
-                    className="card-img-top"
-                    alt={card.name}
-                  />
-                  <div className="card-body game-description">
-                    <h5 className="card-title">{card.name}</h5>
-                    <p className="card-text">{card.description}</p>
-                    <Link to={buttonPath} className="btn btn-primary ">
-                      {buttonText}
-                    </Link>
-                  </div>
+            {cards.map((card) => (
+              <div className="card-container">
+                <img
+                  src={card.linkPortada}
+                  className="card-img-top"
+                  alt={card.name}
+                />
+                <div className="card-body game-description">
+                  <h5 className="card-title">{card.name}</h5>
+                  <p className="card-text">{card.description}</p>
+                  <Link to={buttonPath} className="btn btn-primary ">
+                    {buttonText}
+                  </Link>
                 </div>
-              ))}
+              </div>
+            ))}
           </div>
         </div>
 
