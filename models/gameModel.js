@@ -45,6 +45,10 @@ const gamesSchema = new mongoose.Schema({
   linkPortada: {
     type: String,
   },
+  tags: {
+    type: [String],
+    default: 'none',
+  },
 });
 
 module.exports = mongoose.model('Game', gamesSchema);
