@@ -1,5 +1,6 @@
 import React from 'react';
 import './Chats.scss';
+import './TitleChats.scss';
 import jogaLogo from './assets_Chats/JOGA_LOGO.svg';
 import perfil1 from './assets_Chats/Perf1.svg';
 import perfil2 from './assets_Chats/Perf2.svg';
@@ -64,8 +65,8 @@ export const Chats = () => (
     <div className="maindata">
       <div className="Archivados">
         <h4>Archivados</h4>
-        <a className="Archivados" href="#">
-          <img src={archivados} alt="archivados" />
+        <a className="carpeta" href="#">
+          <img src={archivados} alt="carpeta" />
         </a>
       </div>
       <div className="chats">
