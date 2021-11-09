@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
 import { Footer } from '../footer/Footer';
-import Carrusel from '../juegos/games_section/carrusel_juegos/Carrusel';
 
 export const Home = (props) => {
   const { name, username, img, bio } = props;
@@ -69,23 +68,17 @@ export const Home = (props) => {
             </div>
           </div>
         </div>
-        <Carrusel
-          title=""
-          url="http://localhost:8080/api/game"
-          buttonText="Encontrar grupo"
-          buttonPath="/lfgs"
-        />
       </section>
       <section id="lfgs" className="contenedor-lfgs">
-        <div className="row align-items-center text-white">
-          <div className="col-md-6 intros text-start">
-            <h1 className="display-2 align-self-md-auto">
-              <span className="display-2--intro">LFGs Activos</span>
-            </h1>
+        <div className="container-fluid container-intro">
+          <div className="row align-items-center text-white">
+            <div className="col-md-6 intros text-start">
+              <h1 className="display-2 align-self-md-auto">
+                <span className="display-2--intro">LFGs Activos</span>
+              </h1>
+            </div>
           </div>
-        </div>
-        <div className="container">
-          <div className="row">
+          <div className="container">
             <Card
               name="Fans de Mario"
               image="https://cdn0.iconfinder.com/data/icons/video-games-8/24/video_game_play_toad_mushroom_mario-512.png"

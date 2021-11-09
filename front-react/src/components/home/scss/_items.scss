@@ -56,7 +56,7 @@
 }
 .contenedor-juegos{
     position: absolute;
-    height: 250%;
+    height: auto;
     width: 86%;
     top: 91.3%;
     left: 14%;
@@ -68,13 +68,19 @@
     top: 60%;
     left: 7%;
 }
+.contenedor-lfgs{
+    position: absolute;
+    height: auto;
+    width: 86%;
+    left: 40%;
+}
 
 .contenedor-div{
 
     position: absolute;
     height: auto;
     width: 86%;
-    top: 229%;
+    top: 225%;
     left: 14%;
 }
 
@@ -82,7 +88,7 @@
     position: absolute;
     height: auto;
     width: 86%;
-    top: 162%;
+    top: 155.2%;
     left: 14%;
     
 }
@@ -105,6 +111,7 @@
     }
     .container {
         padding: 10px 16px;
+        display:inline-block;
       }
     .p-4 {
         padding: 1.5rem!important;
