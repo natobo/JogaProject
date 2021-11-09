@@ -1,6 +1,7 @@
 import React from 'react';
 import './Chats.scss';
 import './TitleChats.scss';
+
 import jogaLogo from './assets_Chats/JOGA_LOGO.svg';
 import perfil1 from './assets_Chats/Perf1.svg';
 import perfil2 from './assets_Chats/Perf2.svg';

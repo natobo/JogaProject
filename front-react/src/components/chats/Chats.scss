@@ -1,3 +1,4 @@
+@use "./src/custom" as *;
 .maindata {
     background-color: #3310ac;
     position: absolute;
@@ -10,9 +11,9 @@
 .Archivados {
     position: absolute;
     width: 515px;
-    height: 50px;
-    left: 12%;
-    top: 15px;
+    height: 10%;
+    left: 5%;
+    top: 3%;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -47,7 +48,8 @@
 .chats {
     position: absolute;
     height: 100px;
-    top: -9%;
+    top: -20%;
+    left: -3% ;
     .chat1 {
         position: absolute;
         width: 1634px;
