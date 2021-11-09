@@ -43,10 +43,36 @@ export const Landing = () => {
     console.log('email cambió');
   }, [email]);
 
-  const handleSubmitSignUp = (e) => {
+  const handleSubmitSignUp = async (e) => {
     e.preventDefault();
 
     console.log(formValues);
+  };
+
+  const urlBackLogin = 'http://localhost:8080/api/user/login';
+
+  const handleSubmitLogIn = async (e) => {
+    e.preventDefault();
+    try {
+      // Hace login
+      const resp = await fetch(urlBackLogin, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formValues.email,
+          password: formValues.password,
+        }),
+      });
+      const respJson = await resp.json();
+      console.log(respJson);
+      localStorage.setItem('jwt', respJson.token);
+    } catch (error) {
+      console.error(error);
+      alert(error);
+    }
   };
   return (
     <>
@@ -769,7 +795,7 @@ export const Landing = () => {
               />
             </div>
             <div className="modal-body">
-              <form className="contact-form" onSubmit={handleSubmitSignUp}>
+              <form className="contact-form" onSubmit={handleSubmitLogIn}>
                 <div className="form-group">
                   <input
                     type="email"
@@ -793,12 +819,10 @@ export const Landing = () => {
                     onChange={handleInputChange}
                   />
                 </div>
+                <button type="submit" className="btn btn-primary">
+                  Submit
+                </button>
               </form>
-            </div>
-            <div className="modal-footer">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
             </div>
           </div>
         </div>
