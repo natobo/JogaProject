@@ -1,6 +1,6 @@
 import React from 'react';
 import './Landing.scss';
-import 'jquery';
+import '../../../../node_modules/jquery/dist/jquery';
 import 'popper.js';
 import jogaLogo from './assets/JOGA_LOGO.svg';
 import dashboardImg from './assets/dashboard.svg';
