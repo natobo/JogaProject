@@ -1,0 +1,89 @@
+@use '../shared-scss/mixins' as *;
+
+.main {
+  height: 100vh;
+  height: 2600px;
+  width: 86%;
+  left: 14%;
+  padding-bottom: 60px;
+  display: block;
+}
+
+.backg {
+  background: linear-gradient(179.83deg, #3672F8 0.14%, #B01EFF 99.85%);
+  position: absolute;
+  height: 2600px;
+  width: 86%;
+  left: 14%;
+}
+
+.content{
+  position: absolute;
+  height: 100%;
+  width: 86%;
+  left: 14%;
+
+}
+
+.title {
+ background: #6A00EB;
+}
+
+.title > .text{
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 8vh;
+  font-weight: 700;
+  color: white;
+  padding-left: 5%;
+}
+
+.recent {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.recent > h1 {
+  color: white;
+  font-family: Oswald;
+  font-style: normal;
+  font-feature-settings: 'pnum' on, 'lnum' on, 'ss04' on, 'ss03' on, 'liga' off;
+  align-items: center;
+  font-size: 7vh;
+  font-weight: 700;
+  padding-left: 5%;
+  padding-top: 5%;
+}
+
+.recent > .Car {
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.todos{
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.todos > h1 {
+  color: white;
+  font-family: Oswald;
+  font-style: normal;
+  font-feature-settings: 'pnum' on, 'lnum' on, 'ss04' on, 'ss03' on, 'liga' off;
+  align-items: center;
+  font-size: 7vh;
+  font-weight: 700;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+.main > .content > .foot {
+  bottom:0;
+  padding-top: 100%;
+  width:100%;
+  height: 60px;
+}

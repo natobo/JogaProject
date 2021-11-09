@@ -2,9 +2,7 @@ import React from 'react';
 import { Footer } from '../footer/Footer';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import Carrusel from './games_section/carrusel_juegos/Carrusel';
-import { TitleSearch } from './title/TitleSearch';
-
-const urlBackGames = 'http://localhost:8080/api/game';
+import TitleSearch from './title/TitleSearch';
 
 export const Juegos = () => (
   <>
@@ -17,24 +15,28 @@ export const Juegos = () => (
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
+          tag="none"
         />
         <Carrusel
           title="Populares"
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
+          tag="pop"
         />
         <Carrusel
           title="Competitivos"
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
+          tag="com"
         />
         <Carrusel
           title="Casuales"
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
+          tag="cas"
         />
       </div>
       <div className="footer-juegos">
