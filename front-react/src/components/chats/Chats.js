@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Chats.scss';
 import './TitleChats.scss';
 import perfil1 from './assets_Chats/Perf1.svg';
