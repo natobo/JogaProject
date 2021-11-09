@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Carousel } from '../carousel/Carousel';
 import './Lfgs.scss';
 
@@ -13,7 +13,7 @@ export const Lfgs = () => {
     {
       id: 2,
       name: 'Prueba 2',
-      description: 'asereje aja eje dejebe ti vejebe sebi la puta es dificil',
+      description: 'asereje aja eje dejebe ti vejebe sebi alv es dificil',
       image: 'http://www.irational.org/APD/cyber/600x400.gif',
     },
     {
@@ -23,6 +23,23 @@ export const Lfgs = () => {
       image: 'https://rickandmortyapi.com/api/character/avatar/5.jpeg',
     },
   ];
+  const [images, setGifts] = useState([]);
+  useEffect(() => {
+    // eslint-disable-next-line no-use-before-define
+    fetchGifts();
+  }, []);
+
+  const fetchGifts = async () => {
+    // const data = await resp.json();
+
+    const gifSimple = data?.map((resp) => ({
+      id: resp.id,
+      image: resp.image,
+      name: resp.name,
+      description: resp.description,
+    }));
+    setGifts(gifSimple);
+  };
 
   return (
     <div className="main">
