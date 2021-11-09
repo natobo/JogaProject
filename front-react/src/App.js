@@ -62,7 +62,7 @@ function App() {
       <Router>
         <Route exact path="/home">
           <Home
-            nombre={user.name}
+            name={user.name}
             username={user.username}
             img={user.avatarUrl}
             bio={user.bio}

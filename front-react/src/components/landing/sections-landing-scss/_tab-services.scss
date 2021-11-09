@@ -1,5 +1,5 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
+@use '../../../custom.scss' as *;
+@use '../../shared-scss/mixins' as *;
 
 .tab-services {
   img {
@@ -19,6 +19,8 @@
   nav {
     @include gradient;
   }
+  max-width: 1320px;
+  margin: auto;
 }
 
 .center-pills {

@@ -3,6 +3,7 @@ import './scss/_items.scss';
 import PropTypes from 'prop-types';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
+import { Footer } from '../footer/Footer';
 
 export const Home = (props) => {
   const { name, username, img, bio } = props;
@@ -270,6 +271,10 @@ export const Home = (props) => {
             </div>
           </div>
         </div>
+      </section>
+      <section className="contenedor-footer">
+        {' '}
+        <Footer />
       </section>
     </>
   );

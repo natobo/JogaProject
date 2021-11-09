@@ -1,5 +1,5 @@
-@use '../custom' as *;
-@use '../components/mixins' as *;
+@use '../../../custom.scss' as *;
+@use '../../shared-scss/mixins' as *;
 
 .lfgs-section {
   @include gradient;
@@ -10,6 +10,11 @@
 .container-lfgs {
   max-width: 1320px;
   margin: auto;
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .portfolio-box {
