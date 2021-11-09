@@ -4,8 +4,6 @@ import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import Carrusel from './games_section/carrusel_juegos/Carrusel';
 import TitleSearch from './title/TitleSearch';
 
-const urlBackGames = 'http://localhost:8080/api/game';
-
 export const Juegos = () => (
   <>
     <div>
