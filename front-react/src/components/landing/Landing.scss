@@ -1,12 +1,19 @@
 // Import the sections of the landing page
 @use 'sections-landing-scss/navbar';
 @use 'sections-landing-scss/intro-section';
+@use 'sections-landing-scss/tab-services';
+@use 'sections-landing-scss/lfgs-section';
+@use 'sections-landing-scss/joga-section';
 
 // Font awesome scss
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
-@use '../../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@use '@fortawesome/fontawesome-free/scss/brands.scss';
+@use '@fortawesome/fontawesome-free/scss/regular.scss';
+@use '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@use '@fortawesome/fontawesome-free/scss/solid.scss';
 
 // use shared typography
 @use '../shared-scss/typography';
+@use '../shared-scss/animations';
+
+// Import from cdn
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
