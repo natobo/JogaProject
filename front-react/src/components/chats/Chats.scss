@@ -1,6 +1,6 @@
 @use "./src/custom" as *;
 .maindata {
-    background-color: #3310ac;
+    background-color: #1e0579;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -11,7 +11,7 @@
     position: absolute;
     width: 515px;
     height: 5%;
-    left: 5%;
+    left: 2%;
     top: 3%;
     font-family: Roboto;
     font-style: normal;
@@ -48,7 +48,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    top: -20%;
+    top: -22%;
     left: -6%;
     .chat1 {
         position: absolute;
