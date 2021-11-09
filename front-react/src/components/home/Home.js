@@ -74,6 +74,7 @@ export const Home = (props) => {
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
+          tag="none"
         />
       </section>
       <section id="lfgs" className="contenedor-lfgs">
