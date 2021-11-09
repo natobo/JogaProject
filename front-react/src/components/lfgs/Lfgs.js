@@ -63,13 +63,13 @@ export const Lfgs = () => {
           <div className="recent">
             <h1>Recientes</h1>
             <div className="Car">
-              <CarouselJoga items={lfgs} />
+              <CarouselJoga items={data} />
             </div>
           </div>
           <div className="todos">
             <h1>Todos</h1>
             <div>
-              <Gallery items={lfgs} />
+              <Gallery items={data} />
             </div>
           </div>
           <div className="foot">
