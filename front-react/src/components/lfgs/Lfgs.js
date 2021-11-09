@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel } from '../carousel/Carousel';
 import './Lfgs.scss';
+import { Carousel } from '../carousel/Carousel';
+import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 
 export const Lfgs = () => {
   const data = [
@@ -43,8 +44,20 @@ export const Lfgs = () => {
 
   return (
     <div className="main">
-      <h1>Lfgs titulo</h1>
-      <Carousel items={data} />
+      <div>
+        <Sidenavbar />
+      </div>
+      <div className="content">
+        <div className="title">
+          <div className="text">LFGs</div>
+        </div>
+        <div className="recent">
+          <h1>Recientes</h1>
+          <div className="Car">
+            <Carousel items={data} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

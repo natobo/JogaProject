@@ -1,6 +1,49 @@
 @use '../shared-scss/mixins' as *;
 
 .main {
-  @include gradient;
   height: 100vh;
+  background: linear-gradient(179.83deg, #3672F8 0.14%, #B01EFF 99.85%);
 }
+
+.content{
+  position: absolute;
+  height: 86%;
+  width: 86%;
+  left: 14%;
+}
+
+.title {
+ background: #6A00EB;
+}
+
+.title > .text{
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 8vh;
+  font-weight: 700;
+  color: white;
+  padding-left: 5%;
+}
+
+.recent > h1 {
+  color: white;
+  font-family: Oswald;
+  font-style: normal;
+  font-feature-settings: 'pnum' on, 'lnum' on, 'ss04' on, 'ss03' on, 'liga' off;
+  align-items: center;
+  font-size: 7vh;
+  font-weight: 700;
+  padding-left: 8%;
+  padding-top: 5%;
+}
+
+.recent > .Car{
+  padding-left: 25%;
+  padding-top: 3%;
+}
+
+.recent > .Car > .carousel-inner > carousel-item active > img, .recent > .Car > .carousel-inner > carousel-item > img {
+  width: 600px;
+  height: 400px;
+}
+

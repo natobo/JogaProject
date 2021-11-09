@@ -1,68 +1,73 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from '../cards/simpleCard';
 import './Carousel.scss';
+import { CarouselObject } from './CarouselObject';
 
 export const Carousel = ({ items }) => {
-  const first = items.shift();
+  console.log(items);
   return (
     <div
-      id="carouselExampleIndicators"
+      id="carouselExampleCaptions"
       className="carousel slide"
-      data-ride="carousel"
+      data-bs-ride="carousel"
     >
-      <p>Si llega</p> {console.log(items)}
-      <ol className="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to="0"
+      <div className="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
           className="active"
+          aria-current="true"
+          aria-label="Slide 1"
         />
-        <li data-target="#carouselExampleIndicators" data-slide-to="1" />
-        <li data-target="#carouselExampleIndicators" data-slide-to="2" />
-      </ol>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        />
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        />
+      </div>
       <div className="carousel-inner">
-        <div key={first.id} className="carousel-item active">
+        <div className="carousel-item active">
           <img
-            src={first?.image}
+            src="https://www.eleconomista.com.mx/__export/1581119523386/sites/eleconomista/img/2020/02/07/que-son-esports.jpg_554688468.jpg"
             className="d-block w-100"
-            alt={String(first.name).concat(' image')}
+            alt="primer slide"
           />
           <div className="carousel-caption d-none d-md-block">
-            <h5>{first.name}</h5>
-            <p>{first.description}</p>
+            <h5>Slide de prueba</h5>
+            <p>Este slide no debería mostrarse</p>
           </div>
         </div>
-        {/* eslint-disable-next-line array-callback-return */}
-        {items?.map((item, i) => {
-          <div key={item.id} className="carousel-item">
-            <Card
-              name={item.name}
-              image={item.image}
-              description={item.description}
-            />
-          </div>;
-        })}
+        {items.map((it) => (
+          <CarouselObject key={it.id} item={it} />
+        ))}
       </div>
-      <a
+      <button
         className="carousel-control-prev"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
       >
         <span className="carousel-control-prev-icon" aria-hidden="true" />
-        <span className="sr-only">Previous</span>
-      </a>
-      <a
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button
         className="carousel-control-next"
-        href="#carouselExampleIndicators"
-        role="button"
-        data-slide="next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
       >
         <span className="carousel-control-next-icon" aria-hidden="true" />
-        <span className="sr-only">Next</span>
-      </a>
+        <span className="visually-hidden">Next</span>
+      </button>
     </div>
   );
 };
