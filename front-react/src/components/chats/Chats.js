@@ -22,7 +22,7 @@ export const Chats = () => (
         <div className="barra-contactos">
           <input
             type="text"
-            placeholder="Buscar"
+            placeholder="Buscar Chats"
             className="textField"
             name="busqueda"
           />
