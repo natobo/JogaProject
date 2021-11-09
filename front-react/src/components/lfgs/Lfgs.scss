@@ -1,0 +1,6 @@
+@use '../shared-scss/mixins' as *;
+
+.main {
+  @include gradient;
+  height: 100vh;
+}
