@@ -38,9 +38,9 @@ export const Juegos = () => (
           buttonPath="/lfgs"
           tag="cas"
         />
-      </div>
-      <div className="footer-juegos">
-        <Footer />
+        <div className="footer-juegos">
+          <Footer />
+        </div>
       </div>
     </div>
   </>
