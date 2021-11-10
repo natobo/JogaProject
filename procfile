@@ -2,6 +2,6 @@ web: node app.js
 
 - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
     with:
-      heroku_api_key: "{8bd796a6-bf43-45fe-b210-7a8c50c47505}"
+      heroku_api_key: ${{secrets.HEROKU_API_KEY}} # Falta crear llave en GitHub llave: 8bd796a6-bf43-45fe-b210-7a8c50c47505
       heroku_app_name: "{appjoga}" #Must be unique in Heroku
       heroku_email: "{g.caballero@uniandes.edu.co}"
