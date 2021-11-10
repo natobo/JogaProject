@@ -11,8 +11,5 @@ export const JuegosBuscar = () => (
       buttonText="Encuentra un grupo"
       buttonPath="/lfgs"
     />
-    <div className="footer-juegos">
-      <Footer />
-    </div>
   </div>
 );
