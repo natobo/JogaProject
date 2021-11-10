@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function SearchSection({ url, buttonText, buttonPath }) {
   const [cards, setCards] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const ref = useRef(null);
   const URL = url;
   function shuffle(array) {
     let currentIndex = array.length;
@@ -32,6 +33,8 @@ function SearchSection({ url, buttonText, buttonPath }) {
       .catch((err) => {
         console.log(err);
       });
+    ref.current.focus();
+    ref.current.select();
   }, []);
   return (
     <div>
@@ -45,6 +48,7 @@ function SearchSection({ url, buttonText, buttonPath }) {
             onChange={(event) => {
               setSearchTerm(event.target.value);
             }}
+            ref={ref}
           />
         </form>
       </div>
