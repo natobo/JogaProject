@@ -45,6 +45,7 @@
     "prop-types": "^15.7.2",
     "validator": "^13.6.0",
     "xss-clean": "^0.1.1",
+    "husky": "^7.0.2",
     "run-script-os": "^1.1.6"
   },
   "devDependencies": {
@@ -60,7 +61,6 @@
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.25.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
     "prettier": "^2.3.2",
