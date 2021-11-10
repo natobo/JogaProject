@@ -1,0 +1,7 @@
+web: node app.js
+
+- uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+    with:
+      heroku_api_key: { 647c487f-81dd-48b9-b98c-5f4dc3c917b4}
+      heroku_app_name: "{JOGA}" #Must be unique in Heroku
+      heroku_email: "{g.caballero@uniandes.edu.co}"
