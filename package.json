@@ -2,7 +2,10 @@
   "name": "back-joga",
   "version": "0.0.0",
   "private": true,
-  "web": "node app.js",
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=10.14,0"
+  },
   "scripts": {
     "dev": "run-script-os",
     "compile:sass": "sass --watch front-noframework/scss:front-noframework/assets/css",
