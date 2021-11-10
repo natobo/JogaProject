@@ -1,0 +1,25 @@
+name: Pipeline React
+
+on:
+  push:
+    branches:
+      - master
+      - heroku
+
+jobs:
+  simple_deployment_pipeline:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: npm install
+        run: npm install
+      - name: npm install front
+        run: npm install -w front-react
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "appjoga" #Must be unique in Heroku
+          heroku_email: "g.caballero@uniandes.edu.co"
