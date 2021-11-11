@@ -71,7 +71,7 @@ export const Home = (props) => {
         </div>
         <Carrusel
           title=""
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
         />

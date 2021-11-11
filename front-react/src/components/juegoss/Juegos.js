@@ -4,7 +4,7 @@ import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import Carrusel from './games_section/carrusel_juegos/Carrusel';
 import { TitleSearch } from './title/TitleSearch';
 
-const urlBackGames = 'http://localhost:8080/api/game';
+const urlBackGames = `${process.env.REACT_APP_URL_BACK}/api/game`;
 
 export const Juegos = () => (
   <>
@@ -14,25 +14,25 @@ export const Juegos = () => (
       <div className="juegos-carruseles">
         <Carrusel
           title="Recientes"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
         />
         <Carrusel
           title="Populares"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
         />
         <Carrusel
           title="Competitivos"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
         />
         <Carrusel
           title="Casuales"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
         />
