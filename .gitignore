@@ -67,3 +67,5 @@ front-react/node_modules
 .idea
 
 build
+
+.eslintrc
