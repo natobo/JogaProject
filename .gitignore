@@ -66,4 +66,4 @@ front-react/node_modules
 #WebStorm configuration
 .idea
 
-build/
+build
