@@ -7,10 +7,7 @@ const logger = require('morgan');
 // Middlewares for security
 const rateLimit = require('express-rate-limit');
 const cors = require('cors'); // Enable CORS (Cross-origin resource sharing) in routes or in our app.
-const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
-const xss = require('xss-clean');
-const hpp = require('hpp');
 
 // Imports for the app
 const indexRouter = require('./routes/index');
@@ -30,12 +27,9 @@ const app = express();
 
 // MIDDLEWARES
 app.use(cors({ origin: '*' }));
-app.use(helmet());
 app.use(logger('dev'));
 app.use(cookieParser());
 app.use(mongoSanitize({ replaceWith: '_' }));
-app.use(xss());
-app.use(hpp());
 app.use(express.json()); //  value req.json for data type application/json
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 const limiter = rateLimit({
