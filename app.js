@@ -10,7 +10,6 @@ const cors = require('cors'); // Enable CORS (Cross-origin resource sharing) in 
 const mongoSanitize = require('express-mongo-sanitize');
 
 // Imports for the app
-const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/user-router');
 const dashboardRouter = require('./routes/dashboard-router');
 const reviewsRouter = require('./routes/review-router');
@@ -54,8 +53,8 @@ app.use('/api/chat', chatRouter);
 app.use('/api/message', messageRouter);
 
 app.get('*', (req, res) => {
-  console.log(path.join(__dirname, 'front-react/build/index.html'));
-  res.sendFile(path.join(__dirname, "front-react/build', 'index.html"));
+  console.log("PATH request",path.join(__dirname, 'front-react/build/index.html'));
+  res.sendFile(path.join(__dirname, "front-react/build", "index.html"));
 });
 
 module.exports = app;
