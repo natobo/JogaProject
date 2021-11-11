@@ -16,7 +16,7 @@
     "start:default": "NODE_ENV=production node ./bin/www",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare-local-dev": "husky install",
+    "prepare-husky": "husky install",
     "start-prod": "npm install -w front-react && npm run build -w front-react",
     "heroku-postbuild": "npm run start-prod"
   },
@@ -47,25 +47,25 @@
     "prop-types": "^15.7.2",
     "validator": "^13.6.0",
     "xss-clean": "^0.1.1",
-    "husky": "^7.0.2",
-    "run-script-os": "^1.1.6"
-  },
-  "devDependencies": {
+    "run-script-os": "^1.1.6",
     "babel-eslint": "^10.1.0",
-    "debug": "^2.6.9",
     "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.3.2",
     "eslint-config-wesbos": "^1.0.1",
     "eslint-plugin-html": "^6.2.0",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.24.2",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.25.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "debug": "^2.6.9",
     "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
-    "prettier": "^2.3.2",
     "sass": "^1.42.1"
   },
   "lint-staged": {
