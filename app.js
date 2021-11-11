@@ -48,6 +48,7 @@ app.use('/api', limiter);
 // ROUTES
 // This is a built-in middleware function in Express. It serves static files and is based on serve-static.
 app.use(express.static(path.join(__dirname, 'front-react/build')));
+app.use('/', indexRouter);
 app.use('/api/user', usersRouter);
 app.use('/api/dashboard', dashboardRouter);
 app.use('/api/review', reviewsRouter);

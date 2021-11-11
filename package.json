@@ -16,7 +16,9 @@
     "start:default": "NODE_ENV=production node ./bin/www",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start-prod": "npm install -w front-react && npm run build -w front-react",
+    "heroku-postbuild": "npm run start-prod"
   },
   "workspaces": [
     "front-react"
