@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=10.14.0"
+    "node": "=14.18.21"
   },
   "scripts": {
     "dev": "run-script-os",
