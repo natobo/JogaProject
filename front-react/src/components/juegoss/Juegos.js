@@ -4,7 +4,7 @@ import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import Carrusel from './games_section/carrusel_juegos/Carrusel';
 import { TitleSearch } from './title/TitleSearch';
 
-const urlBackGames = `${process.env.REACT_APP_URL_BACK}/api/game`;
+// const urlBackGames = `${process.env.REACT_APP_URL_BACK}/api/game`;
 
 export const Juegos = () => (
   <>

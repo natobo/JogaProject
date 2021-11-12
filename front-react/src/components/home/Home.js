@@ -145,7 +145,7 @@ export const Home = (props) => {
                                 <div className="candidate-list-info">
                                   <div className="candidate-list-title">
                                     <h5 className="mb-0">
-                                      <a href="#">Brooke Kelly</a>
+                                      <a>Brooke Kelly</a>
                                     </h5>
                                   </div>
                                   <div className="candidate-list-option">
@@ -174,7 +174,7 @@ export const Home = (props) => {
                                 <div className="candidate-list-info">
                                   <div className="candidate-list-title">
                                     <h5 className="mb-0">
-                                      <a href="#">Ronald Bradley</a>
+                                      <a>Ronald Bradley</a>
                                     </h5>
                                   </div>
                                   <div className="candidate-list-option" />
@@ -201,7 +201,7 @@ export const Home = (props) => {
                                 <div className="candidate-list-info">
                                   <div className="candidate-list-title">
                                     <h5 className="mb-0">
-                                      <a href="#">Rafael Briggs</a>
+                                      <a>Rafael Briggs</a>
                                     </h5>
                                   </div>
                                   <div className="candidate-list-option" />
@@ -228,7 +228,7 @@ export const Home = (props) => {
                                 <div className="candidate-list-info">
                                   <div className="candidate-list-title">
                                     <h5 className="mb-0">
-                                      <a href="#">Vickie Meyer</a>
+                                      <a>Vickie Meyer</a>
                                     </h5>
                                   </div>
                                   <div className="candidate-list-option" />
@@ -255,7 +255,7 @@ export const Home = (props) => {
                                 <div className="candidate-list-info">
                                   <div className="candidate-list-title">
                                     <h5 className="mb-0">
-                                      <a href="#">Nichole Haynes</a>
+                                      <a>Nichole Haynes</a>
                                     </h5>
                                   </div>
                                   <div className="candidate-list-option" />

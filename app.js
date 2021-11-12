@@ -53,8 +53,8 @@ app.use('/api/chat', chatRouter);
 app.use('/api/message', messageRouter);
 
 app.get('*', (req, res) => {
-  console.log("PATH request",path.join(__dirname, 'front-react/build/index.html'));
-  res.sendFile(path.join(__dirname, "front-react/build", "index.html"));
+  console.log(path.join(__dirname, 'front-react/build/index.html'));
+  res.sendFile(path.join(__dirname, 'front-react/build', 'index.html'));
 });
 
 module.exports = app;
