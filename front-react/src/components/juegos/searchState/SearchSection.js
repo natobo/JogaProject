@@ -74,18 +74,17 @@ function SearchSection({ url, buttonText, buttonPath }) {
                 })
                 .map((card) => (
                   <div className="card-container">
-                    <img
-                      src={card.linkPortada}
-                      className="card-img-top"
-                      alt={card.name}
-                    />
-                    <div className="card-body game-description">
-                      <h5 className="card-title">{card.name}</h5>
-                      <p className="card-text">{card.description}</p>
-                      <Link to={buttonPath} className="btn btn-primary ">
-                        {buttonText}
-                      </Link>
-                    </div>
+                    <Link to={buttonPath}>
+                      <img
+                        src={card.linkPortada}
+                        className="card-img-top"
+                        alt={card.name}
+                      />
+                      <div className="card-body game-description">
+                        <h5 className="card-title">{card.name}</h5>
+                        <p className="card-text">{card.description}</p>
+                      </div>
+                    </Link>
                   </div>
                 ))}
             </div>

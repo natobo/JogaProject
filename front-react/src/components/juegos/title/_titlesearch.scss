@@ -6,12 +6,13 @@
   left: 14%;
   background: $purple-blue;
   display: flex;
+  font-size: 100%;
 }
 
 .juegos-titulo .text {
   font-family: "Poppins", sans-serif;
   align-items: center;
-  font-size: 8vh;
+  font-size: calc(2.5vw + 4vh);
   font-weight: 700;
   color: #fff;
   padding-left: 5%;
@@ -33,4 +34,15 @@
 .footer-juegos {
   overflow: hidden;
   padding-top: 10%;
+}
+
+@media (max-width: 768px) {
+  .juegos-titulo {
+    position: absolute;
+    height: 14%;
+    width: 100%;
+    left: 0;
+    background: $purple-blue;
+    display: flex;
+  }
 }
