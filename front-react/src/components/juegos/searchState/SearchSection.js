@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useReducer } from 'react';
 import './SearchSection.scss';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-function SearchSection({ url, buttonText, buttonPath }) {
+function SearchSection({ url, buttonPath }) {
   const [cards, setCards] = useState([]);
+  const [tags, setTags] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
   const ref = useRef(null);
   const URL = url;
@@ -23,12 +24,27 @@ function SearchSection({ url, buttonText, buttonPath }) {
 
     return array;
   }
+  function getTags(cardArray) {
+    const allTags = {};
+    cardArray.forEach((card) => {
+      card.tags.forEach((tag) => {
+        console.log(tag);
+        if (!(tag in allTags)) {
+          allTags[tag] = 1;
+        } else {
+          allTags[tag] += 1;
+        }
+      });
+    });
+    return allTags;
+  }
+
   useEffect(() => {
     axios
       .get(URL)
       .then((res) => {
-        console.log(res);
         setCards(shuffle(res.data.data));
+        setTags(getTags(cards));
       })
       .catch((err) => {
         console.log(err);
@@ -36,6 +52,7 @@ function SearchSection({ url, buttonText, buttonPath }) {
     ref.current.focus();
     ref.current.select();
   }, []);
+
   return (
     <div>
       <div className="input-busqueda-div">
@@ -51,6 +68,46 @@ function SearchSection({ url, buttonText, buttonPath }) {
             ref={ref}
           />
         </form>
+        <div className="filtros-juegos">
+          <div className="dropdown">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Filtrar
+            </button>
+
+            <ul className="dropdown-menu" aria-labelledby="Filtrar">
+              {Object.entries(tags)
+                .filter((tag) => {
+                  if (tag[0] !== 'none') {
+                    console.log(tag[0]);
+                    return tag;
+                  }
+                  return null;
+                })
+                .map((tag) => (
+                  <li>
+                    <input
+                      className="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label
+                      className="form-check-label"
+                      htmlFor="flexCheckDefault"
+                    >
+                      {tag[0]}
+                    </label>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </div>
       </div>
       <div className="juegos-busqueda">
         <div className="contenedor-principal">

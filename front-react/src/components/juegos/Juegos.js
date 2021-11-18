@@ -22,21 +22,21 @@ export const Juegos = () => (
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
-          tag="pop"
+          tag="Popular"
         />
         <Carrusel
           title="Competitivos"
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
-          tag="com"
+          tag="Competitivo"
         />
         <Carrusel
           title="Casuales"
           url="http://localhost:8080/api/game"
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
-          tag="cas"
+          tag="Casual"
         />
         <div className="footer-juegos">
           <Footer />

@@ -7,6 +7,7 @@ function Carrusel({ title, url, buttonText, buttonPath, tag }) {
   const [cards, setCards] = useState([]);
   const ref = useRef(null);
   const URL = url;
+  const urlSpecific = `/juegos/${title}`;
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
@@ -43,7 +44,9 @@ function Carrusel({ title, url, buttonText, buttonPath, tag }) {
   return (
     <div className="titulo-carrusel">
       <div className="contenedor-titulo-controles">
-        <h3>{title}</h3>
+        <Link to="/juegos/buscar">
+          <h3>{title}</h3>
+        </Link>
         <div className="indicadores">
           <button aria-label="a" type="button" />
           <button aria-label="b" type="button" />
