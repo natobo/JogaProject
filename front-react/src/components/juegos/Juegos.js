@@ -15,7 +15,7 @@ export const Juegos = () => (
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
-          tag="pop"
+          tag="none"
         />
         <Carrusel
           title="Populares"
@@ -38,9 +38,9 @@ export const Juegos = () => (
           buttonPath="/lfgs"
           tag="cas"
         />
-      </div>
-      <div className="footer-juegos">
-        <Footer />
+        <div className="footer-juegos">
+          <Footer />
+        </div>
       </div>
     </div>
   </>

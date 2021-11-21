@@ -1,5 +1,5 @@
-// Import the sections of the carousel
-@use '_titlesearch.scss';
+// Import the sections of the searchsection
+@use '_searchsection.scss';
 
 // Font awesome scss
 @use '../../../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
@@ -8,4 +8,4 @@
 @use '../../../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
 
 // use shared typography
-@use '../../shared-scss/typography.scss';
+@use '../../shared-scss/typography';

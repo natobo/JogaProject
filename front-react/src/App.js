@@ -5,6 +5,7 @@ import { Home } from './components/home/Home';
 import { Chats } from './components/chats/Chats';
 import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
+import { JuegosBuscar } from './components/juegos/JuegosBuscar';
 
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
@@ -73,6 +74,9 @@ function App() {
         </Route>
         <Route exact path="/juegos">
           <Juegos />
+        </Route>
+        <Route exact path="/juegos/buscar">
+          <JuegosBuscar />
         </Route>
         <Route exact path="/lfgs">
           <Lfgs />
