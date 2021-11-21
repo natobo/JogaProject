@@ -12,28 +12,28 @@ export const Juegos = () => (
       <div className="juegos-carruseles">
         <Carrusel
           title="Recientes"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
           tag="none"
         />
         <Carrusel
           title="Populares"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
           tag="pop"
         />
         <Carrusel
           title="Competitivos"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
           tag="com"
         />
         <Carrusel
           title="Casuales"
-          url="http://localhost:8080/api/game"
+          url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
           tag="cas"
