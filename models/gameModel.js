@@ -47,7 +47,7 @@ const gamesSchema = new mongoose.Schema({
   },
   tags: {
     type: [String],
-    default: 'none',
+    default: ['none'],
   },
 });
 

@@ -108,7 +108,7 @@ export const Home = (props) => {
           </div>
         </div>
       </section>
-      <section id="div" className="contenedor-div">
+      <section id="div" className="contenedor-div amigos">
         <div className="container-fluid container-intro">
           <div className="row align-items-center text-white">
             <h1 className="display-2 align-self-md-auto">
@@ -120,7 +120,7 @@ export const Home = (props) => {
               integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA="
               crossOrigin="anonymous"
             />
-            <div className="container mt-3 mb-4 amigos ">
+            <div className="container mt-3 mb-4 ">
               <div className="col-lg-9 mt-4 mt-lg-0">
                 <div className="row">
                   <div className="col-md-12">
@@ -280,8 +280,7 @@ export const Home = (props) => {
           </div>
         </div>
       </section>
-      <section className="contenedor-footer">
-        {' '}
+      <section id="footer" className="contenedorFooter">
         <Footer />
       </section>
     </>

@@ -3,7 +3,7 @@ import { CarouselJoga } from '../carousel/CarouselJoga';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Gallery } from './gallery/Gallery';
 import { Footer } from '../footer/Footer';
-import './Lfgs.scss';
+// import './Lfgs.scss';
 
 export const Lfgs = () => {
   const data = [

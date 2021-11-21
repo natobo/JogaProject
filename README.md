@@ -27,7 +27,7 @@ _Hola!, este es un proyecto que busca facilitar la manera en que los gamers busc
 - [Video propuesta JOGA](https://github.com/isis3710-uniandes/202120_S2_E1/wiki/VideoPropuesta)
 - [Modelo Conceptual](https://github.com/isis3710-uniandes/202120_S2_E1/wiki/ModeloConceptual)
 - [Video funcionalidad backend](https://www.loom.com/share/ea7f42d3eb024c939db98cb3f7c44047)
-- [Video funcionalidad frontend no framework]()
+- [Video funcionalidad frontend no framework](https://youtu.be/7Jb0ywZrHYo)
 ## Comenzando 🚀 - Instrucciones de uso
 ### Pre-requisitos 📋
 

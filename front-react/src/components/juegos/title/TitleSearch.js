@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './TitleSearch.scss';
 
 function TitleSearch() {
-  const [searchTerm, setSearchTerm] = useState('');
   return (
     <div className="juegos-titulo">
       <div className="text">Juegos</div>
-      <input
-        className="busqueda"
-        type="text"
-        placeholder="Buscar..."
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      />
+      <Link to="/juegos/buscar">
+        <i className="fas fa-search busqueda" />
+      </Link>
     </div>
   );
 }
