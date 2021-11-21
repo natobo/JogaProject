@@ -20,11 +20,13 @@ export const Home = (props) => {
             <div className="col-md-6 intros text-start">
               <h1 className="display-2 align-self-md-auto">
                 <span className="display-2--intro user" id="USERNAME">
+                  user
                   {username}
                 </span>
               </h1>
               <h3 className="display-2">
                 <span className="display-2--description name" id="NAME">
+                  name
                   {name}
                 </span>
               </h3>
@@ -33,7 +35,7 @@ export const Home = (props) => {
               <div className="circulo">
                 <img
                   className="circulo"
-                  src={img}
+                  src="https://cdn-icons-png.flaticon.com/512/1071/1071164.png"
                   alt="control illustration"
                   id="IMG"
                 />

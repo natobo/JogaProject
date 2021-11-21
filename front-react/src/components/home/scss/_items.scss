@@ -4,42 +4,97 @@
   width: 86%;
   left: 14%;
   background-color: #260a87;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+@media (max-width: 768px) {
+  .fondo {
+    position: absolute;
+  height: 3240px;
+  width: 100%;
+  left: 0;
+  background-color: #260a87;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  }
 }
 
 .circulo {
-  width: 375px;
-  height: 384px;
+  max-width: 375px;
+  max-height: 384px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: var(--bs-indigo);
   z-index: -1;
 }
+@media (max-width: 768px) {
+  .circulo {
+    max-width: 300px;
+    max-height: 300px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: var(--bs-indigo);
+    z-index: -1;
+  }
+}
 .rectangulo {
-  width: auto;
+  width: 100%;
   height: 250px;
   background: var(--bs-indigo);
 }
-
+@media (max-width: 768px) {
+  .rectangulo {
+    width: 116%;
+    height: 250px;
+    background: var(--bs-indigo);
+  }
+}
 .contenedor-home {
   position: absolute;
-  height: 86%;
+  max-height: 86%;
   width: 86%;
   left: 14%;
 }
+@media (max-width: 768px) {
+  .contenedor-home {
+    position: absolute;
+    max-height: 86%;
+    width: 86%;
+    left: 0;
+  }
+}
 .user {
   position: absolute;
-  height: 86%;
-  width: 86%;
-  left: 3%;
-  top: 10%;
+  max-height: 86%;
+  max-width: 86%;
+  margin-left: 1%;
+}
+@media (max-width: 768px) {
+  .user {
+    position: absolute;
+    max-height: 86%;
+    max-width: 86%;
+    margin-left: 80%;
+  }
 }
 .name {
-  position: absolute;
+position: absolute;
   height: 86%;
   width: 86%;
-  left: 3%;
-  top: 23%;
+  margin-left: 1%;
+  top: 25%;
+}
+@media (max-width: 768px) {
+  .name {
+    position: absolute;
+    height: 86%;
+    width: 86%;
+    margin-left: 80%;
+  }
 }
 
 .contenedor-bio {
@@ -49,54 +104,124 @@
   top: 41.3%;
   left: 14%;
 }
+@media (max-width: 768px) {
+  .contenedor-bio {
+    position: absolute;
+    height: auto;
+    width: 86%;
+    top: 43.3%;
+    left: 0;
+  }
+}
+
 .contenedor-juegos {
   position: absolute;
-  height: 250%;
+  max-height: 250%;
   width: 86%;
   top: 91.3%;
   left: 14%;
 }
+@media (max-width: 768px) {
+  .contenedor-juegos {
+    position: absolute;
+    max-height: 250%;
+    width: 86%;
+    top: 91.3%;
+    left: 0;
+  }
+}
+
 .contenedor-recientes {
   position: absolute;
-  height: auto;
-  width: 86%;
+  max-height: auto;
+  max-width: 86%;
   top: 60%;
   left: 7%;
 }
+@media (max-width: 768px) {
+  .contenedor-recientes {
+    position: absolute;
+    max-height: auto;
+    max-width: 86%;
+    top: 60%;
+    left: 0;
+  }
+}
 .contenedor-div {
   position: absolute;
-  height: auto;
-  width: 86%;
+  max-height: auto;
+  max-width: 86%;
   top: 229%;
   left: 14%;
 }
-
+@media (max-width: 768px) {
+  .contenedor-div {
+    position: absolute;
+    max-height: auto;
+    max-width: 86%;
+    top: 229%;
+    left: 0;
+  }
+}
 .contenedor-lfgs {
   position: absolute;
-  height: auto;
-  width: 86%;
+  max-height: auto;
+  max-width: 86%;
   top: 162%;
   left: 14%;
 }
-
+@media (max-width: 768px) {
+  .contenedor-lfgs {
+    position: absolute;
+    max-height: auto;
+    max-width: 86%;
+    top: 162%;
+    left: 2%;
+  }
+}
 .contenedorFooter {
   position: absolute;
-  height: auto;
+  max-height: auto;
   width: 86%;
   top: 370%;
   left: 14%;
 }
-
+@media (max-width: 768px) {
+  .contenedorFooter {
+    position: absolute;
+    max-height: auto;
+    width: 100%;
+    top: 370%;
+    left: 0;
+  }
+}
 .amigos {
   position: absolute;
-  height: auto;
-  width: 100%;
+  max-height: auto;
+  max-width: 100%;
   top: 237%;
   left: 14%;
 }
+@media (max-width: 768px) {
+  .amigos {
+    position: absolute;
+    max-height: auto;
+    max-width: 100%;
+    top: 237%;
+    left: 0;
+  }
+}
 .container {
   padding: 10px 16px;
-  width: 86%;
+  max-width: 100%;
+  
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 10px 16px;
+    max-width: 100%;
+    
+  }
 }
 .p-4 {
   padding: 1.5rem !important;
@@ -114,8 +239,8 @@
   margin-right: 20px;
 }
 .user-dashboard-info-box .candidates-list .thumb img {
-  width: 80px;
-  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
   -o-object-fit: cover;
   object-fit: cover;
   overflow: hidden;
