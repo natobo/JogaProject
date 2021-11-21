@@ -22,21 +22,21 @@ export const Juegos = () => (
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
-          tag="pop"
+          tag="Popular"
         />
         <Carrusel
           title="Competitivos"
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
-          tag="com"
+          tag="Competitivo"
         />
         <Carrusel
           title="Casuales"
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
           buttonPath="/lfgs"
-          tag="cas"
+          tag="Casual"
         />
         <div className="footer-juegos">
           <Footer />

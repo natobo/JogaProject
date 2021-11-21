@@ -10,7 +10,7 @@
 }
 
 .form-busqueda {
-  width: 100%;
+  width: 40%;
   height: 100%;
   margin-bottom: auto;
   margin-top: auto;
@@ -19,16 +19,39 @@
 .input-busqueda {
   margin-bottom: auto;
   margin-top: auto;
-  margin-left: 15%;
-  height: 50%;
-  width: 60%;
-  font-size: 30px;
+  margin-left: 5%;
+  height: 30%;
+  width: 100%;
+  font-size: 20px;
   color: $purple-dark;
 }
 
 .input-busqueda:focus {
   color: $purple-dark;
-  text-align: center;
+}
+
+.filtros-juegos {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.filtros-juegos .dropdown .dropdown-toggle {
+  background-color: white;
+  border: none;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.filtros-juegos .dropdown .dropdown-toggle:focus {
+  background-color: white;
+  border: none;
+}
+
+.filtros-juegos .dropdown .dropdown-menu {
+  padding-left: 10px;
+}
+.filtros-juegos .dropdown .dropdown-menu .form-check-label {
+  padding-left: 5px;
 }
 
 .juegos-busqueda {
@@ -126,7 +149,58 @@
   z-index: 2;
 }
 
-.contenedor-carousel-busqueda .carousel .btn-primary:hover {
-  background: $blue-darker;
-  color: rgba(255, 255, 255, 1);
+@media (max-width: 768px) {
+  .input-busqueda-div {
+    position: absolute;
+    height: 14%;
+    width: 100%;
+    left: 0;
+    background: $purple-blue;
+    display: flex;
+  }
+
+  .juegos-busqueda {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    left: 0;
+    top: 14%;
+    background-color: $blue-darker;
+  }
+
+  .contenedor-carousel-busqueda .carousel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contenedor-carousel-busqueda .carousel .card-container {
+    height: 25vh;
+    width: 45%;
+    min-width: 150px;
+  }
+
+  .contenedor-carousel-busqueda .carousel .game-description {
+    position: absolute;
+    bottom: 0;
+    font-size: 5px;
+    height: 20%;
+    width: 80%;
+    border: none;
+    background: rgba(51, 16, 172, 0.95);
+    color: white;
+    padding: 20px;
+  }
+
+  .contenedor-carousel-busqueda .carousel .game-description .card-title {
+    font-size: 16px;
+    padding-top: 5px;
+    position: absolute;
+    top: 0;
+  }
+
+  .contenedor-carousel-busqueda .carousel .game-description .card-text {
+    display: none;
+  }
 }

@@ -93,7 +93,8 @@
 .contenedor-carousel .carousel .card-container {
   position: relative;
   width: 20%;
-  height: 320px;
+  min-width: 200px;
+  height: 35vh;
   transition: 0.3s ease all;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   flex-shrink: 0;
@@ -163,7 +164,64 @@
   z-index: 2;
 }
 
-.contenedor-carousel .carousel .btn-primary:hover {
-  background: $blue-darker;
-  color: rgba(255, 255, 255, 1);
+@media (max-width: 768px) {
+  .juegos-carruseles {
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    left: 0;
+    top: 14%;
+    background-color: $blue-darker;
+  }
+
+  .contenedor-principal .flecha-izquierda {
+    left: 0;
+    display: none;
+  }
+  .contenedor-principal .flecha-derecha {
+    right: 0;
+    display: none;
+  }
+
+  .contenedor-carousel {
+    width: 100%;
+    padding: 20px 0;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+
+  .contenedor-carousel .carousel .card-container {
+    height: 25vh;
+    min-width: 150px;
+  }
+
+  .contenedor-carousel .carousel .game-description {
+    position: absolute;
+    bottom: 0;
+    font-size: 5px;
+    height: 22%;
+    width: 90%;
+    border: none;
+    background: rgba(51, 16, 172, 0.95);
+    color: white;
+    padding: 20px;
+  }
+
+  .contenedor-carousel .carousel .game-description .card-title {
+    font-size: 16px;
+    padding-top: 5px;
+    position: absolute;
+    top: 0;
+  }
+
+  .contenedor-carousel .carousel .game-description .card-title {
+    font-size: 16px;
+    padding-top: 5px;
+    position: absolute;
+    top: 0;
+  }
+
+  .contenedor-carousel .carousel .game-description .card-text {
+    display: none;
+  }
 }
