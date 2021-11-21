@@ -6,6 +6,7 @@ import { Footer } from '../footer/Footer';
 // import './Lfgs.scss';
 
 export const Lfgs = () => {
+  const [lfgs, setLFGs] = useState([]);
   const data = [
     {
       id: 1,
@@ -31,11 +32,6 @@ export const Lfgs = () => {
         'https://cdn2.unrealengine.com/egs-overcooked2-ghosttowngamesandteam17digitalltd-s3-2560x1440-846624591.jpg?h=480&resize=1&w=854',
     },
   ];
-  const [lfgs, setLFGs] = useState([]);
-  useEffect(() => {
-    // eslint-disable-next-line no-use-before-define
-    fetchLFGs();
-  }, []);
 
   const fetchLFGs = async () => {
     // const data = await resp.json();
@@ -48,6 +44,10 @@ export const Lfgs = () => {
     }));
     setLFGs(lfgSimple);
   };
+
+  useEffect(() => {
+    fetchLFGs();
+  }, []);
 
   return (
     <>

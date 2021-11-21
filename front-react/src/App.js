@@ -8,9 +8,9 @@ import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
 
 function App() {
-  const urlBackLogin = 'http://localhost:8080/api/user/login';
+  const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
   // GET mock user
-  const urlBackUser = 'http://localhost:8080/api/user/61620b765b7e08245285f2bf';
+  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61620b765b7e08245285f2bf`;
 
   const [user, setUser] = useState({});
 
