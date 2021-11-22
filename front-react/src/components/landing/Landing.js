@@ -49,7 +49,7 @@ export const Landing = () => {
     console.log(formValues);
   };
 
-  const urlBackLogin = 'http://localhost:8080/api/user/login';
+  const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
 
   const handleSubmitLogIn = async (e) => {
     e.preventDefault();

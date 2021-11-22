@@ -7,15 +7,35 @@ function Carrusel({ title, url, buttonText, buttonPath, tag }) {
   const [cards, setCards] = useState([]);
   const ref = useRef(null);
   const URL = url;
+  const urlSpecific = `/juegos/${title}`;
   const scroll = (scrollOffset) => {
     ref.current.scrollLeft += scrollOffset;
   };
+  function shuffle(array) {
+    let currentIndex = array.length;
+    let randomIndex;
+
+    // While there remain elements to shuffle...
+    while (currentIndex !== 0) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex],
+        array[currentIndex],
+      ];
+    }
+
+    return array;
+  }
   useEffect(() => {
     axios
       .get(URL)
       .then((res) => {
         console.log(res);
-        setCards(res.data.data);
+        setCards(shuffle(res.data.data));
       })
       .catch((err) => {
         console.log(err);
@@ -24,7 +44,9 @@ function Carrusel({ title, url, buttonText, buttonPath, tag }) {
   return (
     <div className="titulo-carrusel">
       <div className="contenedor-titulo-controles">
-        <h3>{title}</h3>
+        <Link to="/juegos/buscar">
+          <h3>{title}</h3>
+        </Link>
         <div className="indicadores">
           <button aria-label="a" type="button" />
           <button aria-label="b" type="button" />
@@ -52,18 +74,17 @@ function Carrusel({ title, url, buttonText, buttonPath, tag }) {
               })
               .map((card) => (
                 <div className="card-container">
-                  <img
-                    src={card.linkPortada}
-                    className="card-img-top"
-                    alt={card.name}
-                  />
-                  <div className="card-body game-description">
-                    <h5 className="card-title">{card.name}</h5>
-                    <p className="card-text">{card.description}</p>
-                    <Link to={buttonPath} className="btn btn-primary ">
-                      {buttonText}
-                    </Link>
-                  </div>
+                  <Link to={buttonPath}>
+                    <img
+                      src={card.linkPortada}
+                      className="card-img-top"
+                      alt={card.name}
+                    />
+                    <div className="card-body game-description">
+                      <h5 className="card-title">{card.name}</h5>
+                      <p className="card-text">{card.description}</p>
+                    </div>
+                  </Link>
                 </div>
               ))}
           </div>
