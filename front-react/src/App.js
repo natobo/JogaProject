@@ -7,6 +7,7 @@ import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
 
+
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
   // GET mock user
@@ -85,6 +86,14 @@ function App() {
           <Landing />
         </Route>
       </Router>
+
+      {/* Pruebas */}
+      <ChatEngine
+        height=""
+        projectID="b4eb53a3-2fcd-45a3-ae7f-de2455d86f5a"
+        userName=""
+        userSecret=""
+      ></ChatEngine>
     </>
   );
 }

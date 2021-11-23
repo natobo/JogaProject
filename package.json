@@ -23,6 +23,7 @@
     "front-react"
   ],
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "autoprefixer": "^9.8.7",
     "axios": "^0.24.0",
@@ -54,6 +55,7 @@
     "postcss-cli": "^9.0.1",
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2",
+    "react-chat-engine": "^1.11.21",
     "run-script-os": "^1.1.6",
     "validator": "^13.6.0",
     "xss-clean": "^0.1.1"
