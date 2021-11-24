@@ -32,133 +32,131 @@ export const Chats = () => (
     <div>
       <Sidenavbar />
     </div>
-    <section className="maindata">
-      <div className="Archivados">
-        <h4>Archivados</h4>
-        <a className="carpeta" href="#">
-          <img src={archivados} alt="carpeta" />
+    <div className="Archivados">
+      <h4>Archivados</h4>
+      <a className="carpeta" href="#">
+        <img src={archivados} alt="carpeta" />
+      </a>
+    </div>
+    <div className="chats">
+      <div className="chat1">
+        <div className="nickname">
+          <h4>Thunderbolt</h4>
+        </div>
+        <div className="rectangle">
+          <div className="Mensaje">
+            <p>Te ha invitado a jugar ROCKET LEAGUE.</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil1} alt="perfil1" />
         </a>
       </div>
-      <div className="chats">
-        <ul className="chat1">
-          <div className="nickname">
-            <h4>Thunderbolt</h4>
+      <div className="chat2">
+        <div className="nickname">
+          <h4>Pigeoncatcher</h4>
+        </div>
+        <div className="rectangle2">
+          <div className="Mensaje">
+            <p>Hola! Qué tal todo?</p>
           </div>
-          <div className="rectangle">
-            <div className="Mensaje">
-              <p>Te ha invitado a jugar ROCKET LEAGUE.</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil1} alt="perfil1" />
-          </a>
-        </ul>
-        <ul className="chat2">
-          <div className="nickname">
-            <h4>Pigeoncatcher</h4>
-          </div>
-          <div className="rectangle2">
-            <div className="Mensaje">
-              <p>Hola! Qué tal todo?</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil2} alt="pefil2" />
-          </a>
-        </ul>
-        <ul className="chat3">
-          <div className="nickname">
-            <h4>RadishRush_TAS</h4>
-          </div>
-          <div className="rectangle3">
-            <div className="Mensaje">
-              <p>Mira mi última puntuación en Battlefield!</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil3} alt="perfil3" />
-          </a>
-        </ul>
-        <ul className="chat4">
-          <div className="nickname">
-            <h4>RumpleThump</h4>
-          </div>
-          <div className="rectangle4">
-            <div className="Mensaje">
-              <p>Ahora no puedo, me tengo que ir a trabajar.</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil4} alt="perfil4" />
-          </a>
-        </ul>
-        <ul className="chat5">
-          <div className="nickname">
-            <h4>Explo$$sive</h4>
-          </div>
-          <div className="rectangle5">
-            <div className="Mensaje">
-              <p>Te conozco?</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil5} alt="perfil5" />
-          </a>
-        </ul>
-        <ul className="chat6">
-          <div className="nickname">
-            <h4>Tech-Cluster</h4>
-          </div>
-          <div className="rectangle6">
-            <div className="Mensaje">
-              <p>Wow! Me encantó jugar contigo, nos vemos en la próxima.</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil6} alt="perfil6" />
-          </a>
-        </ul>
-        <ul className="chat7">
-          <div className="nickname">
-            <h4>Hypophrenia015</h4>
-          </div>
-          <div className="rectangle7">
-            <div className="Mensaje">
-              <p>Envíame petición de amistad para jugar otra vez!</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil7} alt="perfil7" />
-          </a>
-        </ul>
-        <ul className="chat8">
-          <div className="nickname">
-            <h4>XxAurilauxX</h4>
-          </div>
-          <div className="rectangle8">
-            <div className="Mensaje">
-              <p>Adiós!</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil8} alt="perfil8" />
-          </a>
-        </ul>
-        <ul className="chat9">
-          <div className="nickname">
-            <h4>Regicide_76</h4>
-          </div>
-          <div className="rectangle9">
-            <div className="Mensaje">
-              <p>Por favor, no me envíes mas invitaciones.</p>
-            </div>
-          </div>
-          <a className="perfil" href="#">
-            <img src={perfil9} alt="perfil9" />
-          </a>
-        </ul>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil2} alt="pefil2" />
+        </a>
       </div>
-    </section>
+      <div className="chat3">
+        <div className="nickname">
+          <h4>RadishRush_TAS</h4>
+        </div>
+        <div className="rectangle3">
+          <div className="Mensaje">
+            <p>Mira mi última puntuación en Battlefield!</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil3} alt="perfil3" />
+        </a>
+      </div>
+      <div className="chat4">
+        <div className="nickname">
+          <h4>RumpleThump</h4>
+        </div>
+        <div className="rectangle4">
+          <div className="Mensaje">
+            <p>Ahora no puedo, me tengo que ir a trabajar.</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil4} alt="perfil4" />
+        </a>
+      </div>
+      <div className="chat5">
+        <div className="nickname">
+          <h4>Explo$$sive</h4>
+        </div>
+        <div className="rectangle5">
+          <div className="Mensaje">
+            <p>Te conozco?</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil5} alt="perfil5" />
+        </a>
+      </div>
+      <div className="chat6">
+        <div className="nickname">
+          <h4>Tech-Cluster</h4>
+        </div>
+        <div className="rectangle6">
+          <div className="Mensaje">
+            <p>Wow! Me encantó jugar contigo, nos vemos en la próxima.</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil6} alt="perfil6" />
+        </a>
+      </div>
+      <div className="chat7">
+        <div className="nickname">
+          <h4>Hypophrenia015</h4>
+        </div>
+        <div className="rectangle7">
+          <div className="Mensaje">
+            <p>Envíame petición de amistad para jugar otra vez!</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil7} alt="perfil7" />
+        </a>
+      </div>
+      <div className="chat8">
+        <div className="nickname">
+          <h4>XxAurilauxX</h4>
+        </div>
+        <div className="rectangle8">
+          <div className="Mensaje">
+            <p>Adiós!</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil8} alt="perfil8" />
+        </a>
+      </div>
+      <div className="chat9">
+        <div className="nickname">
+          <h4>Regicide_76</h4>
+        </div>
+        <div className="rectangle9">
+          <div className="Mensaje">
+            <p>Por favor, no me envíes mas invitaciones.</p>
+          </div>
+        </div>
+        <a className="perfil" href="#">
+          <img src={perfil9} alt="perfil9" />
+        </a>
+      </div>
+    </div>
     <section className="contenedor-footer">
       {' '}
       <Footer />
