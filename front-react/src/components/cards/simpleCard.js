@@ -6,16 +6,12 @@ export const Card = (props) => {
   const { name, image, description } = props;
   return (
     <>
-      <div className="card">
-        <img
-          className="card-image img-fluid"
-          src={image}
-          alt={name}
-          x="50%"
-          y="50%"
-        />
-        <h3>{name}</h3>
-        <p>{description}</p>
+      <div className="col-lg-4 col-md-6">
+        <div className="card shadow">
+          <img className="img-fluid" src={image} alt={name} />
+          <h4>{name}</h4>
+          <p>{description}</p>
+        </div>
       </div>
     </>
   );

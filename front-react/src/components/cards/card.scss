@@ -1,19 +1,22 @@
 .card {
-    display:inline-block;
-    justify-content: center;
-    flex-direction: column;
-    width: 20%;
-    height: 20%;
-    border: 1px solid gray;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    flex: 1 0 14%; 
-    margin-left: 30px;
+  max-width: 1320px;
+  margin: auto;
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4%;
   }
-  
-  .card .card-image {
-    width: auto;
-    height: auto;
-
+  @media screen and (max-width: 768px) {
+    .card {
+      max-width: 1320px;
+      margin: auto;
+      width: 50%;
+      padding-right: var(--bs-gutter-x, 1.5rem);
+      padding-left: var(--bs-gutter-x, 0.75rem);
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 4%;
+      }
   }
-  

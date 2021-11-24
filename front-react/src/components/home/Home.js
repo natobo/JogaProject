@@ -30,7 +30,7 @@ export const Home = (props) => {
               </h3>
             </div>
             <div className="col-md-6 intros text-end">
-              <div className="circulo">
+              <div className="">
                 <img
                   className="circulo"
                   src={img}
@@ -51,7 +51,7 @@ export const Home = (props) => {
                 <span className="display-2--intro">Bio</span>
               </h1>
               <h3 className="display-2">
-                <span className="display-2--description" id="BIO">
+                <span className="display-2--description bio" id="BIO">
                   {bio}
                 </span>
               </h3>
@@ -91,19 +91,16 @@ export const Home = (props) => {
               name="Fans de Mario"
               image="https://cdn0.iconfinder.com/data/icons/video-games-8/24/video_game_play_toad_mushroom_mario-512.png"
               description="Jugamos los martes Mario Party"
-              key={1}
             />
             <Card
               name="Playstation Club"
               image="https://cdn.iconscout.com/icon/free/png-256/playstation-3628985-3030210.png"
               description="Play fans en un solo lugar"
-              key={2}
             />
             <Card
               name="Poker Game Club"
               image="https://icon-library.com/images/cards-icon/cards-icon-13.jpg"
               description="¡Todo tipo de juegos de azar!"
-              key={3}
             />
           </div>
         </div>
