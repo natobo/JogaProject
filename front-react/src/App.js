@@ -10,7 +10,7 @@ import { JuegosBuscar } from './components/juegos/JuegosBuscar';
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
   // GET mock user
-  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61620b765b7e08245285f2bf`;
+  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61ad69a1eeef91c6dbfc6ff5`;
 
   const [user, setUser] = useState({});
 
@@ -46,7 +46,6 @@ function App() {
       });
       const dataUserJsonResp = await dataUser.json();
       const dataUserJson = dataUserJsonResp.data;
-      console.log(dataUserJson);
       setUser(dataUserJson);
     } catch (error) {
       console.log(error);
@@ -67,6 +66,7 @@ function App() {
             username={user.username}
             img={user.avatarUrl}
             bio={user.bio}
+            friends={user.friends}
           />
         </Route>
         <Route exact path="/chats">
