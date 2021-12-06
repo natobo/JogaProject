@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 
 const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
+const urlBackSignUp = `${process.env.REACT_APP_URL_BACK}/api/user/signup`;
 const authContext = createContext();
 
 // Hook for child components to get the auth object ...
@@ -12,7 +13,7 @@ export const useAuth = () => useContext(authContext);
 function useProvideAuth() {
   const [user, setUser] = useState(null);
   // Method to singin
-  const signin = async (email, password) => {
+  const login = async (email, password) => {
     try {
       // Hace login
       const resp = await fetch(urlBackLogin, {
@@ -32,14 +33,37 @@ function useProvideAuth() {
       console.log(error);
     }
   };
-  const signup = (email, password) =>
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((response) => {
-        setUser(response.user);
-        return response.user;
+  const signup = async (
+    name,
+    username,
+    email,
+    password,
+    passwordConfirm,
+    friends
+  ) => {
+    try {
+      // Hace login
+      const resp = await fetch(urlBackSignUp, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          username,
+          email,
+          password,
+          passwordConfirm,
+          friends,
+        }),
       });
+      const respJson = await resp.json();
+      localStorage.setItem('jwt', respJson.token);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const signout = () =>
     firebase
       .auth()
@@ -51,7 +75,7 @@ function useProvideAuth() {
   // Return the user object and auth methods
   return {
     user,
-    signin,
+    login,
     signup,
     signout,
   };
