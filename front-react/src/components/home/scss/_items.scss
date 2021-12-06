@@ -1,45 +1,15 @@
 .fondo {
   position: absolute;
-  height: 2800px;
+  min-height: 100%;
+  display: block;
+  overflow: auto;
   width: 86%;
   left: 14%;
   background-color: #260a87;
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 983px) {
-  .fondo {
-    position: absolute;
-    height: 3010px;
-    width: 86%;
-    left: 14%;
-    background-color: #260a87;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-@media (max-width: 768px) {
-  .fondo {
-    position: absolute;
-  height: 2960px;
-  width: 100%;
-  left: 0;
-  background-color: #260a87;
-  display: flex;
-  justify-content: space-between;
-  }
-}
-@media (max-width: 411px) {
-  .fondo {
-  position: absolute;
-  height: 4000px;
-  width: 100%;
-  left: 0;
-  background-color: #260a87;
-  display: flex;
-  justify-content: space-between;
-  }
-}
+
 
 .circulo {
   max-width: 375px;
@@ -79,16 +49,8 @@
   position: absolute;
   max-height: 86%;
   width: 86%;
-  left: 14%;
 }
-@media (max-width: 768px) {
-  .contenedor-home {
-    position: absolute;
-    max-height: 86%;
-    width: 86%;
-    left: 0;
-  }
-}
+
 .user {
   position: absolute;
   max-height: 86%;
@@ -129,7 +91,6 @@ position: absolute;
   height: auto;
   width: 100%;
   top: 41.3%;
-  left: 14%;
 }
 @media (max-width: 768px) {
   .contenedor-bio {
@@ -155,7 +116,6 @@ position: absolute;
   max-height: 250%;
   width: 86%;
   top: 74.3%;
-  left: 14%;
 }
 @media (max-width: 768px) {
   .contenedor-juegos {
@@ -181,7 +141,6 @@ position: absolute;
   max-height: auto;
   max-width: 86%;
   top: 60%;
-  left: 7%;
 }
 @media (max-width: 768px) {
   .contenedor-recientes {
@@ -197,7 +156,6 @@ position: absolute;
   max-height: auto;
   max-width: 86%;
   top: 229%;
-  left: 14%;
 }
 @media (max-width: 768px) {
   .contenedor-div {
@@ -213,15 +171,13 @@ position: absolute;
   max-height: auto;
   max-width: 86%;
   top: 142%;
-  left: 14%;
 }
 @media (max-width: 768px) {
   .contenedor-lfgs {
     position: absolute;
     max-height: auto;
     max-width: 86%;
-    top: 135%;
-    left: 2%;
+    top: 145%;
   }
 }
 @media (max-width: 411px) {
@@ -238,7 +194,6 @@ position: absolute;
   max-height: auto;
   width: 86%;
   top: 345%;
-  left: 14%;
 }
 @media (max-width: 983px) {
   .contenedorFooter {
@@ -273,7 +228,6 @@ position: absolute;
   max-height: auto;
   max-width: 100%;
   top: 217%;
-  left: 14%;
 }
 @media (max-width: 983px) {
   .amigos {
@@ -281,7 +235,6 @@ position: absolute;
     max-height: auto;
     max-width: 100%;
     top: 260%;
-    left: 14%;
   }
 }
 @media (max-width: 768px) {
