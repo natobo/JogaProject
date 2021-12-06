@@ -46,7 +46,6 @@ function App() {
       });
       const dataUserJsonResp = await dataUser.json();
       const dataUserJson = dataUserJsonResp.data;
-      console.log('DATA', dataUserJson);
       setUser(dataUserJson);
     } catch (error) {
       console.log(error);
