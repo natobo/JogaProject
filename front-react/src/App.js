@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Landing } from './components/landing/Landing';
@@ -6,6 +7,7 @@ import { Chats } from './components/chats/Chats';
 import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
+import { JuegoSpecific } from './components/juegos/specific/JuegoSpecific';
 
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
@@ -74,6 +76,9 @@ function App() {
         </Route>
         <Route exact path="/juegos">
           <Juegos />
+        </Route>
+        <Route exact path="/juegos/:id">
+          <JuegoSpecific />
         </Route>
         <Route exact path="/juegos/buscar">
           <JuegosBuscar />

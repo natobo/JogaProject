@@ -49,6 +49,17 @@ const gamesSchema = new mongoose.Schema({
     type: [String],
     default: ['none'],
   },
+  rating: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 100,
+  },
+  numberOfReviews: {
+    type: Number,
+    min: 0,
+    default: 0,
+  },
 });
 
 module.exports = mongoose.model('Game', gamesSchema);

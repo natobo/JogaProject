@@ -74,7 +74,7 @@ function Carrusel({ title, url, buttonText, buttonPath, tag }) {
               })
               .map((card) => (
                 <div className="card-container">
-                  <Link to={buttonPath}>
+                  <Link to={`/juegos/${card._id}`}>
                     <img
                       src={card.linkPortada}
                       className="card-img-top"
