@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { Landing } from './components/landing/Landing';
 import { Home } from './components/home/Home';
-import { Chats } from './components/chats/Chats';
+// import { Chats } from './components/chats/Chats';
+import { AppChat } from './components/chats/AppChat';
 import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
@@ -70,7 +71,7 @@ function App() {
           />
         </Route>
         <Route exact path="/chats">
-          <Chats />
+          <AppChat />
         </Route>
         <Route exact path="/juegos">
           <Juegos />

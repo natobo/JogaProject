@@ -19,6 +19,14 @@
           "some": ["nesting", "id"]
         }
       }
+    ],
+    "react/jsx-props-no-spreading" :[
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
     ]
   }
 }
