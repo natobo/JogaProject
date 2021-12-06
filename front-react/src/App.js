@@ -10,7 +10,7 @@ import { JuegosBuscar } from './components/juegos/JuegosBuscar';
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
   // GET mock user
-  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61620b765b7e08245285f2bf`;
+  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61ad4e50cfe69c7cc2aa0945`;
 
   const [user, setUser] = useState({});
 
@@ -67,6 +67,7 @@ function App() {
             username={user.username}
             img={user.avatarUrl}
             bio={user.bio}
+            friends={user.friends}
           />
         </Route>
         <Route exact path="/chats">

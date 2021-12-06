@@ -1,13 +1,49 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './scss/_items.scss';
 import PropTypes from 'prop-types';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
 import { Footer } from '../footer/Footer';
 import Carrusel from '../juegos/games_section/carrusel_juegos/Carrusel';
+import { FilaAmigo } from './Amigos';
 
 export const Home = (props) => {
-  const { name, username, img, bio } = props;
+  const { name, username, img, bio, friends } = props;
+  const [amigos, setAmigos] = useState([]);
+
+  const fetchFriend = async (urlBackUser) => {
+    try {
+      const dataUser = await fetch(urlBackUser, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('jwt')}`,
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      });
+      const dataUserJsonResp = await dataUser.json();
+      const dataUserJson = dataUserJsonResp.data;
+      return dataUserJson;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const getFriends = async () => {
+    const list = friends.map(async (e, i) => {
+      // Traemos la info
+      const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/${e}`;
+      const friend = await fetchFriend(urlBackUser);
+      return friend;
+    });
+    setAmigos(list);
+  };
+
+  useEffect(() => {
+    getFriends();
+    console.log(amigos);
+  }, [amigos]);
+
   return (
     <>
       <div className="fondo" />
@@ -130,143 +166,14 @@ export const Home = (props) => {
                           </tr>
                         </thead>
                         <tbody>
-                          <tr className="candidates-list">
-                            <td className="title">
-                              <div className="thumb">
-                                <img
-                                  className="img-fluid"
-                                  src="https://cdn-icons-png.flaticon.com/512/219/219969.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="candidate-list-details">
-                                <div className="candidate-list-info">
-                                  <div className="candidate-list-title">
-                                    <h5 className="mb-0">
-                                      <a>Brooke Kelly</a>
-                                    </h5>
-                                  </div>
-                                  <div className="candidate-list-option">
-                                    <ul className="list-unstyled" />
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td className="candidate-list-favourite-time text-center">
-                              <span className="candidate-list-time order-1">
-                                Jugando
-                              </span>
-                            </td>
-                            <td />
-                          </tr>
-                          <tr className="candidates-list">
-                            <td className="title">
-                              <div className="thumb">
-                                <img
-                                  className="img-fluid"
-                                  src="https://cdn-icons-png.flaticon.com/512/219/219988.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="candidate-list-details">
-                                <div className="candidate-list-info">
-                                  <div className="candidate-list-title">
-                                    <h5 className="mb-0">
-                                      <a>Ronald Bradley</a>
-                                    </h5>
-                                  </div>
-                                  <div className="candidate-list-option" />
-                                </div>
-                              </div>
-                            </td>
-                            <td className="candidate-list-favourite-time text-center">
-                              <span className="candidate-list-time order-1">
-                                Inactivo
-                              </span>
-                            </td>
-                            <td />
-                          </tr>
-                          <tr className="candidates-list">
-                            <td className="title">
-                              <div className="thumb">
-                                <img
-                                  className="img-fluid"
-                                  src="https://cdn-icons-png.flaticon.com/512/219/219986.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="candidate-list-details">
-                                <div className="candidate-list-info">
-                                  <div className="candidate-list-title">
-                                    <h5 className="mb-0">
-                                      <a>Rafael Briggs</a>
-                                    </h5>
-                                  </div>
-                                  <div className="candidate-list-option" />
-                                </div>
-                              </div>
-                            </td>
-                            <td className="candidate-list-favourite-time text-center">
-                              <span className="candidate-list-time order-1">
-                                Jugando
-                              </span>
-                            </td>
-                            <td />
-                          </tr>
-                          <tr className="candidates-list">
-                            <td className="title">
-                              <div className="thumb">
-                                <img
-                                  className="img-fluid"
-                                  src="http://cemokalab.com/wp-content/uploads/2015/07/avatar-369-456321.png"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="candidate-list-details">
-                                <div className="candidate-list-info">
-                                  <div className="candidate-list-title">
-                                    <h5 className="mb-0">
-                                      <a>Vickie Meyer</a>
-                                    </h5>
-                                  </div>
-                                  <div className="candidate-list-option" />
-                                </div>
-                              </div>
-                            </td>
-                            <td className="candidate-list-favourite-time text-center">
-                              <span className="candidate-list-time order-1">
-                                Jugando
-                              </span>
-                            </td>
-                            <td />
-                          </tr>
-                          <tr className="candidates-list">
-                            <td className="title">
-                              <div className="thumb">
-                                <img
-                                  className="img-fluid"
-                                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s5z4ojtNwl2jXifp1jiboZ2T0plskgirZXxHaE_UW2jdj9PI-8Ig05DPcMBUUAvWNCQ&usqp=CAU"
-                                  alt=""
-                                />
-                              </div>
-                              <div className="candidate-list-details">
-                                <div className="candidate-list-info">
-                                  <div className="candidate-list-title">
-                                    <h5 className="mb-0">
-                                      <a>Nichole Haynes</a>
-                                    </h5>
-                                  </div>
-                                  <div className="candidate-list-option" />
-                                </div>
-                              </div>
-                            </td>
-                            <td className="candidate-list-favourite-time text-center">
-                              <span className="candidate-list-time order-1">
-                                Jugando
-                              </span>
-                            </td>
-                            <td />
-                          </tr>
+                          {amigos.map((e, i) => (
+                            <FilaAmigo
+                              key={i}
+                              name={e.name}
+                              username={e.username}
+                              img={e.avatarUrl}
+                            />
+                          ))}
                         </tbody>
                       </table>
                     </div>
@@ -289,4 +196,5 @@ Home.propTypes = {
   username: PropTypes.string,
   img: PropTypes.string,
   bio: PropTypes.string,
+  friends: PropTypes.arrayOf(PropTypes.string),
 };
