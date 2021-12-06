@@ -31,15 +31,16 @@ export const Home = (props) => {
 
   useEffect(() => {
     const getFriends = async () => {
-      console.log('Dentro del metodo', friends);
-      const listPromises = friends?.map((e, i) => {
-        // Traemos la info
-        const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/${e}`;
-        const friend = fetchFriend(urlBackUser);
-        return friend;
-      });
-      const list = await Promise.all(listPromises);
-      setAmigos(list);
+      if (friends) {
+        const listPromises = friends?.map((e) => {
+          // Traemos la info
+          const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/${e}`;
+          const friend = fetchFriend(urlBackUser);
+          return friend;
+        });
+        const list = await Promise.all(listPromises);
+        setAmigos(list);
+      }
     };
     getFriends();
   }, [friends]);
@@ -166,17 +167,14 @@ export const Home = (props) => {
                           </tr>
                         </thead>
                         <tbody>
-                          {amigos?.map((e, i) => {
-                            console.log('FILA AMIGO', e);
-                            return (
-                              <FilaAmigo
-                                key={i}
-                                name={e.name}
-                                username={e.username}
-                                img={e.avatarUrl}
-                              />
-                            );
-                          })}
+                          {amigos?.map((e, i) => (
+                            <FilaAmigo
+                              key={i}
+                              name={e.name}
+                              username={e.username}
+                              img={e.avatarUrl}
+                            />
+                          ))}
                         </tbody>
                       </table>
                     </div>
