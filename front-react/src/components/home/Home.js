@@ -29,20 +29,20 @@ export const Home = (props) => {
     }
   };
 
-  const getFriends = async () => {
-    const list = friends?.map(async (e, i) => {
-      // Traemos la info
-      const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/${e}`;
-      const friend = await fetchFriend(urlBackUser);
-      return friend;
-    });
-    setAmigos(list);
-  };
-
   useEffect(() => {
+    const getFriends = async () => {
+      console.log('Dentro del metodo', friends);
+      const listPromises = friends?.map((e, i) => {
+        // Traemos la info
+        const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/${e}`;
+        const friend = fetchFriend(urlBackUser);
+        return friend;
+      });
+      const list = await Promise.all(listPromises);
+      setAmigos(list);
+    };
     getFriends();
-    console.log(amigos);
-  }, [amigos]);
+  }, [friends]);
 
   return (
     <>
@@ -140,43 +140,46 @@ export const Home = (props) => {
               />
             </div>
           </div>
-        </section>
-        <section id="div" className="contenedor-div amigos">
-          <div className="container-fluid container-intro">
-            <div className="row align-items-center text-white">
-              <h1 className="display-2 align-self-md-auto">
-                <span className="display-2--intro">Amigos</span>
-              </h1>
-              <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
-                integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA="
-                crossOrigin="anonymous"
-              />
-              <div className="container mt-3 mb-4 ">
-                <div className="col-lg-9 mt-4 mt-lg-0">
-                  <div className="row">
-                    <div className="col-md-12">
-                      <div className="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
-                        <table className="table manage-candidates-top mb-0">
-                          <thead>
-                            <tr>
-                              <th>Usuario</th>
-                              <th className="text-center">Status</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {amigos?.map((e, i) => (
+        </div>
+      </section>
+      <section id="div" className="contenedor-div amigos">
+        <div className="container-fluid container-intro">
+          <div className="row align-items-center text-white">
+            <h1 className="display-2 align-self-md-auto">
+              <span className="display-2--intro">Amigos</span>
+            </h1>
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+              integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA="
+              crossOrigin="anonymous"
+            />
+            <div className="container mt-3 mb-4 ">
+              <div className="col-lg-9 mt-4 mt-lg-0">
+                <div className="row">
+                  <div className="col-md-12">
+                    <div className="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
+                      <table className="table manage-candidates-top mb-0">
+                        <thead>
+                          <tr>
+                            <th>Usuario</th>
+                            <th className="text-center">Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {amigos?.map((e, i) => {
+                            console.log('FILA AMIGO', e);
+                            return (
                               <FilaAmigo
                                 key={i}
                                 name={e.name}
                                 username={e.username}
                                 img={e.avatarUrl}
                               />
-                            ))}
-                          </tbody>
-                        </table>
-                      </div>
+                            );
+                          })}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
@@ -187,7 +190,7 @@ export const Home = (props) => {
         <section id="footer" className="contenedorFooter">
           <Footer />
         </section>
-      </div>
+      </div >
     </>
   );
 };
