@@ -39,10 +39,6 @@ export const Landing = () => {
   const { name, username, email, bio, avatarUrl, password, passwordConfirm } =
     formValues;
 
-  useEffect(() => {
-    console.log('email cambió');
-  }, [email]);
-
   const handleSubmitSignUp = async (e) => {
     e.preventDefault();
 
