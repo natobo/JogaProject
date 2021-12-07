@@ -68,7 +68,6 @@ function App() {
   }, []);
 
   return (
-
     <Router>
       <Route exact path="/home">
         <Home
@@ -113,7 +112,6 @@ function App() {
         <LoginForm />
       </Route>
     </Router>
-
   );
 }
 
