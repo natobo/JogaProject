@@ -1,26 +1,25 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import { Landing } from './components/landing/Landing';
 import { Home } from './components/home/Home';
-import { Chats } from './components/chats/Chats';
+// import { Chats } from './components/chats/Chats';
+import { AppChat } from './components/chats/AppChat';
 import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
+import { SignupForm } from './components/forms/SignUpForm';
+import { LoginForm } from './components/forms/LoginForm';
+import { ProvideAuth, authContext } from './hooks/useAuth';
 import { JuegoSpecific } from './components/juegos/specific/JuegoSpecific';
 import { Stats } from './components/stats/Stats';
 import { AgregarJuego } from './components/juegos/agregar/AgregarJuego';
 
 function App() {
+  const auth = useContext(authContext);
+
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
   // GET mock user
-  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61620b765b7e08245285f2bf`;
+  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/getMe`;
 
   const [user, setUser] = useState({});
 
@@ -34,16 +33,17 @@ function App() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          email: 'noreply.joga@gmail.com',
-          password: 'admin123',
+          email: 'jbuitrago@gmail.com',
+          password: '12345678',
         }),
       });
       const respJson = await resp.json();
       localStorage.setItem('jwt', respJson.token);
+      localStorage.setItem('username', 'jbuitrago');
+      localStorage.setItem('password', '123123');
     } catch (error) {
       console.log(error);
     }
-
     try {
       // Traemos la info
       const dataUser = await fetch(urlBackUser, {
@@ -56,7 +56,6 @@ function App() {
       });
       const dataUserJsonResp = await dataUser.json();
       const dataUserJson = dataUserJsonResp.data;
-      console.log(dataUserJson);
       setUser(dataUserJson);
     } catch (error) {
       console.log(error);
@@ -69,46 +68,75 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Router>
-        <Route exact path="/home">
-          <Home
-            name={user.name}
-            username={user.username}
-            img={user.avatarUrl}
-            bio={user.bio}
-          />
-        </Route>
-        <Route exact path="/chats">
-          <Chats />
-        </Route>
-        <Route exact path="/juegos">
-          <Juegos />
-        </Route>
-        <Route exact path="/juegos/buscar/:id">
-          <JuegoSpecific />
-        </Route>
-        <Route exact path="/juegos/:id">
-          <JuegoSpecific />
-        </Route>
-        <Route exact path="/juegos/buscar">
-          <JuegosBuscar />
-        </Route>
-        <Route exact path="/juegos/agregar">
-          <AgregarJuego />
-        </Route>
-        <Route exact path="/lfgs">
-          <Lfgs />
-        </Route>
-        <Route exact path="/stats">
-          <Stats />
-        </Route>
-        <Route exact path="/">
-          <Landing />
-        </Route>
-      </Router>
-    </>
+
+    <Router>
+      <Route exact path="/home">
+        <Home
+          name={user.name}
+          username={user.username}
+          img={user.avatarUrl}
+          bio={user.bio}
+          friends={user.friends}
+        />
+      </Route>
+      <Route exact path="/chats">
+        <AppChat />
+      </Route>
+      <Route exact path="/juegos">
+        <Juegos />
+      </Route>
+      <Route exact path="/juegos/buscar/:id">
+        <JuegoSpecific />
+      </Route>
+      <Route exact path="/juegos/:id">
+        <JuegoSpecific />
+      </Route>
+      <Route exact path="/juegos/buscar">
+        <JuegosBuscar />
+      </Route>
+      <Route exact path="/juegos/agregar">
+        <AgregarJuego />
+      </Route>
+      <Route exact path="/lfgs">
+        <Lfgs />
+      </Route>
+      <Route exact path="/stats">
+        <Stats />
+      </Route>
+      <Route exact path="/">
+        <Landing />
+      </Route>
+      <Route exact path="/signup">
+        <SignupForm />
+      </Route>
+      <Route exact path="/login">
+        <LoginForm />
+      </Route>
+    </Router>
+
   );
 }
 
+// A wrapper for <Route> that redirects to the login
+// screen if you're not yet authenticated.
+function PrivateRoute({ children, ...rest }) {
+  const auth = useContext(authContext);
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        auth.user ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: location },
+            }}
+          />
+        )
+      }
+    />
+  );
+}
 export default App;
