@@ -10,7 +10,7 @@ import { JuegosBuscar } from './components/juegos/JuegosBuscar';
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
   // GET mock user
-  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61ad69a1eeef91c6dbfc6ff5`;
+  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61ad7e12da15acdd5b3f77f7`;
 
   const [user, setUser] = useState({});
 

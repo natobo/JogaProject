@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './scss/_items.scss';
 import PropTypes from 'prop-types';
+import { reverse } from 'dns';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
 import { Footer } from '../footer/Footer';
@@ -10,6 +11,7 @@ import { FilaAmigo } from './Amigos';
 export const Home = (props) => {
   const { name, username, img, bio, friends } = props;
   const [amigos, setAmigos] = useState([]);
+  const [searchUser, setSearchUser] = useState('');
 
   const fetchFriend = async (urlBackUser) => {
     try {
@@ -159,22 +161,52 @@ export const Home = (props) => {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
+                        <input
+                          id="myInput"
+                          type="text"
+                          placeholder="Search.."
+                          onChange={(event) => {
+                            setSearchUser(event.target.value);
+                          }}
+                        />
                         <table className="table manage-candidates-top mb-0">
                           <thead>
                             <tr>
-                              <th>Usuario</th>
+                              <th>
+                                <button
+                                  className="btn"
+                                  type="button"
+                                  id="Sort"
+                                  aria-expanded="false"
+                                >
+                                  Usuario
+                                </button>
+                              </th>
                               <th className="text-center">Status</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {amigos?.map((e, i) => (
-                              <FilaAmigo
-                                key={i}
-                                name={e.name}
-                                username={e.username}
-                                img={e.avatarUrl}
-                              />
-                            ))}
+                            {amigos
+                              ?.filter((amigo) => {
+                                if (
+                                  searchUser === '' ||
+                                  amigo.username
+                                    .toLowerCase()
+                                    .includes(searchUser.toLowerCase()) ||
+                                  amigo.username.includes(searchUser)
+                                ) {
+                                  return amigo;
+                                }
+                                return null;
+                              })
+                              .map((e, i) => (
+                                <FilaAmigo
+                                  key={i}
+                                  name={e.name}
+                                  username={e.username}
+                                  img={e.avatarUrl}
+                                />
+                              ))}
                           </tbody>
                         </table>
                       </div>
