@@ -12,6 +12,7 @@ import { LoginForm } from './components/forms/LoginForm';
 import { ProvideAuth, authContext } from './hooks/useAuth';
 import { JuegoSpecific } from './components/juegos/specific/JuegoSpecific';
 import { Stats } from './components/stats/Stats';
+import { AgregarJuego } from './components/juegos/agregar/AgregarJuego';
 
 function App() {
   const auth = useContext(authContext);
@@ -67,6 +68,7 @@ function App() {
   }, []);
 
   return (
+
     <Router>
       <Route exact path="/home">
         <Home
@@ -92,6 +94,9 @@ function App() {
       <Route exact path="/juegos/buscar">
         <JuegosBuscar />
       </Route>
+      <Route exact path="/juegos/agregar">
+        <AgregarJuego />
+      </Route>
       <Route exact path="/lfgs">
         <Lfgs />
       </Route>
@@ -108,6 +113,7 @@ function App() {
         <LoginForm />
       </Route>
     </Router>
+
   );
 }
 
