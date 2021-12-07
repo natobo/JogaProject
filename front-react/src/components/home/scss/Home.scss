@@ -207,20 +207,20 @@ position: absolute;
 }
 .contenedorFooter {
   position: absolute;
-  bottom: -130rem;
+  bottom: -150rem;
   width: 100%;
 }
 @media (max-width: 1000px) {
   .contenedorFooter {
     position: absolute;
-    bottom: -170rem;
+    bottom: -190rem;
     width: 100%;
   }
 }
 @media (max-width: 411px) {
   .contenedorFooter {
     position: absolute;
-    bottom: -180rem;
+    bottom: -200rem;
     width: 100%;
   }
 }
@@ -376,7 +376,8 @@ position: absolute;
 }
 
 .candidate-list-title {
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
+  color: black;
 }
 
 .candidate-list-details ul {
@@ -409,7 +410,7 @@ position: absolute;
   position: relative;
   height: 40px;
   width: 40px;
-  line-height: 40px;
+  line-height: 80px;
   border: 1px solid #eeeeee;
   border-radius: 100%;
   text-align: center;
