@@ -207,10 +207,23 @@ position: absolute;
 }
 .contenedorFooter {
   position: absolute;
-  bottom: -363%;
+  bottom: -130rem;
   width: 100%;
 }
-
+@media (max-width: 1000px) {
+  .contenedorFooter {
+    position: absolute;
+    bottom: -170rem;
+    width: 100%;
+  }
+}
+@media (max-width: 411px) {
+  .contenedorFooter {
+    position: absolute;
+    bottom: -180rem;
+    width: 100%;
+  }
+}
 
 .amigos {
   position: absolute;
@@ -223,7 +236,7 @@ position: absolute;
     position: absolute;
     max-height: auto;
     max-width: 100%;
-    top: 260%;
+    top: 273%;
   }
 }
 @media (max-width: 768px) {
@@ -428,4 +441,25 @@ position: absolute;
 
 .user-dashboard-info-box .candidates-list .thumb {
   margin-right: 20px;
+}
+
+thead button {
+  border: 0;
+  border-radius: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  padding: 0.5em;
+  margin-bottom: 1px;
+}
+thead button.ascending::after {
+  content: '👇';
+  display: inline-block;
+  margin-left: 1em;
+}
+
+thead button.descending::after {
+  content: '☝️';
+  display: inline-block;
+  margin-left: 1em;
 }

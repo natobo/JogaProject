@@ -1,5 +1,5 @@
 import React from 'react';
-import './scss/_items.scss';
+import './scss/Home.scss';
 import PropTypes from 'prop-types';
 
 export const FilaAmigo = (props) => {

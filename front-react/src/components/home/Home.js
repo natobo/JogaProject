@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import './scss/_items.scss';
+import './scss/Home.scss';
 import PropTypes from 'prop-types';
-import { reverse } from 'dns';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
 import { Footer } from '../footer/Footer';
 import Carrusel from '../juegos/games_section/carrusel_juegos/Carrusel';
 import { FilaAmigo } from './Amigos';
+import { useSortableData } from '../../hooks/useSortableData';
 
 export const Home = (props) => {
   const { name, username, img, bio, friends } = props;
@@ -46,6 +46,15 @@ export const Home = (props) => {
     };
     getFriends();
   }, [friends]);
+
+  const { items, requestSort, sortConfig } = useSortableData(amigos);
+  const getClassNamesFor = (pname) => {
+    console.log('Sort', sortConfig, pname);
+    if (!sortConfig) {
+      return;
+    }
+    return sortConfig.key === pname ? sortConfig.direction : undefined;
+  };
 
   return (
     <>
@@ -174,10 +183,11 @@ export const Home = (props) => {
                             <tr>
                               <th>
                                 <button
-                                  className="btn"
                                   type="button"
-                                  id="Sort"
+                                  id="sort"
                                   aria-expanded="false"
+                                  onClick={() => requestSort('username')}
+                                  className={getClassNamesFor('username')}
                                 >
                                   Usuario
                                 </button>
@@ -186,7 +196,7 @@ export const Home = (props) => {
                             </tr>
                           </thead>
                           <tbody>
-                            {amigos
+                            {items
                               ?.filter((amigo) => {
                                 if (
                                   searchUser === '' ||
