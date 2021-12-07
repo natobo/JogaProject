@@ -12,15 +12,17 @@ export const AppChat = () => {
 
   return (
     <>
-      <ChatEngine
-        height="100vh"
-        projectID={projectID}
-        userName={localStorage.getItem('username')}
-        userSecret={localStorage.getItem('password')}
-        // eslint-disable-next-line react/jsx-props-no-spreading
-        renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
-      />
-      <Footer />
+      <div className="ChatEngine">
+        <ChatEngine
+          height="100vh"
+          projectID={projectID}
+          userName={localStorage.getItem('username')}
+          userSecret={localStorage.getItem('password')}
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
+        />
+        <Footer />
+      </div>
       <Sidenavbar />
     </>
   );
