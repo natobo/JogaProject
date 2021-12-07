@@ -19,12 +19,11 @@ const gamesSchema = new mongoose.Schema({
       message: 'A game must have at least 1 platform!',
     },
   },
-  linkImg: [
-    {
-      data: Buffer,
-      contentType: String,
-    },
-  ],
+  linkImg: {
+    type: [String],
+    default: [],
+  },
+
   type: {
     type: String,
     uppercase: true,

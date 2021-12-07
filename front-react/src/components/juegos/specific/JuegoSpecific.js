@@ -27,14 +27,35 @@ export const JuegoSpecific = () => {
   }, []);
 
   if (loading) {
-    return <h1>loading</h1>;
+    return (
+      <div>
+        <Sidenavbar />
+        <div className="vista-juego" />
+      </div>
+    );
   }
 
   return (
     <div>
       <Sidenavbar />
       <div className="vista-juego">
-        <div className="game-title">{game.name}</div>
+        <div className="game-specific-title">{game.name}</div>
+        <div className="game-specific-imgbg-wrapper">
+          <img
+            src={game.linkPortada}
+            className="game-specific-imgbg"
+            aria-label={game.name}
+          />
+        </div>
+        <div className="game-specific-main-img-wrapper">
+          <img
+            src={game.linkPortada}
+            className="game-specific-main-img"
+            aria-label={game.name}
+          />
+        </div>
+        <div className="game-specific-encontrar-lfg">Encontrar grupo</div>
+        <div className="game-specific-description">{game.description}</div>
       </div>
     </div>
   );
