@@ -14,13 +14,14 @@
 }
 
 .ce-active-chat-card {
-  background-color: #cabcdc !important;
-  border: 4px solid #cabcdc !important;
+  background-color: #a692ee !important;
+  border: 4px solid #a692ee !important;
   border-radius: 0px !important;
 }
 
 .ce-chat-subtitle-text {
-  color: #595959 !important;
+  color: #000000 !important;
+  font-weight: bold;
 }
 
 .ce-chat-form-container {
