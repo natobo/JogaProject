@@ -15,7 +15,7 @@
     "start:windows": "SET NODE_ENV=production & node ./bin/www",
     "start:default": "NODE_ENV=production node ./bin/www",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint . --fix --ext .js,.jsx .",
     "start-prod": "npm install -w front-react && npm run build -w front-react",
     "heroku-postbuild": "npm run start-prod"
   },
@@ -25,7 +25,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "autoprefixer": "^9.8.7",
-    "axios": "^0.24.0",
     "babel-eslint": "^10.1.0",
     "bcrypt": "^5.0.1",
     "bootstrap": "^5.1.3",

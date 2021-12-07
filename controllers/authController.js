@@ -49,6 +49,7 @@ exports.signup = catchAsync(async (req, res) => {
     passwordConfirm: req.body.passwordConfirm,
     bio: req.body.bio,
     avatarUrl: req.body.avatarUrl,
+    friends: req.body.friends,
   });
   createSendToken(newUser, 201, res);
 });

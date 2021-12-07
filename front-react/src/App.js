@@ -9,7 +9,8 @@ import {
 } from 'react-router-dom';
 import { Landing } from './components/landing/Landing';
 import { Home } from './components/home/Home';
-import { Chats } from './components/chats/Chats';
+// import { Chats } from './components/chats/Chats';
+import { AppChat } from './components/chats/AppChat';
 import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
@@ -19,7 +20,7 @@ import { Stats } from './components/stats/Stats';
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
   // GET mock user
-  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61620b765b7e08245285f2bf`;
+  const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/61ad7e12da15acdd5b3f77f7`;
 
   const [user, setUser] = useState({});
 
@@ -55,7 +56,6 @@ function App() {
       });
       const dataUserJsonResp = await dataUser.json();
       const dataUserJson = dataUserJsonResp.data;
-      console.log(dataUserJson);
       setUser(dataUserJson);
     } catch (error) {
       console.log(error);
@@ -76,10 +76,11 @@ function App() {
             username={user.username}
             img={user.avatarUrl}
             bio={user.bio}
+            friends={user.friends}
           />
         </Route>
         <Route exact path="/chats">
-          <Chats />
+          <AppChat />
         </Route>
         <Route exact path="/juegos">
           <Juegos />
@@ -106,5 +107,4 @@ function App() {
     </>
   );
 }
-
 export default App;
