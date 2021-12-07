@@ -1,5 +1,12 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect,
+} from 'react-router-dom';
 import { Landing } from './components/landing/Landing';
 import { Home } from './components/home/Home';
 // import { Chats } from './components/chats/Chats';
@@ -7,6 +14,8 @@ import { AppChat } from './components/chats/AppChat';
 import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
+import { JuegoSpecific } from './components/juegos/specific/JuegoSpecific';
+import { Stats } from './components/stats/Stats';
 
 function App() {
   const urlBackLogin = `${process.env.REACT_APP_URL_BACK}/api/user/login`;
@@ -76,11 +85,20 @@ function App() {
         <Route exact path="/juegos">
           <Juegos />
         </Route>
+        <Route exact path="/juegos/buscar/:id">
+          <JuegoSpecific />
+        </Route>
+        <Route exact path="/juegos/:id">
+          <JuegoSpecific />
+        </Route>
         <Route exact path="/juegos/buscar">
           <JuegosBuscar />
         </Route>
         <Route exact path="/lfgs">
           <Lfgs />
+        </Route>
+        <Route exact path="/stats">
+          <Stats />
         </Route>
         <Route exact path="/">
           <Landing />

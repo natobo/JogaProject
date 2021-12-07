@@ -14,28 +14,24 @@ export const Juegos = () => (
           title="Recientes"
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
-          buttonPath="/lfgs"
           tag="none"
         />
         <Carrusel
           title="Populares"
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
-          buttonPath="/lfgs"
           tag="Popular"
         />
         <Carrusel
           title="Competitivos"
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
-          buttonPath="/lfgs"
           tag="Competitivo"
         />
         <Carrusel
           title="Casuales"
           url={`${process.env.REACT_APP_URL_BACK}/api/game`}
           buttonText="Encontrar grupo"
-          buttonPath="/lfgs"
           tag="Casual"
         />
         <div className="footer-juegos">

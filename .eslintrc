@@ -4,6 +4,7 @@
   "plugins": ["html"],
   "rules": {
     "react/prop-types": ["off"],
+    "no-restricted-syntax": ["off"],
     "jsx-a11y/label-has-associated-control": [
       "error",
       {
