@@ -167,6 +167,7 @@ export const Home = (props) => {
                             </tr>
                           </thead>
                           <tbody>
+                            {console.log('AMIGOS', amigos)}
                             {amigos?.map((e, i) => (
                               <FilaAmigo
                                 key={i}
