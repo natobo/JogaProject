@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './scss/_items.scss';
+import './scss/Home.scss';
 import PropTypes from 'prop-types';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
 import { Footer } from '../footer/Footer';
 import Carrusel from '../juegos/games_section/carrusel_juegos/Carrusel';
 import { FilaAmigo } from './Amigos';
+import { useSortableData } from '../../hooks/useSortableData';
 
 export const Home = (props) => {
   const { name, username, img, bio, friends } = props;
   const [amigos, setAmigos] = useState([]);
+  const [searchUser, setSearchUser] = useState('');
 
   const fetchFriend = async (urlBackUser) => {
     try {
@@ -44,6 +46,15 @@ export const Home = (props) => {
     };
     getFriends();
   }, [friends]);
+
+  const { items, requestSort, sortConfig } = useSortableData(amigos);
+  const getClassNamesFor = (pname) => {
+    console.log('Sort', sortConfig, pname);
+    if (!sortConfig) {
+      return;
+    }
+    return sortConfig.key === pname ? sortConfig.direction : undefined;
+  };
 
   return (
     <>
@@ -159,23 +170,53 @@ export const Home = (props) => {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm">
+                        <input
+                          id="myInput"
+                          type="text"
+                          placeholder="Search.."
+                          onChange={(event) => {
+                            setSearchUser(event.target.value);
+                          }}
+                        />
                         <table className="table manage-candidates-top mb-0">
                           <thead>
                             <tr>
-                              <th>Usuario</th>
+                              <th>
+                                <button
+                                  type="button"
+                                  id="sort"
+                                  aria-expanded="false"
+                                  onClick={() => requestSort('username')}
+                                  className={getClassNamesFor('username')}
+                                >
+                                  Usuario
+                                </button>
+                              </th>
                               <th className="text-center">Status</th>
                             </tr>
                           </thead>
                           <tbody>
-                            {console.log('AMIGOS', amigos)}
-                            {amigos?.map((e, i) => (
-                              <FilaAmigo
-                                key={i}
-                                name={e.name}
-                                username={e.username}
-                                img={e.avatarUrl}
-                              />
-                            ))}
+                            {items
+                              ?.filter((amigo) => {
+                                if (
+                                  searchUser === '' ||
+                                  amigo.username
+                                    .toLowerCase()
+                                    .includes(searchUser.toLowerCase()) ||
+                                  amigo.username.includes(searchUser)
+                                ) {
+                                  return amigo;
+                                }
+                                return null;
+                              })
+                              .map((e, i) => (
+                                <FilaAmigo
+                                  key={i}
+                                  name={e.name}
+                                  username={e.username}
+                                  img={e.avatarUrl}
+                                />
+                              ))}
                           </tbody>
                         </table>
                       </div>

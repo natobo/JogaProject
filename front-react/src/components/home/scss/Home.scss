@@ -1,6 +1,8 @@
 .fondo {
   position: absolute;
   min-height: 100%;
+  height: auto ;
+  height: 100%;
   display: block;
   overflow: auto;
   width: 86%;
@@ -9,7 +11,21 @@
   display: flex;
   justify-content: space-between;
 }
-
+@media (max-width: 768px) {
+  .fondo {
+    position: absolute;
+    min-height: 100%;
+    height: auto ;
+    height: 100%;
+    display: block;
+    overflow: auto;
+    width: 100%;
+    left: 0%;
+    background-color: #260a87;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .circulo {
   max-width: 375px;
@@ -34,7 +50,7 @@
   }
 }
 .rectangulo {
-  width: 100%;
+  width: 116%;
   height: 250px;
   background: var(--bs-indigo);
 }
@@ -115,14 +131,14 @@ position: absolute;
   position: absolute;
   max-height: 250%;
   width: 86%;
-  top: 74.3%;
+  top: 78.3%;
 }
 @media (max-width: 768px) {
   .contenedor-juegos {
     position: absolute;
     max-height: 250%;
     width: 82%;
-    top: 88.3%;
+    top: 92.3%;
     left: 0;
   }
 }
@@ -131,7 +147,7 @@ position: absolute;
     position: absolute;
     max-height: 250%;
     width: 86%;
-    top: 111.3%;
+    top: 115.3%;
     left: 0;
   }
 }
@@ -170,14 +186,14 @@ position: absolute;
   position: absolute;
   max-height: auto;
   max-width: 86%;
-  top: 142%;
+  top: 152%;
 }
 @media (max-width: 768px) {
   .contenedor-lfgs {
     position: absolute;
     max-height: auto;
     max-width: 86%;
-    top: 145%;
+    top: 140%;
   }
 }
 @media (max-width: 411px) {
@@ -185,41 +201,27 @@ position: absolute;
     position: absolute;
     max-height: auto;
     max-width: 86%;
-    top: 162%;
+    top: 17%;
     left: 2%;
   }
 }
 .contenedorFooter {
   position: absolute;
-  max-height: auto;
-  width: 86%;
-  top: 345%;
+  bottom: -130rem;
+  width: 100%;
 }
-@media (max-width: 983px) {
+@media (max-width: 1000px) {
   .contenedorFooter {
     position: absolute;
-    max-height: auto;
-    width: 86%;
-    top: 410%;
-    left: 14%;
-  }
-}
-@media (max-width: 768px) {
-  .contenedorFooter {
-    position: absolute;
-    max-height: auto;
+    bottom: -170rem;
     width: 100%;
-    top: 400%;
-    left: 0;
   }
 }
 @media (max-width: 411px) {
   .contenedorFooter {
     position: absolute;
-    max-height: auto;
+    bottom: -180rem;
     width: 100%;
-    top: 450%;
-    left: 0;
   }
 }
 
@@ -234,7 +236,7 @@ position: absolute;
     position: absolute;
     max-height: auto;
     max-width: 100%;
-    top: 260%;
+    top: 273%;
   }
 }
 @media (max-width: 768px) {
@@ -242,7 +244,7 @@ position: absolute;
     position: absolute;
     max-height: auto;
     max-width: 100%;
-    top: 272%;
+    top: 278%;
     left: 0;
   }
 }
@@ -251,7 +253,7 @@ position: absolute;
     position: absolute;
     max-height: auto;
     max-width: 100%;
-    top: 300%;
+    top: 305%;
     left: 0;
   }
 }
@@ -439,4 +441,25 @@ position: absolute;
 
 .user-dashboard-info-box .candidates-list .thumb {
   margin-right: 20px;
+}
+
+thead button {
+  border: 0;
+  border-radius: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  padding: 0.5em;
+  margin-bottom: 1px;
+}
+thead button.ascending::after {
+  content: '👇';
+  display: inline-block;
+  margin-left: 1em;
+}
+
+thead button.descending::after {
+  content: '☝️';
+  display: inline-block;
+  margin-left: 1em;
 }

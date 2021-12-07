@@ -19,12 +19,11 @@ const gamesSchema = new mongoose.Schema({
       message: 'A game must have at least 1 platform!',
     },
   },
-  linkImg: [
-    {
-      data: Buffer,
-      contentType: String,
-    },
-  ],
+  linkImg: {
+    type: [String],
+    default: [],
+  },
+
   type: {
     type: String,
     uppercase: true,
@@ -48,6 +47,17 @@ const gamesSchema = new mongoose.Schema({
   tags: {
     type: [String],
     default: ['none'],
+  },
+  rating: {
+    type: Number,
+    default: 0,
+    min: 0,
+    max: 100,
+  },
+  numberOfReviews: {
+    type: Number,
+    min: 0,
+    default: 0,
   },
 });
 

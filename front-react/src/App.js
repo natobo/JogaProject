@@ -1,20 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
 import { Landing } from './components/landing/Landing';
 import { Home } from './components/home/Home';
-import { Chats } from './components/chats/Chats';
+// import { Chats } from './components/chats/Chats';
+import { AppChat } from './components/chats/AppChat';
 import { Juegos } from './components/juegos/Juegos';
 import { Lfgs } from './components/lfgs/Lfgs';
 import { JuegosBuscar } from './components/juegos/JuegosBuscar';
 import { SignupForm } from './components/forms/SignUpForm';
 import { LoginForm } from './components/forms/LoginForm';
 import { ProvideAuth, authContext } from './hooks/useAuth';
+import { JuegoSpecific } from './components/juegos/specific/JuegoSpecific';
+import { Stats } from './components/stats/Stats';
 
 function App() {
   const auth = useContext(authContext);
@@ -70,43 +67,47 @@ function App() {
   }, []);
 
   return (
-    <>
-      <ProvideAuth>
-        <Router>
-          {console.log('APP', auth)}
-          <Route exact path="/home">
-            <Home
-              name={user.name}
-              username={user.username}
-              img={user.avatarUrl}
-              bio={user.bio}
-              friends={user.friends}
-            />
-          </Route>
-          <Route exact path="/chats">
-            <Chats />
-          </Route>
-          <Route exact path="/juegos">
-            <Juegos />
-          </Route>
-          <Route exact path="/juegos/buscar">
-            <JuegosBuscar />
-          </Route>
-          <Route exact path="/lfgs">
-            <Lfgs />
-          </Route>
-          <Route exact path="/">
-            <Landing />
-          </Route>
-          <Route exact path="/signup">
-            <SignupForm />
-          </Route>
-          <Route exact path="/login">
-            <LoginForm />
-          </Route>
-        </Router>
-      </ProvideAuth>
-    </>
+    <Router>
+      <Route exact path="/home">
+        <Home
+          name={user.name}
+          username={user.username}
+          img={user.avatarUrl}
+          bio={user.bio}
+          friends={user.friends}
+        />
+      </Route>
+      <Route exact path="/chats">
+        <AppChat />
+      </Route>
+      <Route exact path="/juegos">
+        <Juegos />
+      </Route>
+      <Route exact path="/juegos/buscar/:id">
+        <JuegoSpecific />
+      </Route>
+      <Route exact path="/juegos/:id">
+        <JuegoSpecific />
+      </Route>
+      <Route exact path="/juegos/buscar">
+        <JuegosBuscar />
+      </Route>
+      <Route exact path="/lfgs">
+        <Lfgs />
+      </Route>
+      <Route exact path="/stats">
+        <Stats />
+      </Route>
+      <Route exact path="/">
+        <Landing />
+      </Route>
+      <Route exact path="/signup">
+        <SignupForm />
+      </Route>
+      <Route exact path="/login">
+        <LoginForm />
+      </Route>
+    </Router>
   );
 }
 
@@ -132,5 +133,4 @@ function PrivateRoute({ children, ...rest }) {
     />
   );
 }
-
 export default App;
