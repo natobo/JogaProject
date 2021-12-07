@@ -1,0 +1,11 @@
+// Import the sections of the searchsection
+@use './_agregarjuego.scss';
+
+// Font awesome scss
+@use '../../../../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@use '../../../../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
+@use '../../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@use '../../../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+
+// use shared typography
+@use '../../shared-scss/typography';

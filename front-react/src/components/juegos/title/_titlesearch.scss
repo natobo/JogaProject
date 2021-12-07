@@ -22,13 +22,33 @@
   position: absolute;
   right: 0;
   font-size: 3rem;
-  margin-right: 5rem;
+  margin-right: 5%;
   margin-top: 2.5%;
   height: 6vh;
   border-radius: 12px;
   line-height: 50px;
   text-align: center;
   color: #fff;
+  transition: 0.3s;
+}
+
+.agregar {
+  position: absolute;
+  right: 8%;
+  font-size: 3rem;
+  margin-right: 8%;
+  margin-top: 2.5%;
+  height: 6vh;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.agregar:hover,
+.busqueda:hover {
+  color: $blue-darker;
 }
 
 .footer-juegos {
@@ -44,5 +64,9 @@
     left: 0;
     background: $purple-blue;
     display: flex;
+  }
+
+  .agregar {
+    visibility: hidden;
   }
 }
