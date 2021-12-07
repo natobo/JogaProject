@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 function SearchSection({ url, buttonPath }) {
   const [cards, setCards] = useState([]);
+  const [checked, setChecked] = useState(false);
   const [tags, setTags] = useState({});
   const [activeTags, setActiveTags] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
@@ -44,7 +45,7 @@ function SearchSection({ url, buttonPath }) {
     const tagsState = activeTags;
     tagsState[filter] = isChecked;
     setActiveTags(tagsState);
-    console.log(activeTags);
+    setChecked(!checked);
   };
 
   function getTags(cardArray) {
@@ -58,12 +59,10 @@ function SearchSection({ url, buttonPath }) {
         }
       });
     });
-    console.log(allTags);
     return allTags;
   }
 
   useEffect(() => {
-    console.log('effected');
     async function fetchData() {
       await axios
         .get(URL)
@@ -79,7 +78,8 @@ function SearchSection({ url, buttonPath }) {
         });
     }
     fetchData();
-  }, [loading, activeTags]);
+    console.log('useEffect', activeTags);
+  }, [loading, checked]);
   if (loading) {
     return <div>loading</div>;
   }
@@ -173,7 +173,7 @@ function SearchSection({ url, buttonPath }) {
                 })
                 .map((card) => (
                   <div className="card-container">
-                    <Link to="/lfgs">
+                    <Link to={`/juegos/buscar/${card._id}`}>
                       <img
                         src={card.linkPortada}
                         className="card-img-top"

@@ -41,7 +41,6 @@ export const JuegoSpecific = () => {
         .catch((err) => {
           console.log(err);
         });
-      console.log('lol');
     }
     fetchData();
   }, [rating]);

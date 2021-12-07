@@ -36,6 +36,12 @@ export const Sidenavbar = () => (
             <span className="links-name">Chats</span>
           </Link>
         </li>
+        <li>
+          <Link to="/stats">
+            <i className="fas fa-chart-bar" />
+            <span className="links-name">Stats</span>
+          </Link>
+        </li>
       </ul>
     </div>
   </div>
