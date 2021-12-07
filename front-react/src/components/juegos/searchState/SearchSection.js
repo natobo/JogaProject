@@ -6,29 +6,51 @@ import { Link } from 'react-router-dom';
 function SearchSection({ url, buttonPath }) {
   const [cards, setCards] = useState([]);
   const [tags, setTags] = useState({});
+  const [activeTags, setActiveTags] = useState({});
   const [searchTerm, setSearchTerm] = useState('');
+  const [loading, setLoading] = useState(true);
   const ref = useRef(null);
   const URL = url;
-  function shuffle(array) {
-    let currentIndex = array.length;
-    let randomIndex;
 
-    while (currentIndex !== 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
+  const anyFilterActive = () => {
+    if (
+      Object.keys(activeTags).length === 0 &&
+      activeTags.constructor === Object
+    ) {
+      return false;
     }
+    const elements = Object.entries(activeTags);
+    let found = false;
+    for (let i = 0; i < elements.length && !found; i += 1) {
+      if (elements[i][1]) {
+        found = true;
+      }
+    }
+    return found;
+  };
 
-    return array;
-  }
+  const checkIfFilter = (t) => {
+    const cardTags = t;
+    let matches = false;
+    for (let i = 0; i < cardTags.length && !matches; i += 1) {
+      if (activeTags[cardTags[i]]) {
+        matches = true;
+      }
+    }
+    return matches;
+  };
+
+  const handleFilter = (filter, isChecked) => {
+    const tagsState = activeTags;
+    tagsState[filter] = isChecked;
+    setActiveTags(tagsState);
+    console.log(activeTags);
+  };
+
   function getTags(cardArray) {
     const allTags = {};
     cardArray.forEach((card) => {
       card.tags.forEach((tag) => {
-        console.log(tag);
         if (!(tag in allTags)) {
           allTags[tag] = 1;
         } else {
@@ -36,22 +58,31 @@ function SearchSection({ url, buttonPath }) {
         }
       });
     });
+    console.log(allTags);
     return allTags;
   }
 
   useEffect(() => {
-    axios
-      .get(URL)
-      .then((res) => {
-        setCards(shuffle(res.data.data));
-        setTags(getTags(cards));
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    ref.current.focus();
-    ref.current.select();
-  }, []);
+    console.log('effected');
+    async function fetchData() {
+      await axios
+        .get(URL)
+        .then((res) => {
+          setCards(res.data.data);
+          setTags(getTags(cards));
+
+          setLoading(false);
+        })
+
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    fetchData();
+  }, [loading, activeTags]);
+  if (loading) {
+    return <div>loading</div>;
+  }
 
   return (
     <div>
@@ -84,7 +115,6 @@ function SearchSection({ url, buttonPath }) {
               {Object.entries(tags)
                 .filter((tag) => {
                   if (tag[0] !== 'none') {
-                    console.log(tag[0]);
                     return tag;
                   }
                   return null;
@@ -96,6 +126,9 @@ function SearchSection({ url, buttonPath }) {
                       type="checkbox"
                       value=""
                       id="flexCheckDefault"
+                      onChange={(event) => {
+                        handleFilter(tag[0], event.target.checked);
+                      }}
                     />
                     <label
                       className="form-check-label"
@@ -118,6 +151,15 @@ function SearchSection({ url, buttonPath }) {
             <div className="carousel">
               {cards
                 .filter((card) => {
+                  if (!anyFilterActive()) {
+                    return card;
+                  }
+                  if (checkIfFilter(card.tags)) {
+                    return card;
+                  }
+                  return null;
+                })
+                .filter((card) => {
                   if (
                     searchTerm === '' ||
                     card.name
@@ -131,7 +173,7 @@ function SearchSection({ url, buttonPath }) {
                 })
                 .map((card) => (
                   <div className="card-container">
-                    <Link to={buttonPath}>
+                    <Link to="/lfgs">
                       <img
                         src={card.linkPortada}
                         className="card-img-top"

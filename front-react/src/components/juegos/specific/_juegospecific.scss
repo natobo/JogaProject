@@ -70,11 +70,10 @@
   color: white;
   top: 40%;
   left: 35%;
-  font-size: 30px;
-  width: 15%;
-  height: 20%;
+  font-size: calc(1vw + 0.9vh);
+  width: 12%;
   background-color: $blue-darker;
-  padding: 3%;
+  padding: 2%;
   text-align: center;
   vertical-align: middle;
   border-radius: 5%;
@@ -82,11 +81,38 @@
   cursor: pointer;
 }
 
+.game-specific-encontrar-lfg:after {
+  content: "";
+  display: block;
+  padding-bottom: 40%;
+}
+
 .game-specific-encontrar-lfg:hover {
   color: $blue-darker;
   background-color: white;
 }
 
+.game-rating-wrapper {
+  position: absolute;
+  background-color: $blue-darker;
+  border-radius: 5%;
+  width: 34%;
+  top: 40%;
+  left: 50%;
+  padding: 20px;
+}
+
+.game-rating-title {
+  color: white;
+  font-size: 3vh;
+}
+
+.footer-juegos-specific {
+  position: absolute;
+  left: 14%;
+  width: 86%;
+  bottom: -15%;
+}
 @media (max-width: 768px) {
   .vista-juego {
     position: absolute;
@@ -95,5 +121,95 @@
     left: 0;
     background: $purple-blue;
     display: flex;
+  }
+
+  .game-specific-main-img {
+    object-fit: cover;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .game-specific-main-img-wrapper {
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    height: 40%;
+    width: 70%;
+  }
+
+  .game-specific-description {
+    position: absolute;
+    color: white;
+    top: 54%;
+    left: 15%;
+    font-size: 14px;
+    width: 70%;
+    height: 10%;
+    background-color: $blue-dark;
+    padding: 10px;
+    overflow-y: hidden;
+  }
+
+  .game-specific-encontrar-lfg {
+    position: absolute;
+    color: $blue-darker;
+    top: 90%;
+    left: 25%;
+    font-size: 18px;
+    width: 50%;
+    height: 5%;
+    background-color: white;
+    padding: 2%;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5%;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .game-rating-wrapper {
+    position: absolute;
+    background-color: $blue-darker;
+    border-radius: 5%;
+    width: 80%;
+    top: 66%;
+    left: 10%;
+    padding: 20px;
+  }
+
+  .game-rating-title {
+    color: white;
+    font-size: 20px;
+  }
+
+  .footer-juegos-specific {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -65%;
+  }
+
+  .game-specific-imgbg {
+    object-fit: cover;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .game-specific-imgbg-wrapper {
+    position: absolute;
+    top: 10%;
+    height: 100%;
+    width: 100%;
+  }
+
+  .vista-juego {
+    position: absolute;
+    height: 102vh;
+    background: $purple-blue;
+    display: flex;
+    font-size: 100%;
+    z-index: -2;
   }
 }
