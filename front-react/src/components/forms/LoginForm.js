@@ -5,6 +5,7 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import './Forms.scss';
 import { Link, useHistory, withRouter } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import { authContext } from '../../hooks/useAuth';
 
 const CONTAINER = styled.div`
@@ -102,7 +103,9 @@ export const LoginForm = () => {
   return (
     <div className="form-section-login">
       <CONTAINER>
-        <h1>Registro Joga</h1>
+        <h1>
+          <FormattedMessage id="Registro Joga" />
+        </h1>
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
@@ -134,7 +137,9 @@ export const LoginForm = () => {
                 ) : null}
               </Form.Group>
               <Form.Group controlId="formPassword">
-                <Form.Label>Contraseña :</Form.Label>
+                <Form.Label>
+                  <FormattedMessage id="password" /> :
+                </Form.Label>
                 <Form.Control
                   type="password"
                   name="password"
@@ -151,9 +156,13 @@ export const LoginForm = () => {
                 ) : null}
               </Form.Group>
               <br />
-              <Link to="/signup">Crear una cuenta</Link>
+              <Link to="/signup">
+                <FormattedMessage id="createaccount" />
+              </Link>
               <br />
-              <Link to="/">Volver landing</Link>
+              <Link to="/">
+                <FormattedMessage id="returntomainpage" />
+              </Link>
               <br />
               <BUTTON variant="primary" type="submit" disabled={isSubmitting}>
                 Submit

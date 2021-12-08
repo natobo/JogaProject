@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import { IntlProvider } from 'react-intl';
 import { Landing } from './components/landing/Landing';
 import { Home } from './components/home/Home';
 // import { Chats } from './components/chats/Chats';
@@ -13,6 +14,9 @@ import { ProvideAuth, authContext } from './hooks/useAuth';
 import { JuegoSpecific } from './components/juegos/specific/JuegoSpecific';
 import { Stats } from './components/stats/Stats';
 import { AgregarJuego } from './components/juegos/agregar/AgregarJuego';
+import { LOCALES } from './i18n/locales';
+import messages from './i18n/messages';
+import { Sidenavbar } from './components/sidenavbar/Sidenavbar';
 
 function App() {
   const auth = useContext(authContext);
@@ -22,6 +26,7 @@ function App() {
   const urlBackUser = `${process.env.REACT_APP_URL_BACK}/api/user/getMe`;
 
   const [user, setUser] = useState({});
+  const [language, setLanguage] = useState(LOCALES.SPANISH);
 
   const fetchUser = async () => {
     try {
@@ -62,56 +67,75 @@ function App() {
     }
     // setUser(gifSimple);
   };
+  const langint = () => {
+    if (language === LOCALES.ENGLISH) {
+      setLanguage(LOCALES.SPANISH);
+    } else {
+      setLanguage(LOCALES.ENGLISH);
+    }
+    console.log('new lang: ', language);
+  };
 
   useEffect(() => {
     fetchUser();
   }, []);
 
   return (
-    <Router>
-      <Route exact path="/home">
-        <Home
-          name={user.name}
-          username={user.username}
-          img={user.avatarUrl}
-          bio={user.bio}
-          friends={user.friends}
-        />
-      </Route>
-      <Route exact path="/chats">
-        <AppChat />
-      </Route>
-      <Route exact path="/juegos">
-        <Juegos />
-      </Route>
-      <Route exact path="/juegos/buscar/:id">
-        <JuegoSpecific />
-      </Route>
-      <Route exact path="/juegos/:id">
-        <JuegoSpecific />
-      </Route>
-      <Route exact path="/juegos/buscar">
-        <JuegosBuscar />
-      </Route>
-      <Route exact path="/juegos/agregar">
-        <AgregarJuego />
-      </Route>
-      <Route exact path="/lfgs">
-        <Lfgs />
-      </Route>
-      <Route exact path="/stats">
-        <Stats />
-      </Route>
-      <Route exact path="/">
-        <Landing />
-      </Route>
-      <Route exact path="/signup">
-        <SignupForm />
-      </Route>
-      <Route exact path="/login">
-        <LoginForm />
-      </Route>
-    </Router>
+    <IntlProvider locale={language} messages={messages[language]}>
+      <Router>
+        <Route exact path="/home">
+          <Sidenavbar />
+          <Home
+            name={user.name}
+            username={user.username}
+            img={user.avatarUrl}
+            bio={user.bio}
+            friends={user.friends}
+            setLanguage={langint}
+          />
+        </Route>
+        <Route exact path="/chats">
+          <Sidenavbar />
+          <AppChat />
+        </Route>
+        <Route exact path="/juegos">
+          <Sidenavbar />
+          <Juegos />
+        </Route>
+        <Route exact path="/juegos/buscar/:id">
+          <Sidenavbar />
+          <JuegoSpecific />
+        </Route>
+        <Route exact path="/juegos/:id">
+          <Sidenavbar />
+          <JuegoSpecific />
+        </Route>
+        <Route exact path="/juegos/buscar">
+          <Sidenavbar />
+          <JuegosBuscar />
+        </Route>
+        <Route exact path="/juegos/agregar">
+          <AgregarJuego />
+        </Route>
+        <Route exact path="/lfgs">
+          <Sidenavbar />
+          <Lfgs />
+        </Route>
+        <Route exact path="/stats">
+          <Sidenavbar />
+          <Stats />
+        </Route>
+        <Route exact path="/">
+          <Landing setLanguage={langint} />
+        </Route>
+        <Route exact path="/signup">
+          <SignupForm />
+        </Route>
+        <Route exact path="/login">
+          <LoginForm />
+        </Route>
+      </Router>
+    </IntlProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './scss/Home.scss';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { Card } from '../cards/simpleCard';
 import { Footer } from '../footer/Footer';
@@ -9,7 +10,7 @@ import { FilaAmigo } from './Amigos';
 import { useSortableData } from '../../hooks/useSortableData';
 
 export const Home = (props) => {
-  const { name, username, img, bio, friends } = props;
+  const { name, username, img, bio, friends, setLanguage } = props;
   const [amigos, setAmigos] = useState([]);
   const [searchUser, setSearchUser] = useState('');
 
@@ -59,9 +60,6 @@ export const Home = (props) => {
   return (
     <>
       <div className="fondo">
-        <div>
-          <Sidenavbar />
-        </div>
         <section id="img" className="contenedor-home">
           <div className=" rectangulo ">
             <div className="row align-items-start text-white">
@@ -76,6 +74,15 @@ export const Home = (props) => {
                     {name}
                   </span>
                 </h3>
+                <div
+                  className="change-language-home"
+                  role="button"
+                  tabIndex="0"
+                  onClick={setLanguage}
+                  onKeyPress={setLanguage}
+                >
+                  <i className="fas fa-globe" />
+                </div>
               </div>
               <div className="col-md-6 intros text-end">
                 <div className="">
@@ -112,7 +119,9 @@ export const Home = (props) => {
             <div className="row align-items-center text-white">
               <div className="col-md-6 intros text-start">
                 <h1 className="display-2 align-self-md-auto">
-                  <span className="display-2--intro">juegos Recientes</span>
+                  <span className="display-2--intro">
+                    <FormattedMessage id="recentgames" />
+                  </span>
                 </h1>
               </div>
             </div>
@@ -129,7 +138,9 @@ export const Home = (props) => {
           <div className="row align-items-center text-white">
             <div className="col-md-6 intros text-start">
               <h1 className="display-2 align-self-md-auto">
-                <span className="display-2--intro">LFGs Activos</span>
+                <span className="display-2--intro">
+                  <FormattedMessage id="activelfgs" />
+                </span>
               </h1>
             </div>
           </div>
@@ -157,7 +168,9 @@ export const Home = (props) => {
           <div className="container-fluid container-intro">
             <div className="row align-items-center text-white">
               <h1 className="display-2 align-self-md-auto">
-                <span className="display-2--intro">Amigos</span>
+                <span className="display-2--intro">
+                  <FormattedMessage id="friends" />
+                </span>
               </h1>
               <link
                 rel="stylesheet"

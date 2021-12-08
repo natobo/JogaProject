@@ -25,6 +25,7 @@
 .sidebargames ul {
   margin-top: 0;
   padding-left: 0;
+  height: 100%;
 }
 
 .sidebargames ul li {
@@ -60,6 +61,35 @@
   text-align: center;
 }
 
+.bottom-sidenavbar {
+  position: relative;
+  bottom: 0;
+}
+.sidenavbar-change-language {
+  position: relative;
+  height: 8vh;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 6vh;
+  border-radius: 12px;
+  color: white;
+  transition: 0.3s;
+  bottom: 0;
+}
+
+.sidenavbar-change-language i {
+  height: 6vh;
+  min-width: 30%;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidenavbar-change-language:hover {
+  background: $blue-darker;
+  cursor: pointer;
+}
 @media (max-width: 768px) {
   .sidebargames {
     display: none;

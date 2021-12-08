@@ -53,9 +53,7 @@ export const Lfgs = () => {
     <>
       <div className="main">
         <div className="backg" />
-        <div>
-          <Sidenavbar />
-        </div>
+        <div />
         <div className="content">
           <div className="title">
             <div className="text">LFGs</div>
