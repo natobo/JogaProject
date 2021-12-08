@@ -48,6 +48,7 @@ const spanish = {
     filter: 'Filtrar',
     findgroup: 'Encontrar grupo',
     rategame: 'Califica el juego:',
+    topratedgames: 'Juegos Mejor Calificados',
   },
 };
 
