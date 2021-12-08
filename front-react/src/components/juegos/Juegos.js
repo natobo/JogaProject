@@ -7,7 +7,6 @@ import TitleSearch from './title/TitleSearch';
 export const Juegos = () => (
   <>
     <div>
-      <Sidenavbar />
       <TitleSearch />
       <div className="juegos-carruseles">
         <Carrusel

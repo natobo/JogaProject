@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Link, useParams } from 'react-router-dom';
 import { Rating } from 'react-simple-star-rating';
 import { Footer } from '../../footer/Footer';
-import { Sidenavbar } from '../../sidenavbar/Sidenavbar';
 import './JuegoSpecific.scss';
 
 export const JuegoSpecific = () => {
@@ -48,7 +48,6 @@ export const JuegoSpecific = () => {
   if (loading) {
     return (
       <div>
-        <Sidenavbar />
         <div className="vista-juego" />
       </div>
     );
@@ -56,7 +55,6 @@ export const JuegoSpecific = () => {
 
   return (
     <div>
-      <Sidenavbar />
       <div className="vista-juego">
         <div className="game-specific-title">{game.name}</div>
         <div className="game-specific-imgbg-wrapper">
@@ -74,11 +72,15 @@ export const JuegoSpecific = () => {
           />
         </div>
         <Link to={linkto}>
-          <div className="game-specific-encontrar-lfg">Encontrar grupo</div>
+          <div className="game-specific-encontrar-lfg">
+            <FormattedMessage id="findgroup" />
+          </div>
         </Link>
 
         <div className="game-rating-wrapper">
-          <p className="game-rating-title">Califica el juego:</p>
+          <p className="game-rating-title">
+            <FormattedMessage id="rategame" />
+          </p>
           <Rating
             onClick={handleRating}
             ratingValue={rating}

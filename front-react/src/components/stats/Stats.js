@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { Sidenavbar } from '../sidenavbar/Sidenavbar';
 import { BarChart } from './chart/BarChart';
 import './Stats.scss';
@@ -34,18 +35,22 @@ export const Stats = () => {
   if (loading) {
     return (
       <div>
-        <Sidenavbar />
-        <div className="stats-title">Estadisticas</div>
+        <div className="stats-title">
+          <FormattedMessage id="stats" />
+        </div>
         <div className="stats-main-section" />
       </div>
     );
   }
   return (
     <div>
-      <Sidenavbar />
-      <div className="stats-title">Estadisticas</div>
+      <div className="stats-title">
+        <FormattedMessage id="stats" />
+      </div>
       <div className="stats-main-section">
-        <div className="chart-title">Juegos Mejor Calificados</div>
+        <div className="chart-title">
+          <FormattedMessage id="topratedgames" />
+        </div>
         <div className="chart-wrapper">
           <BarChart data={games} filterBy={chart} />
         </div>

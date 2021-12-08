@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useReducer } from 'react';
 import './SearchSection.scss';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 function SearchSection({ url, buttonPath }) {
   const [cards, setCards] = useState([]);
@@ -108,7 +109,7 @@ function SearchSection({ url, buttonPath }) {
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Filtrar
+              <FormattedMessage id="filter" />
             </button>
 
             <ul className="dropdown-menu" aria-labelledby="Filtrar">
